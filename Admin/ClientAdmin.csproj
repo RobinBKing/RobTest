@@ -1,0 +1,1268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B243660B-33C2-4AB9-8675-CE3E3163B417}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClientAdmin</RootNamespace>
+    <AssemblyName>ClientAdmin</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="BCrypt.Net, Version=0.1.4056.18965, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\BCrypt.Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CKSource.CKFinder.Connector.Config, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\CKSource.CKFinder.Connector.Config.dll</HintPath>
+    </Reference>
+    <Reference Include="CKSource.CKFinder.Connector.Core, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\CKSource.CKFinder.Connector.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="CKSource.CKFinder.Connector.Host.Owin, Version=3.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\CKSource.CKFinder.Connector.Host.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="CKSource.FileSystem, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\CKSource.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="CKSource.FileSystem.Local, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\CKSource.FileSystem.Local.dll</HintPath>
+    </Reference>
+    <Reference Include="ImageProcessor, Version=2.3.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ImageProcessor.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\ObjectLibrary.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Saturno.WebBack, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Saturno.WebBack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\setup\AboutPage.xml" />
+    <Content Include="App_Data\setup\Area.xml" />
+    <Content Include="App_Data\setup\BarAdmission.xml" />
+    <Content Include="App_Data\setup\Bio.xml" />
+    <Content Include="App_Data\setup\BioTitle.xml" />
+    <Content Include="App_Data\setup\Blog.xml" />
+    <Content Include="App_Data\setup\BlogPost.xml" />
+    <Content Include="App_Data\setup\Case.xml" />
+    <Content Include="App_Data\setup\Contact.xml" />
+    <Content Include="App_Data\setup\CourtAdmission.xml" />
+    <Content Include="App_Data\setup\EducationLevel.xml" />
+    <Content Include="App_Data\setup\Event.xml" />
+    <Content Include="App_Data\setup\HomepageSlide.xml" />
+    <Content Include="App_Data\setup\Industry.xml" />
+    <Content Include="App_Data\setup\Jurisdiction.xml" />
+    <Content Include="App_Data\setup\LandingPage.xml" />
+    <Content Include="App_Data\setup\News.xml" />
+    <Content Include="App_Data\setup\Office.xml" />
+    <Content Include="App_Data\setup\OtherPage.xml" />
+    <Content Include="App_Data\setup\School.xml" />
+    <Content Include="App_Data\setup\Slide.xml" />
+    <Content Include="App_Data\setup\WebbackManager.xml" />
+    <Content Include="App_Data\setup\webbackobjects.xml" />
+    <Content Include="App_Data\setup\Widget.xml" />
+    <Content Include="core\admin.aspx" />
+    <Content Include="core\ajax\associationpopup.aspx" />
+    <Content Include="core\ajax\jqdt\jqdtAjaxProcessor.aspx" />
+    <Content Include="core\ajax\modal\preview.aspx" />
+    <Content Include="core\ajax\recordlist_data.aspx" />
+    <Content Include="core\ajax\WBAjaxAssociations.aspx" />
+    <Content Include="core\ajax\WBAjaxPage.aspx" />
+    <Content Include="core\ajax\WBAjaxUploader.aspx" />
+    <Content Include="core\ajax\WBWidgetAjaxResponse.aspx" />
+    <Content Include="core\controls\permissions.ascx" />
+    <Content Include="core\controls\WBAssociationPanel.ascx" />
+    <Content Include="core\controls\WBDetailHistory.ascx" />
+    <Content Include="core\controls\WBDetailMetrics.ascx" />
+    <Content Include="core\controls\WBDetailNotes.ascx" />
+    <Content Include="core\controls\WBDetailSubRecords.ascx" />
+    <Content Include="core\controls\WBDetailUrls.ascx" />
+    <Content Include="core\controls\WBGallery.ascx" />
+    <Content Include="core\controls\WBMessages.ascx" />
+    <Content Include="core\controls\WBNavbar.ascx" />
+    <Content Include="core\controls\WBRecordListFilters.ascx" />
+    <Content Include="core\controls\WBSearchBar.ascx" />
+    <Content Include="core\controls\WBSidebar.ascx" />
+    <Content Include="core\controls\WBStats.ascx" />
+    <Content Include="core\controls\WidgetRecentChanges.ascx" />
+    <Content Include="core\css\bootstrap.min.css" />
+    <Content Include="core\css\icons.css" />
+    <Content Include="core\css\icons\icons.dev.svg" />
+    <Content Include="core\css\icons\icons.eot" />
+    <Content Include="core\css\icons\icons.svg" />
+    <Content Include="core\css\icons\icons.ttf" />
+    <Content Include="core\css\icons\icons.woff" />
+    <Content Include="core\css\londinium-theme.css" />
+    <Content Include="core\css\londinium.css" />
+    <Content Include="core\css\wb-core.css" />
+    <Content Include="core\diagnostics.aspx" />
+    <Content Include="core\forgotpass.aspx" />
+    <Content Include="core\globalsearch.aspx" />
+    <Content Include="core\images\blank.gif" />
+    <Content Include="core\images\colorpicker\alpha.png" />
+    <Content Include="core\images\colorpicker\hue.png" />
+    <Content Include="core\images\colorpicker\saturation.png" />
+    <Content Include="core\images\flags\chinese.png" />
+    <Content Include="core\images\flags\dutch.png" />
+    <Content Include="core\images\flags\english.png" />
+    <Content Include="core\images\flags\french.png" />
+    <Content Include="core\images\flags\french_bg.png" />
+    <Content Include="core\images\flags\german.png" />
+    <Content Include="core\images\flags\hindi.png" />
+    <Content Include="core\images\flags\hungarian.png" />
+    <Content Include="core\images\flags\italian.png" />
+    <Content Include="core\images\flags\japanese.png" />
+    <Content Include="core\images\flags\portugal.png" />
+    <Content Include="core\images\flags\russian.png" />
+    <Content Include="core\images\flags\spanish.png" />
+    <Content Include="core\images\flags\ukrainian.png" />
+    <Content Include="core\images\forms\add_files.png" />
+    <Content Include="core\images\forms\check.png" />
+    <Content Include="core\images\forms\checkbox.png" />
+    <Content Include="core\images\forms\checkbox_blue.png" />
+    <Content Include="core\images\forms\checkbox_dark.png" />
+    <Content Include="core\images\forms\checkbox_green.png" />
+    <Content Include="core\images\forms\checkbox_red.png" />
+    <Content Include="core\images\forms\check_white.png" />
+    <Content Include="core\images\forms\choice.png" />
+    <Content Include="core\images\forms\choice_white.png" />
+    <Content Include="core\images\forms\clear_results.png" />
+    <Content Include="core\images\forms\dropdown_arrow_down.png" />
+    <Content Include="core\images\forms\dropdown_arrow_up.png" />
+    <Content Include="core\images\forms\radio.png" />
+    <Content Include="core\images\forms\radio_blue.png" />
+    <Content Include="core\images\forms\radio_dark.png" />
+    <Content Include="core\images\forms\radio_green.png" />
+    <Content Include="core\images\forms\radio_red.png" />
+    <Content Include="core\images\forms\select_multiple_add.png" />
+    <Content Include="core\images\forms\spinner_bottom.png" />
+    <Content Include="core\images\forms\spinner_top.png" />
+    <Content Include="core\images\forms\switch_handler.png" />
+    <Content Include="core\images\interface\arrow_left.png" />
+    <Content Include="core\images\interface\arrow_right.png" />
+    <Content Include="core\images\interface\breadcrumb_home.png" />
+    <Content Include="core\images\interface\datepicker_trigger.png" />
+    <Content Include="core\images\interface\filter.png" />
+    <Content Include="core\images\interface\lightbox_overlay.png" />
+    <Content Include="core\images\interface\loader.gif" />
+    <Content Include="core\images\interface\minus.png" />
+    <Content Include="core\images\interface\nav_arrow_left.png" />
+    <Content Include="core\images\interface\nav_arrow_right.png" />
+    <Content Include="core\images\interface\plupload_done.png" />
+    <Content Include="core\images\interface\plupload_error.png" />
+    <Content Include="core\images\interface\plupload_remove.png" />
+    <Content Include="core\images\interface\plupload_title.png" />
+    <Content Include="core\images\interface\plus.png" />
+    <Content Include="core\images\interface\slider_handle.png" />
+    <Content Include="core\images\interface\tables\filter.png" />
+    <Content Include="core\images\interface\tables\sort_asc.png" />
+    <Content Include="core\images\interface\tables\sort_asc_disabled.png" />
+    <Content Include="core\images\interface\tables\sort_both.png" />
+    <Content Include="core\images\interface\tables\sort_desc.png" />
+    <Content Include="core\images\interface\tables\sort_desc_disabled.png" />
+    <Content Include="core\images\interface\typing.gif" />
+    <Content Include="core\images\interface\user_arrow_default.png" />
+    <Content Include="core\images\interface\user_arrow_hover.png" />
+    <Content Include="core\images\interface\user_menu_arrow.png" />
+    <Content Include="core\images\interface\vertical_arrows.png" />
+    <Content Include="core\images\interface\zoom.png" />
+    <Content Include="core\images\logo.png" />
+    <Content Include="core\images\logo_dark.png" />
+    <Content Include="core\images\wb-navbar-logo.png" />
+    <Content Include="core\js\application.js" />
+    <Content Include="core\js\application_blank.js" />
+    <Content Include="core\js\bootstrap.min.js" />
+    <Content Include="core\js\globalize\globalize.culture.de-DE.js" />
+    <Content Include="core\js\globalize\globalize.culture.ja-JP.js" />
+    <Content Include="core\js\globalize\globalize.js" />
+    <Content Include="core\js\plugins\forms\autosize.js" />
+    <Content Include="core\js\plugins\forms\inputlimit.min.js" />
+    <Content Include="core\js\plugins\forms\inputmask.js" />
+    <Content Include="core\js\plugins\forms\listbox.js" />
+    <Content Include="core\js\plugins\forms\multiselect.js" />
+    <Content Include="core\js\plugins\forms\select2.min.js" />
+    <Content Include="core\js\plugins\forms\switch.min.js" />
+    <Content Include="core\js\plugins\forms\tags.min.js" />
+    <Content Include="core\js\plugins\forms\uniform.min.js" />
+    <Content Include="core\js\plugins\forms\uploader\plupload.full.min.js" />
+    <Content Include="core\js\plugins\forms\uploader\plupload.queue.min.js" />
+    <Content Include="core\js\plugins\forms\validate.min.js" />
+    <Content Include="core\js\plugins\interface\collapsible.min.js" />
+    <Content Include="core\js\plugins\interface\colorpicker.js" />
+    <Content Include="core\js\plugins\interface\datatables.min.js" />
+    <Content Include="core\js\plugins\interface\daterangepicker.js" />
+    <Content Include="core\js\plugins\interface\fancybox.min.js" />
+    <Content Include="core\js\plugins\interface\fullcalendar.min.js" />
+    <Content Include="core\js\plugins\interface\hover_dropdown.min.js" />
+    <Content Include="core\js\plugins\interface\jgrowl.min.js" />
+    <Content Include="core\js\plugins\interface\jquery.dataTables.min.js" />
+    <Content Include="core\js\plugins\interface\jquery.mjs.nestedSortable.js" />
+    <Content Include="core\js\plugins\interface\moment.js" />
+    <Content Include="core\js\plugins\interface\mousewheel.js" />
+    <Content Include="core\js\plugins\interface\prettify.js" />
+    <Content Include="core\js\plugins\interface\tabletools.min.js" />
+    <Content Include="core\js\plugins\interface\timepicker.min.js" />
+    <Content Include="core\js\respond.min.js" />
+    <Content Include="core\js\wb-application.js" />
+    <Content Include="core\js\wb-associator.js" />
+    <Content Include="core\js\wb-ckeditor-default.js" />
+    <Content Include="core\js\wb-detail.js" />
+    <Content Include="core\js\wb-gallery.js" />
+    <Content Include="core\js\wb-list.js" />
+    <Content Include="core\js\wb-uploader.js" />
+    <Content Include="core\js\wb-utils.js" />
+    <Content Include="core\lib\ckeditor\adapters\jquery.js" />
+    <Content Include="core\lib\ckeditor\ckeditor.js" />
+    <Content Include="core\lib\ckeditor\config.js" />
+    <Content Include="core\lib\ckeditor\contents.css" />
+    <Content Include="core\lib\ckeditor\lang\af.js" />
+    <Content Include="core\lib\ckeditor\lang\ar.js" />
+    <Content Include="core\lib\ckeditor\lang\bg.js" />
+    <Content Include="core\lib\ckeditor\lang\bn.js" />
+    <Content Include="core\lib\ckeditor\lang\bs.js" />
+    <Content Include="core\lib\ckeditor\lang\ca.js" />
+    <Content Include="core\lib\ckeditor\lang\cs.js" />
+    <Content Include="core\lib\ckeditor\lang\cy.js" />
+    <Content Include="core\lib\ckeditor\lang\da.js" />
+    <Content Include="core\lib\ckeditor\lang\de-ch.js" />
+    <Content Include="core\lib\ckeditor\lang\de.js" />
+    <Content Include="core\lib\ckeditor\lang\el.js" />
+    <Content Include="core\lib\ckeditor\lang\en-au.js" />
+    <Content Include="core\lib\ckeditor\lang\en-ca.js" />
+    <Content Include="core\lib\ckeditor\lang\en-gb.js" />
+    <Content Include="core\lib\ckeditor\lang\en.js" />
+    <Content Include="core\lib\ckeditor\lang\eo.js" />
+    <Content Include="core\lib\ckeditor\lang\es.js" />
+    <Content Include="core\lib\ckeditor\lang\et.js" />
+    <Content Include="core\lib\ckeditor\lang\eu.js" />
+    <Content Include="core\lib\ckeditor\lang\fa.js" />
+    <Content Include="core\lib\ckeditor\lang\fi.js" />
+    <Content Include="core\lib\ckeditor\lang\fo.js" />
+    <Content Include="core\lib\ckeditor\lang\fr-ca.js" />
+    <Content Include="core\lib\ckeditor\lang\fr.js" />
+    <Content Include="core\lib\ckeditor\lang\gl.js" />
+    <Content Include="core\lib\ckeditor\lang\gu.js" />
+    <Content Include="core\lib\ckeditor\lang\he.js" />
+    <Content Include="core\lib\ckeditor\lang\hi.js" />
+    <Content Include="core\lib\ckeditor\lang\hr.js" />
+    <Content Include="core\lib\ckeditor\lang\hu.js" />
+    <Content Include="core\lib\ckeditor\lang\id.js" />
+    <Content Include="core\lib\ckeditor\lang\is.js" />
+    <Content Include="core\lib\ckeditor\lang\it.js" />
+    <Content Include="core\lib\ckeditor\lang\ja.js" />
+    <Content Include="core\lib\ckeditor\lang\ka.js" />
+    <Content Include="core\lib\ckeditor\lang\km.js" />
+    <Content Include="core\lib\ckeditor\lang\ko.js" />
+    <Content Include="core\lib\ckeditor\lang\ku.js" />
+    <Content Include="core\lib\ckeditor\lang\lt.js" />
+    <Content Include="core\lib\ckeditor\lang\lv.js" />
+    <Content Include="core\lib\ckeditor\lang\mk.js" />
+    <Content Include="core\lib\ckeditor\lang\mn.js" />
+    <Content Include="core\lib\ckeditor\lang\ms.js" />
+    <Content Include="core\lib\ckeditor\lang\nb.js" />
+    <Content Include="core\lib\ckeditor\lang\nl.js" />
+    <Content Include="core\lib\ckeditor\lang\no.js" />
+    <Content Include="core\lib\ckeditor\lang\pl.js" />
+    <Content Include="core\lib\ckeditor\lang\pt-br.js" />
+    <Content Include="core\lib\ckeditor\lang\pt.js" />
+    <Content Include="core\lib\ckeditor\lang\ro.js" />
+    <Content Include="core\lib\ckeditor\lang\ru.js" />
+    <Content Include="core\lib\ckeditor\lang\si.js" />
+    <Content Include="core\lib\ckeditor\lang\sk.js" />
+    <Content Include="core\lib\ckeditor\lang\sl.js" />
+    <Content Include="core\lib\ckeditor\lang\sq.js" />
+    <Content Include="core\lib\ckeditor\lang\sr-latn.js" />
+    <Content Include="core\lib\ckeditor\lang\sr.js" />
+    <Content Include="core\lib\ckeditor\lang\sv.js" />
+    <Content Include="core\lib\ckeditor\lang\th.js" />
+    <Content Include="core\lib\ckeditor\lang\tr.js" />
+    <Content Include="core\lib\ckeditor\lang\tt.js" />
+    <Content Include="core\lib\ckeditor\lang\ug.js" />
+    <Content Include="core\lib\ckeditor\lang\uk.js" />
+    <Content Include="core\lib\ckeditor\lang\vi.js" />
+    <Content Include="core\lib\ckeditor\lang\zh-cn.js" />
+    <Content Include="core\lib\ckeditor\lang\zh.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\ar.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\bg.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\ca.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\cs.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\cy.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\da.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\de.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\el.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\en-gb.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\en.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\eo.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\es.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\et.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\fa.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\fi.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\fr-ca.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\fr.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\gl.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\gu.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\he.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\hi.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\hr.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\hu.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\id.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\it.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\ja.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\km.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\ko.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\ku.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\lt.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\lv.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\mk.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\mn.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\nb.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\nl.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\no.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\pl.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\pt-br.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\pt.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\ro.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\ru.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\si.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\sk.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\sl.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\sq.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\sr-latn.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\sr.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\sv.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\th.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\tr.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\tt.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\ug.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\uk.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\vi.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\zh-cn.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\zh.js" />
+    <Content Include="core\lib\ckeditor\plugins\a11yhelp\dialogs\lang\_translationstatus.txt" />
+    <Content Include="core\lib\ckeditor\plugins\about\dialogs\about.js" />
+    <Content Include="core\lib\ckeditor\plugins\about\dialogs\hidpi\logo_ckeditor.png" />
+    <Content Include="core\lib\ckeditor\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="core\lib\ckeditor\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="core\lib\ckeditor\plugins\colordialog\dialogs\colordialog.js" />
+    <Content Include="core\lib\ckeditor\plugins\dialog\dialogDefinition.js" />
+    <Content Include="core\lib\ckeditor\plugins\div\dialogs\div.js" />
+    <Content Include="core\lib\ckeditor\plugins\extraformattributes\lang\en.js" />
+    <Content Include="core\lib\ckeditor\plugins\extraformattributes\lang\es.js" />
+    <Content Include="core\lib\ckeditor\plugins\extraformattributes\lang\fr.js" />
+    <Content Include="core\lib\ckeditor\plugins\extraformattributes\lang\it.js" />
+    <Content Include="core\lib\ckeditor\plugins\extraformattributes\lang\ru.js" />
+    <Content Include="core\lib\ckeditor\plugins\extraformattributes\LICENSE" />
+    <Content Include="core\lib\ckeditor\plugins\extraformattributes\plugin.js" />
+    <Content Include="core\lib\ckeditor\plugins\extraformattributes\README.md" />
+    <Content Include="core\lib\ckeditor\plugins\find\dialogs\find.js" />
+    <Content Include="core\lib\ckeditor\plugins\flash\dialogs\flash.js" />
+    <Content Include="core\lib\ckeditor\plugins\flash\images\placeholder.png" />
+    <Content Include="core\lib\ckeditor\plugins\forms\dialogs\button.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\dialogs\checkbox.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\dialogs\form.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\dialogs\hiddenfield.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\dialogs\radio.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\dialogs\select.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\dialogs\textarea.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\dialogs\textfield.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\icons\button.png" />
+    <Content Include="core\lib\ckeditor\plugins\forms\icons\checkbox.png" />
+    <Content Include="core\lib\ckeditor\plugins\forms\icons\form.png" />
+    <Content Include="core\lib\ckeditor\plugins\forms\icons\hiddenfield.png" />
+    <Content Include="core\lib\ckeditor\plugins\forms\icons\hidpi\button.png" />
+    <Content Include="core\lib\ckeditor\plugins\forms\icons\hidpi\checkbox.png" />
+    <Content Include="core\lib\ckeditor\plugins\forms\icons\hidpi\form.png" />
+    <Content Include="core\lib\ckeditor\plugins\forms\icons\hidpi\hiddenfield.png" />
+    <Content Include="core\lib\ckeditor\plugins\forms\icons\hidpi\imagebutton.png" />
+    <Content Include="core\lib\ckeditor\plugins\forms\icons\hidpi\radio.png" />
+    <Content Include="core\lib\ckeditor\plugins\forms\icons\hidpi\select-rtl.png" />
+    <Content Include="core\lib\ckeditor\plugins\forms\icons\hidpi\select.png" />
+    <Content Include="core\lib\ckeditor\plugins\forms\icons\hidpi\textarea-rtl.png" />
+    <Content Include="core\lib\ckeditor\plugins\forms\icons\hidpi\textarea.png" />
+    <Content Include="core\lib\ckeditor\plugins\forms\icons\hidpi\textfield-rtl.png" />
+    <Content Include="core\lib\ckeditor\plugins\forms\icons\hidpi\textfield.png" />
+    <Content Include="core\lib\ckeditor\plugins\forms\icons\imagebutton.png" />
+    <Content Include="core\lib\ckeditor\plugins\forms\icons\radio.png" />
+    <Content Include="core\lib\ckeditor\plugins\forms\icons\select-rtl.png" />
+    <Content Include="core\lib\ckeditor\plugins\forms\icons\select.png" />
+    <Content Include="core\lib\ckeditor\plugins\forms\icons\textarea-rtl.png" />
+    <Content Include="core\lib\ckeditor\plugins\forms\icons\textarea.png" />
+    <Content Include="core\lib\ckeditor\plugins\forms\icons\textfield-rtl.png" />
+    <Content Include="core\lib\ckeditor\plugins\forms\icons\textfield.png" />
+    <Content Include="core\lib\ckeditor\plugins\forms\images\hiddenfield.gif" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\af.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\ar.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\bg.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\bn.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\bs.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\ca.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\cs.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\cy.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\da.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\de-ch.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\de.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\el.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\en-au.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\en-ca.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\en-gb.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\en.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\eo.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\es.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\et.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\eu.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\fa.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\fi.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\fo.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\fr-ca.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\fr.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\gl.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\gu.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\he.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\hi.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\hr.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\hu.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\id.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\is.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\it.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\ja.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\ka.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\km.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\ko.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\ku.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\lt.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\lv.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\mk.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\mn.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\ms.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\nb.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\nl.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\no.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\pl.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\pt-br.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\pt.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\ro.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\ru.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\si.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\sk.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\sl.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\sq.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\sr-latn.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\sr.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\sv.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\th.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\tr.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\tt.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\ug.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\uk.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\vi.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\zh-cn.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\lang\zh.js" />
+    <Content Include="core\lib\ckeditor\plugins\forms\plugin.js" />
+    <Content Include="core\lib\ckeditor\plugins\icons.png" />
+    <Content Include="core\lib\ckeditor\plugins\icons_hidpi.png" />
+    <Content Include="core\lib\ckeditor\plugins\iframe\dialogs\iframe.js" />
+    <Content Include="core\lib\ckeditor\plugins\iframe\images\placeholder.png" />
+    <Content Include="core\lib\ckeditor\plugins\image\dialogs\image.js" />
+    <Content Include="core\lib\ckeditor\plugins\image\images\noimage.png" />
+    <Content Include="core\lib\ckeditor\plugins\label\dialogs\label.js" />
+    <Content Include="core\lib\ckeditor\plugins\label\icons\label.png" />
+    <Content Include="core\lib\ckeditor\plugins\label\plugin.js" />
+    <Content Include="core\lib\ckeditor\plugins\lineutils\dev\dnd.html" />
+    <Content Include="core\lib\ckeditor\plugins\lineutils\dev\magicfinger.html" />
+    <Content Include="core\lib\ckeditor\plugins\lineutils\plugin.js" />
+    <Content Include="core\lib\ckeditor\plugins\link\dialogs\anchor.js" />
+    <Content Include="core\lib\ckeditor\plugins\link\dialogs\link.js" />
+    <Content Include="core\lib\ckeditor\plugins\link\images\anchor.png" />
+    <Content Include="core\lib\ckeditor\plugins\link\images\hidpi\anchor.png" />
+    <Content Include="core\lib\ckeditor\plugins\liststyle\dialogs\liststyle.js" />
+    <Content Include="core\lib\ckeditor\plugins\magicline\images\hidpi\icon.png" />
+    <Content Include="core\lib\ckeditor\plugins\magicline\images\icon.png" />
+    <Content Include="core\lib\ckeditor\plugins\oembed\icons\hidpi\oembed.png" />
+    <Content Include="core\lib\ckeditor\plugins\oembed\icons\oembed.png" />
+    <Content Include="core\lib\ckeditor\plugins\oembed\lang\de.js" />
+    <Content Include="core\lib\ckeditor\plugins\oembed\lang\en.js" />
+    <Content Include="core\lib\ckeditor\plugins\oembed\lang\fr.js" />
+    <Content Include="core\lib\ckeditor\plugins\oembed\lang\nl.js" />
+    <Content Include="core\lib\ckeditor\plugins\oembed\lang\pl.js" />
+    <Content Include="core\lib\ckeditor\plugins\oembed\lang\pt-br.js" />
+    <Content Include="core\lib\ckeditor\plugins\oembed\lang\ru.js" />
+    <Content Include="core\lib\ckeditor\plugins\oembed\lang\tr.js" />
+    <Content Include="core\lib\ckeditor\plugins\oembed\libs\jquery.oembed.min.js" />
+    <Content Include="core\lib\ckeditor\plugins\oembed\LICENSE.md" />
+    <Content Include="core\lib\ckeditor\plugins\oembed\plugin.js" />
+    <Content Include="core\lib\ckeditor\plugins\oembed\README.md" />
+    <Content Include="core\lib\ckeditor\plugins\pagebreak\images\pagebreak.gif" />
+    <Content Include="core\lib\ckeditor\plugins\pastefromword\filter\default.js" />
+    <Content Include="core\lib\ckeditor\plugins\preview\preview.html" />
+    <Content Include="core\lib\ckeditor\plugins\scayt\dialogs\options.js" />
+    <Content Include="core\lib\ckeditor\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="core\lib\ckeditor\plugins\scayt\LICENSE.md" />
+    <Content Include="core\lib\ckeditor\plugins\scayt\README.md" />
+    <Content Include="core\lib\ckeditor\plugins\showblocks\images\block_address.png" />
+    <Content Include="core\lib\ckeditor\plugins\showblocks\images\block_blockquote.png" />
+    <Content Include="core\lib\ckeditor\plugins\showblocks\images\block_div.png" />
+    <Content Include="core\lib\ckeditor\plugins\showblocks\images\block_h1.png" />
+    <Content Include="core\lib\ckeditor\plugins\showblocks\images\block_h2.png" />
+    <Content Include="core\lib\ckeditor\plugins\showblocks\images\block_h3.png" />
+    <Content Include="core\lib\ckeditor\plugins\showblocks\images\block_h4.png" />
+    <Content Include="core\lib\ckeditor\plugins\showblocks\images\block_h5.png" />
+    <Content Include="core\lib\ckeditor\plugins\showblocks\images\block_h6.png" />
+    <Content Include="core\lib\ckeditor\plugins\showblocks\images\block_p.png" />
+    <Content Include="core\lib\ckeditor\plugins\showblocks\images\block_pre.png" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\dialogs\smiley.js" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\angel_smile.gif" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\angel_smile.png" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\angry_smile.gif" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\angry_smile.png" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\broken_heart.gif" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\broken_heart.png" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\confused_smile.gif" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\confused_smile.png" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\cry_smile.gif" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\cry_smile.png" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\devil_smile.gif" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\devil_smile.png" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\embaressed_smile.gif" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\embarrassed_smile.gif" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\embarrassed_smile.png" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\envelope.gif" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\envelope.png" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\heart.gif" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\heart.png" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\kiss.gif" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\kiss.png" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\lightbulb.gif" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\lightbulb.png" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\omg_smile.gif" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\omg_smile.png" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\regular_smile.gif" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\regular_smile.png" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\sad_smile.gif" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\sad_smile.png" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\shades_smile.gif" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\shades_smile.png" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\teeth_smile.gif" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\teeth_smile.png" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\thumbs_down.gif" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\thumbs_down.png" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\thumbs_up.gif" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\thumbs_up.png" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\tongue_smile.gif" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\tongue_smile.png" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\tounge_smile.gif" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\whatchutalkingabout_smile.gif" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\whatchutalkingabout_smile.png" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\wink_smile.gif" />
+    <Content Include="core\lib\ckeditor\plugins\smiley\images\wink_smile.png" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\ar.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\bg.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\ca.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\cs.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\cy.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\de.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\el.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\en-gb.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\en.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\eo.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\es.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\et.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\fa.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\fi.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\fr-ca.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\fr.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\gl.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\he.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\hr.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\hu.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\id.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\it.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\ja.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\km.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\ku.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\lv.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\nb.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\nl.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\no.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\pl.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\pt-br.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\pt.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\ru.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\si.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\sk.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\sl.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\sq.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\sv.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\th.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\tr.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\tt.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\ug.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\uk.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\vi.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\zh-cn.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\zh.js" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\lang\_translationstatus.txt" />
+    <Content Include="core\lib\ckeditor\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="core\lib\ckeditor\plugins\stylesheetparser\plugin.js" />
+    <Content Include="core\lib\ckeditor\plugins\stylesheetparser\samples\assets\sample.css" />
+    <Content Include="core\lib\ckeditor\plugins\stylesheetparser\samples\stylesheetparser.html" />
+    <Content Include="core\lib\ckeditor\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="core\lib\ckeditor\plugins\table\dialogs\table.js" />
+    <Content Include="core\lib\ckeditor\plugins\templates\dialogs\templates.css" />
+    <Content Include="core\lib\ckeditor\plugins\templates\dialogs\templates.js" />
+    <Content Include="core\lib\ckeditor\plugins\templates\templates\default.js" />
+    <Content Include="core\lib\ckeditor\plugins\templates\templates\images\template1.gif" />
+    <Content Include="core\lib\ckeditor\plugins\templates\templates\images\template2.gif" />
+    <Content Include="core\lib\ckeditor\plugins\templates\templates\images\template3.gif" />
+    <Content Include="core\lib\ckeditor\plugins\uploadimage\plugin.js" />
+    <Content Include="core\lib\ckeditor\plugins\uploadwidget\dev\cors.html" />
+    <Content Include="core\lib\ckeditor\plugins\uploadwidget\dev\filereaderplugin.js" />
+    <Content Include="core\lib\ckeditor\plugins\uploadwidget\dev\upload.html" />
+    <Content Include="core\lib\ckeditor\plugins\uploadwidget\lang\cs.js" />
+    <Content Include="core\lib\ckeditor\plugins\uploadwidget\lang\da.js" />
+    <Content Include="core\lib\ckeditor\plugins\uploadwidget\lang\de-ch.js" />
+    <Content Include="core\lib\ckeditor\plugins\uploadwidget\lang\de.js" />
+    <Content Include="core\lib\ckeditor\plugins\uploadwidget\lang\el.js" />
+    <Content Include="core\lib\ckeditor\plugins\uploadwidget\lang\en.js" />
+    <Content Include="core\lib\ckeditor\plugins\uploadwidget\lang\eo.js" />
+    <Content Include="core\lib\ckeditor\plugins\uploadwidget\lang\eu.js" />
+    <Content Include="core\lib\ckeditor\plugins\uploadwidget\lang\fr.js" />
+    <Content Include="core\lib\ckeditor\plugins\uploadwidget\lang\gl.js" />
+    <Content Include="core\lib\ckeditor\plugins\uploadwidget\lang\hu.js" />
+    <Content Include="core\lib\ckeditor\plugins\uploadwidget\lang\id.js" />
+    <Content Include="core\lib\ckeditor\plugins\uploadwidget\lang\it.js" />
+    <Content Include="core\lib\ckeditor\plugins\uploadwidget\lang\ko.js" />
+    <Content Include="core\lib\ckeditor\plugins\uploadwidget\lang\ku.js" />
+    <Content Include="core\lib\ckeditor\plugins\uploadwidget\lang\nb.js" />
+    <Content Include="core\lib\ckeditor\plugins\uploadwidget\lang\nl.js" />
+    <Content Include="core\lib\ckeditor\plugins\uploadwidget\lang\pl.js" />
+    <Content Include="core\lib\ckeditor\plugins\uploadwidget\lang\pt-br.js" />
+    <Content Include="core\lib\ckeditor\plugins\uploadwidget\lang\ru.js" />
+    <Content Include="core\lib\ckeditor\plugins\uploadwidget\lang\sv.js" />
+    <Content Include="core\lib\ckeditor\plugins\uploadwidget\lang\tr.js" />
+    <Content Include="core\lib\ckeditor\plugins\uploadwidget\lang\ug.js" />
+    <Content Include="core\lib\ckeditor\plugins\uploadwidget\lang\uk.js" />
+    <Content Include="core\lib\ckeditor\plugins\uploadwidget\lang\zh-cn.js" />
+    <Content Include="core\lib\ckeditor\plugins\uploadwidget\lang\zh.js" />
+    <Content Include="core\lib\ckeditor\plugins\uploadwidget\plugin.js" />
+    <Content Include="core\lib\ckeditor\plugins\wb-editor-form\icons\wb-editor-form.png" />
+    <Content Include="core\lib\ckeditor\plugins\wb-editor-form\plugin.js" />
+    <Content Include="core\lib\ckeditor\plugins\wb-editor-form\styles\wbform.css" />
+    <Content Include="core\lib\ckeditor\plugins\widget\dev\assets\contents.css" />
+    <Content Include="core\lib\ckeditor\plugins\widget\dev\assets\sample.jpg" />
+    <Content Include="core\lib\ckeditor\plugins\widget\dev\assets\simplebox\contents.css" />
+    <Content Include="core\lib\ckeditor\plugins\widget\dev\assets\simplebox\dialogs\simplebox.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\dev\assets\simplebox\icons\simplebox.png" />
+    <Content Include="core\lib\ckeditor\plugins\widget\dev\assets\simplebox\plugin.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\dev\console.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\dev\nestedwidgets.html" />
+    <Content Include="core\lib\ckeditor\plugins\widget\dev\widgetstyles.html" />
+    <Content Include="core\lib\ckeditor\plugins\widget\images\handle.png" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\af.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\ar.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\ca.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\cs.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\cy.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\da.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\de.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\el.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\en-gb.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\en.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\eo.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\es.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\fa.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\fi.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\fr.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\gl.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\he.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\hr.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\hu.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\it.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\ja.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\km.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\ko.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\ku.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\nb.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\nl.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\no.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\pl.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\pt-br.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\pt.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\ru.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\sk.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\sl.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\sq.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\sv.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\tr.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\tt.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\uk.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\vi.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\zh-cn.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\lang\zh.js" />
+    <Content Include="core\lib\ckeditor\plugins\widget\plugin.js" />
+    <Content Include="core\lib\ckeditor\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="core\lib\ckeditor\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="core\lib\ckeditor\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="core\lib\ckeditor\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="core\lib\ckeditor\plugins\wsc\dialogs\wsc_ie.js" />
+    <Content Include="core\lib\ckeditor\plugins\wsc\LICENSE.md" />
+    <Content Include="core\lib\ckeditor\plugins\wsc\README.md" />
+    <Content Include="core\lib\ckeditor\skins\moono\dialog.css" />
+    <Content Include="core\lib\ckeditor\skins\moono\dialog_ie.css" />
+    <Content Include="core\lib\ckeditor\skins\moono\dialog_ie7.css" />
+    <Content Include="core\lib\ckeditor\skins\moono\dialog_ie8.css" />
+    <Content Include="core\lib\ckeditor\skins\moono\dialog_iequirks.css" />
+    <Content Include="core\lib\ckeditor\skins\moono\editor.css" />
+    <Content Include="core\lib\ckeditor\skins\moono\editor_gecko.css" />
+    <Content Include="core\lib\ckeditor\skins\moono\editor_ie.css" />
+    <Content Include="core\lib\ckeditor\skins\moono\editor_ie7.css" />
+    <Content Include="core\lib\ckeditor\skins\moono\editor_ie8.css" />
+    <Content Include="core\lib\ckeditor\skins\moono\editor_iequirks.css" />
+    <Content Include="core\lib\ckeditor\skins\moono\icons.png" />
+    <Content Include="core\lib\ckeditor\skins\moono\icons_hidpi.png" />
+    <Content Include="core\lib\ckeditor\skins\moono\images\arrow.png" />
+    <Content Include="core\lib\ckeditor\skins\moono\images\close.png" />
+    <Content Include="core\lib\ckeditor\skins\moono\images\hidpi\close.png" />
+    <Content Include="core\lib\ckeditor\skins\moono\images\hidpi\lock-open.png" />
+    <Content Include="core\lib\ckeditor\skins\moono\images\hidpi\lock.png" />
+    <Content Include="core\lib\ckeditor\skins\moono\images\hidpi\refresh.png" />
+    <Content Include="core\lib\ckeditor\skins\moono\images\lock-open.png" />
+    <Content Include="core\lib\ckeditor\skins\moono\images\lock.png" />
+    <Content Include="core\lib\ckeditor\skins\moono\images\refresh.png" />
+    <Content Include="core\lib\ckeditor\skins\moono\images\spinner.gif" />
+    <Content Include="core\lib\ckeditor\skins\moono\readme.md" />
+    <Content Include="core\lib\ckeditor\styles.js" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\ckfinder.html" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\ckfinder.js" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\config.js" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\bg.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\ca.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\cs.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\cy.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\da.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\de.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\el.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\en.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\eo.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\es-mx.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\es.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\et.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\eu.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\fa.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\fi.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\fr.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\gu.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\he.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\hi.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\hr.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\hu.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\id.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\it.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\ja.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\ko.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\ku.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\lt.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\lv.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\nb.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\nl.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\nn.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\no.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\pl.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\pt-br.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\ro.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\ru.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\sk.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\sl.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\sr.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\sv.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\tr.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\vi.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\zh-cn.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\zh-tw.json" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\caman.js" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\ajax-loader.gif" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\action-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\action-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\alert-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\alert-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\arrow-d-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\arrow-d-l-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\arrow-d-l-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\arrow-d-r-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\arrow-d-r-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\arrow-d-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\arrow-l-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\arrow-l-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\arrow-r-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\arrow-r-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\arrow-u-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\arrow-u-l-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\arrow-u-l-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\arrow-u-r-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\arrow-u-r-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\arrow-u-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\audio-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\audio-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\back-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\back-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\bars-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\bars-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\bullets-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\bullets-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\calendar-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\calendar-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\camera-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\camera-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\carat-d-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\carat-d-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\carat-l-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\carat-l-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\carat-r-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\carat-r-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\carat-u-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\carat-u-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\check-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\check-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\clock-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\clock-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\cloud-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\cloud-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\comment-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\comment-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\delete-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\delete-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\edit-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\edit-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\eye-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\eye-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\forbidden-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\forbidden-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\forward-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\forward-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\gear-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\gear-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\grid-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\grid-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\heart-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\heart-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\home-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\home-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\info-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\info-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\location-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\location-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\lock-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\lock-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\mail-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\mail-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\minus-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\minus-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\navigation-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\navigation-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\phone-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\phone-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\plus-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\plus-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\power-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\power-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\recycle-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\recycle-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\refresh-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\refresh-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\search-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\search-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\shop-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\shop-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\star-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\star-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\tag-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\tag-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\user-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\user-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\video-black.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\images\icons-png\video-white.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\jquery.js" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\jquery.mobile.icons.css" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\jquery.mobile.js" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\jquery.mobile.structure.css" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\libs\jquery.mobile.theme.css" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\plugins\README.md" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\ckfinder.css" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\128\7z.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\128\access.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\128\audio.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\128\calc.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\128\css.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\128\csv.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\128\directory.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\128\draw.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\128\excel.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\128\html.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\128\image.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\128\impress.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\128\javascript.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\128\log.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\128\msword.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\128\pdf.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\128\php.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\128\plain.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\128\powerpoint.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\128\rar.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\128\readme.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\128\rtf.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\128\sql.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\128\tar.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\128\unknown.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\128\video.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\128\writer.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\128\zip.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\16\7z.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\16\access.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\16\audio.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\16\calc.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\16\css.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\16\csv.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\16\directory.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\16\draw.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\16\excel.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\16\html.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\16\image.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\16\impress.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\16\javascript.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\16\log.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\16\msword.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\16\pdf.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\16\php.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\16\plain.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\16\powerpoint.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\16\rar.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\16\readme.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\16\rtf.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\16\sql.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\16\tar.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\16\unknown.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\16\video.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\16\writer.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\16\zip.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\22\7z.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\22\access.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\22\audio.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\22\calc.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\22\css.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\22\csv.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\22\directory.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\22\draw.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\22\excel.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\22\html.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\22\image.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\22\javascript.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\22\log.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\22\msword.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\22\pdf.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\22\php.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\22\plain.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\22\powerpoint.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\22\rar.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\22\readme.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\22\rtf.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\22\sql.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\22\tar.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\22\unknown.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\22\video.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\22\zip.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\256\7z.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\256\access.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\256\audio.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\256\calc.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\256\css.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\256\csv.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\256\directory.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\256\draw.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\256\excel.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\256\html.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\256\image.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\256\javascript.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\256\log.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\256\msword.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\256\pdf.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\256\php.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\256\plain.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\256\powerpoint.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\256\rar.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\256\readme.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\256\rtf.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\256\sql.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\256\tar.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\256\unknown.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\256\video.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\256\zip.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\32\7z.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\32\access.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\32\audio.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\32\calc.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\32\css.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\32\csv.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\32\directory.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\32\draw.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\32\excel.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\32\html.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\32\image.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\32\impress.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\32\javascript.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\32\log.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\32\msword.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\32\pdf.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\32\php.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\32\plain.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\32\powerpoint.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\32\rar.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\32\readme.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\32\rtf.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\32\sql.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\32\tar.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\32\unknown.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\32\video.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\32\writer.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\32\zip.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\48\7z.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\48\access.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\48\audio.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\48\calc.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\48\css.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\48\csv.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\48\directory.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\48\draw.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\48\excel.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\48\html.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\48\image.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\48\impress.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\48\javascript.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\48\log.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\48\msword.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\48\pdf.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\48\php.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\48\plain.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\48\powerpoint.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\48\rar.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\48\readme.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\48\rtf.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\48\sql.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\48\tar.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\48\unknown.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\48\video.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\48\writer.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\48\zip.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\64\7z.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\64\access.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\64\audio.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\64\calc.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\64\css.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\64\csv.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\64\directory.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\64\draw.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\64\excel.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\64\html.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\64\image.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\64\impress.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\64\javascript.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\64\log.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\64\msword.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\64\pdf.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\64\php.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\64\plain.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\64\powerpoint.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\64\rar.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\64\readme.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\64\rtf.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\64\sql.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\64\tar.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\64\unknown.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\64\video.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\64\writer.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\file-icons\64\zip.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\images\custom\128\image.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\images\custom\256\image.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\images\custom\32\image.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\images\custom\48\image.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\core\images\custom\64\image.png" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\jquery-mobile\icons.css" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\moono\ckfinder.css" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\moono\icons.css" />
+    <Content Include="core\lib\ckfinder\CKFinderScripts\skins\moono\images\ajax-loader.gif" />
+    <Content Include="core\login.aspx" />
+    <Content Include="core\media\swf\copy_csv_xls.swf" />
+    <Content Include="core\media\swf\copy_csv_xls_pdf.swf" />
+    <Content Include="core\recordarchive.aspx" />
+    <Content Include="core\recorddetail.aspx" />
+    <Content Include="core\recordlinkreport.aspx" />
+    <Content Include="core\recordlist.aspx" />
+    <Content Include="core\support.aspx" />
+    <Content Include="core\WBSite.Master" />
+    <Content Include="core\WBSiteClean.Master" />
+    <Content Include="core\WidgetRecentChanges.aspx" />
+    <Content Include="custom\fileuploader.ascx" />
+    <Content Include="custom\images\userprofile-default.jpg" />
+    <Content Include="custom\js\templates.js" />
+    <Content Include="custom\js\wb-ckeditor-custom.js" />
+    <Content Include="custom\js\wb-ckfinder-custom.js" />
+    <Content Include="custom\menu.xml" />
+    <Content Include="Global.asax" />
+    <Content Include="index.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="custom\CustomActions.cs" />
+    <Compile Include="custom\fileuploader.ascx.cs">
+      <DependentUpon>fileuploader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="custom\js\images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="custom\fileuploader.ascx.resx">
+      <DependentUpon>fileuploader.ascx.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="core\lib\ckfinder\CKFinderScripts\lang\bs.json" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>65409</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,1562 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+SatLib.Base
+</name>
+</assembly>
+<members>
+<member name="T:SatLib.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:SatLib.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:SatLib.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:SatLib.My.Resources.Resources.publicWBFormScripts">
+<summary>
+  Looks up a localized string similar to // javascript for custom WB forms
+$(document).ready(function() {
+	sl_wbf_initAssets();
+	sl_wbf_initEvents();
+});
+
+// load assets for the form 
+function sl_wbf_initAssets() {
+	var styles = $(&apos;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/satlib/h/resource/publicWBFormStyles.css.ashx&quot; /&gt;&apos;);
+	$(&apos;head&apos;).append(styles);
+}
+
+// configure events for functionality
+function sl_wbf_initEvents() {
+
+}.
+</summary>
+</member>
+<member name="P:SatLib.My.Resources.Resources.publicWBFormStyles">
+<summary>
+  Looks up a localized string similar to .wb-editor-form {
+    padding: 8px;
+    margin: 10px;
+    background: #eee;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 1px 1px #fff inset, 0 -1px 0px #ccc inset;
+}
+.wb-editor-form-title, .wb-editor-form-content {
+    box-shadow: 0 1px 1px #ddd inset;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background: #fff;
+}
+.wb-editor-form-title {
+    margin: 0 0 8px;
+    padding: 5px 8px;
+}
+.wb-editor-form-content {
+    padding: 0 8px;
+}
+.
+</summary>
+</member>
+<member name="P:SatLib.My.Resources.Resources.SatPreviewPageTemplate">
+<summary>
+  Looks up a localized string similar to &lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+    &lt;title&gt;WebBack Preview&lt;/title&gt;
+    &lt;style type=&apos;text/css&apos;&gt;
+        html {padding:0;margin:0;}
+        body {padding:0;margin:0;position:relative;font-family:Arial,Helvetica,Sans-serif;font-size:14px;line-height:24px;background-color:#444;color:#fff;overflow:hidden;}
+        #prevnav {width:auto;padding:8px;margin:0;position:relative;text-align:left;font-size:14px;line-height:32px;background-color:#4fa2c2;colo [rest of string was truncated]&quot;;.
+</summary>
+</member>
+<member name="P:SatLib.My.Resources.Resources.SatSyndicationAmpTemplate">
+<summary>
+  Looks up a localized string similar to &lt;!doctype html&gt;
+&lt;html amp lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;[$doctitle$]&lt;/title&gt;
+    &lt;link rel=&quot;canonical&quot; href=&quot;[$canonical$]&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,minimum-scale=1,initial-scale=1&quot;&gt;
+    &lt;style amp-custom&gt;
+		/* core styles */
+		body {padding:0;margin:0;font-family:Droid Sans,Helvetica,Arial,sans-serif;font-size:16px;line-height:24px;background-color:#eee;}
+
+		h1,h2,h3,h4,h5,h6 {display:block;padding:0;margin:0 0 24px 0;font-weight:bold;} [rest of string was truncated]&quot;;.
+</summary>
+</member>
+<member name="T:SatLib.SatExtra.SatFeed">
+ <summary>
+ Represents a single RSS Feed Channel and allows for simplified population and output.
+ Data stored in Items as a DataTable {ID, Title, Description, PubDate, Link(optional)}
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatFeed.Title">
+ <summary>
+ Feed Channel Title
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatFeed.Link">
+ <summary>
+ Feed Channel Link - an absolute URL to the webpage associated with this feed
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatFeed.Description">
+ <summary>
+ Feed Channel Description - a brief plain-text description of this feed
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatFeed.Language">
+ <summary>
+ Feed Language code, default is "en-us"
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatFeed.Items">
+ <summary>
+ Feed Items, a DataTable with columns {ID, Title, Description, PubDate, Link(optional)}
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatFeed.ExtraItemFields">
+ <summary>
+ Mapping of per-item extra fields to output, with data pulled from the "Items" DataTable. Format is {column name : output tag}
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatFeed.OptionUrlBase">
+ <summary>
+ Url Base for Rewriter links, used to generate URL if an item's "Link" field is blank. Ex: "http://www.site.com/"
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatFeed.#ctor(System.String,System.String,System.String,System.Data.DataTable)">
+ <summary>
+ Create a new SatFeed with the specified parameters.
+ </summary>
+ <param name="strTitle">Feed Title (HTML will be stripped)</param>
+ <param name="strDescription">Feed Description (HTML will be stripped)</param>
+ <param name="strLink">Absolute URL to webpage associated with this Feed</param>
+ <param name="dtItems">Item data, columns {ID, Title, Description, PubDate}. Optional "Link" column will be used instead of auto-gen SatRewriter link if included.</param>
+</member>
+<member name="M:SatLib.SatExtra.SatFeed.GetXmlAtom20">
+ <summary>
+ Generate the full Atom 2.0 XML output for this SatFeed with default options (20 items, strip HTML, 500 char description length, local time)
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatFeed.GetXmlAtom20(System.Int32,System.String,System.Int32,System.Boolean)">
+ <summary>
+ Generate the full Atom 2.0 XML output for this SatFeed
+ </summary>
+ <param name="maxItems">Maximum items to be included in feed, -1 for unlimited</param>
+ <param name="boolStripHtmlFromDescriptions">Should HTML be stripped from descriptions?</param>
+ <param name="maxDescriptionLength">Length limit for item description, -1 for unlimited. Any positive value will force HTML stripping.</param>
+ <param name="boolAssumeLocalTime">Assume dates are expressed in local time rather than UTC time</param>
+</member>
+<member name="M:SatLib.SatExtra.SatFeed.SendXmlResponse(System.String)">
+ <summary>
+ Send the given string as an XML response to the visitor
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatFeed.FormatDateTimeRFC822(System.DateTimeOffset)">
+ <summary>
+ Format a DateTimeOffset using Microsoft's approach to RFC 822 support for feeds
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatFeed.FormatPlainTextForRSS(System.Object)">
+ <summary>
+ Format a given object as a safe plain-text (no HTML or extended ASCII) string
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatFeed._stripHashtagLinks(System.Object)">
+ <summary>
+ Given some HTML content, remove links pointing to hashtag destinations, such as "#target". 
+ The entire A tag is not removed, just the href attribute is stripped.
+ </summary>
+ <param name="objInput">HTML input content</param>
+</member>
+<member name="M:SatLib.SatExtra.SatFeed._stripNonAsciiChars(System.Object)">
+ <summary>
+ String all non-ASCII chars from content (to prevent encoding errors)
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatPreviewPage.CheckAndWrapPreviewPage">
+ <summary>
+ Check for a preview request, and if we find one, construct a wrapper for our page and end the request!
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatPreviewPage.IsResponsivePreviewEnabled">
+ <summary>
+ Returns true if the responsive preview is configured to be active
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatPreviewPage.IsWebBackPreviewRequest">
+ <summary>
+ Is current request a preview request from WebBack? This will match WebBack previews but not the nested preview page generated by SatPreviewPage.
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatHandler.SatHandlerUserForm.CheckContextAndMapHandler(System.Web.HttpContext)">
+ <summary>
+ Check the current context and optionally map handler if necessary
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatHandler.SatHandlerUserForm.CheckExistenceOfEmailTargetAndReportIfMissing">
+ <summary>
+ Check to see if we have proper web.config value for email target (EmailUserForm), fallback (EmailContact), write to trace if failed.
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatHandler.SatHandlerResource.CheckContextAndMapHandler(System.Web.HttpContext)">
+ <summary>
+ Check the current context and optionally map handler if necessary
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatSyndication.ISatSyndicationFormatter.CanRender(SatLib.SatExtra.SatSyndication.SatSyndicationData)">
+ <summary>
+ Return true if the given SatSyndicationData has enough information to be rendered in this output format.
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatSyndication.ISatSyndicationFormatter.GetActivationCode">
+ <summary>
+ Return the "activation code" which indicates that this formatter should be active. Expected to be read from "satfmt" query string.
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatSyndication.ISatSyndicationFormatter.GetOutputHtml(SatLib.SatExtra.SatSyndication.SatSyndicationData)">
+ <summary>
+ Generate the full output for this item in HTML format.
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatSyndication.ISatSyndicationFormatter.InitializeForRequest(System.Web.HttpRequest)">
+ <summary>
+ Called to initialize the formatter with any special settings based on the current request.
+ </summary>
+</member>
+<member name="F:SatLib.SatExtra.SatSyndication.SatSyndicationData.DefaultPublisherName">
+ <summary>
+ Default name to be used as publisher (typically the firm name)
+ </summary>
+</member>
+<member name="F:SatLib.SatExtra.SatSyndication.SatSyndicationData.DefaultPublisherLogo">
+ <summary>
+ Default publisher logo, relative or absolute URL. Max 600x60 pixel size, recommend exact 60px height.
+ </summary>
+</member>
+<member name="F:SatLib.SatExtra.SatSyndication.SatSyndicationData.DefaultPublisherUrl">
+ <summary>
+ Default publisher homepage, absolute URL.
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatSyndication.SatSyndicationData.PublisherName">
+ <summary>
+ Name to be used as publisher (typically the firm name)
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatSyndication.SatSyndicationData.PublisherLogo">
+ <summary>
+ Publisher logo, relative or absolute URL. Max 600x60 pixel size, recommend exact 60px height.
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatSyndication.SatSyndicationData.PublisherUrl">
+ <summary>
+ Publisher homepage, absolute URL
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatSyndication.SatSyndicationData.ContentShowID">
+ <summary>
+ WebBack ShowID for this item's record in the DB, if applicable. Default: -1
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatSyndication.SatSyndicationData.ContentUrl">
+ <summary>
+ Canonical URL to the "standard view" of the published item (leave blank for auto-generation by ContentShowID).
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatSyndication.SatSyndicationData.ContentType">
+ <summary>
+ Schema.org content type for this published item.  Default "NewsArticle".
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatSyndication.SatSyndicationData.ContentTitle">
+ <summary>
+ Content Headline, acts like a title (will be capped at 110 characters)
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatSyndication.SatSyndicationData.ContentAuthorName">
+ <summary>
+ Content author (name as plaintext), leave blank and the publisher organization will be used.
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatSyndication.SatSyndicationData.ContentDateText">
+ <summary>
+ Human-readable date string representing the "date" of this item (to be shown with article content)
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatSyndication.SatSyndicationData.ContentImage">
+ <summary>
+ Content Image, relative or absolute URL. Minimum 696 pixels wide.
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatSyndication.SatSyndicationData.ContentDatePublished">
+ <summary>
+ Original publish date of the content in UTC
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatSyndication.SatSyndicationData.ContentDateModified">
+ <summary>
+ Most recent modified date of the content in UTC
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatSyndication.SatSyndicationData.ContentSummary">
+ <summary>
+ Brief description of the content (not the full body, no HTML).
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatSyndication.SatSyndicationData.ContentIntro">
+ <summary>
+ Intro HTML body of the content (comes before main body, usually for author listings or subtitle etc)
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatSyndication.SatSyndicationData.ContentBody">
+ <summary>
+ Full HTML body of the content.
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatSyndication.SatSyndicationData.ContentOutro">
+ <summary>
+ Outro HTML body of the content (comes after main body, usually for related content etc)
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatSyndication.SatSyndicationData.ExtraMetaJson">
+ <summary>
+ Extra raw text added standard schema.org values.  Should be in JSON-LD format, we automatically append this with commas to the property list.
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatSyndication.SatSyndicationData.ConvertPlainDateToMiddayUTC(System.DateTime,System.DateTime)">
+ <summary>
+ Convert a "day only" date (no time specified) into a UTC date at 12:00PM (noon)
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatSyndication.SatSyndicationData.#ctor">
+ <summary>
+ Constructor
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatSyndication.SatSyndicationData.GetOutput_SchemaOrg_JSONLD">
+ <summary>
+ Get the full schema.org output values for this SyndicationData object, in JSON-LD format.
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatSyndication.SatSyndicationData.PopulateDefaultValues(System.Data.DataRow)">
+ <summary>
+ Populate some basic fields with the given data. Attempts to pull from: ID, LastUpdated, Title, Date, Body, wbc_socialtitle, wbc_socialimage, wbc_socialdescription
+ </summary>
+</member>
+<member name="T:SatLib.SatExtra.SatSyndication.SatSyndicationImage">
+ <summary>
+ Represents an image, including all information required for storage in our SatSyndicationData
+ </summary>
+</member>
+<member name="F:SatLib.SatExtra.SatSyndication.SatSyndicationImage._inUrl">
+ <summary>
+ Originally-supplied image url
+ </summary>
+</member>
+<member name="F:SatLib.SatExtra.SatSyndication.SatSyndicationImage._pathClean">
+ <summary>
+ Local file path to the image
+ </summary>
+</member>
+<member name="F:SatLib.SatExtra.SatSyndication.SatSyndicationImage._height">
+ <summary>
+ Height of the image in pixels
+ </summary>
+</member>
+<member name="F:SatLib.SatExtra.SatSyndication.SatSyndicationImage._width">
+ <summary>
+ Width of the image in pixels
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatSyndication.SatSyndicationImage.Height">
+ <summary>
+ Height of the image in pixels
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatSyndication.SatSyndicationImage.Width">
+ <summary>
+ Width of the image in pixels
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatSyndication.SatSyndicationImage.UrlBase">
+ <summary>
+ UrlBase for the output of this image ... can be modified independently of the relative url fragments (format:  "http://site.com/")
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatSyndication.SatSyndicationImage.#ctor(System.String)">
+ <summary>
+ Create a new instance of info for this image, from the given relative URL
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatSyndication.SatSyndicationImage.IsValid">
+ <summary>
+ Is this a valid image?
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatSyndication.SatSyndicationImage.GetImageInfoString">
+ <summary>
+ Get the JSON-LD image info string for this image
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatSyndication.SatSyndicationImage.GetUrl">
+ <summary>
+ Get the URL to this image, using the configured UrlBase
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatSyndication.SatSyndicationFormatterAmp.DefaultStyleSheet">
+ <summary>
+ Default relative path to a stylesheet within this application, contents will be loaded and placed into the style tag of the output doc.
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatSyndication.SatSyndicationFormatterAmp.DefaultHeaderLogo">
+ <summary>
+ Default header logo, relative image path, will be used in output HTML and linked to company homepage
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatSyndication.SatSyndicationFormatterAmp.DefaultAnalyticsID">
+ <summary>
+ Default google analytics property ID
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatSyndication.SatSyndicationFormatterAmp.AnalyticsID">
+ <summary>
+ Google analytics property ID for this particular instance of the formatter
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatSyndication.SatSyndicationFormatterAmp.HeaderLogo">
+ <summary>
+ Header Logo for this particular formatter instance
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatSyndication.SatSyndicationFormatterAmp.StyleSheetRelativeUrl">
+ <summary>
+ Relative path to stylesheet (within the webapp), contents will be loaded and placed into the style tag of the output doc.
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatSyndication.SatSyndicationFormatterAmp.StylesText">
+ <summary>
+ "Quick" text of custom inline styles to be placed on the page.  Must be valid CSS rules for AMP or you will break this!
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatSyndication.SatSyndicationFormatterAmp.GetActivationCode">
+ <summary>
+ Get the query string activation code for this particular formatter
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatSyndication.SatSyndicationFormatterAmp.InitializeForRequest(System.Web.HttpRequest)">
+ <summary>
+ Configure this instance of the formatter based on the current request
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatSyndication.SatSyndicationFormatterAmp.CanRender(SatLib.SatExtra.SatSyndication.SatSyndicationData)">
+ <summary>
+ Can we output this item for AMP?   Currently checks only if title exists.
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatSyndication.SatSyndicationFormatterAmp.GetOutputHtml(SatLib.SatExtra.SatSyndication.SatSyndicationData)">
+ <summary>
+ Get the full AMP output HTML for the item in question.
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatSyndication.SatSyndicationFormatterAmp.GetStylesContent">
+ <summary>
+ Get the raw content of the custom styles as specified in the StyleSheetRelativeUrl property
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatSyndication.SatSyndicationFormatterAmp.RenderImageTag(SatLib.SatExtra.SatSyndication.SatSyndicationImage,System.String)">
+ <summary>
+ Render the given image as an "amp-img" HTML tag including its width and height.
+ <paramref name="layout">amp-img layout value, defaults to blank if not supplied</paramref>
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatSyndication.SatSyndicationFormatterAmp.Template_TokenReplace(System.String,System.String,System.String)">
+ <summary>
+ Perform token-replacement in the given template, format will be like [$tokenName$]
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatSyndication.SatSyndicationFormatterAmp.TransformHtmlToAMP(System.Object)">
+ <summary>
+ Attempt to sanitize the supplied HTML content to AMP-safe markup.
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatSyndication.SatSyndicationFormatterAmp.StripSingleHtmlTag(System.Object,System.String)">
+ <summary>
+ Strip a single HTML tag (case insensitive)
+ </summary>
+ <param name="html"></param>
+ <param name="tag">Tag name, e.g. "iframe"</param>
+</member>
+<member name="T:SatLib.SatExtra.SatVCard">
+ <summary>
+  Standard Saturno VCard output class ... with safe string functions for ease of use, standardization.
+ </summary>
+ <remarks>
+ Placed into Library by Brian on 01/16/2013.
+ If we add new vcard formats in the future, they should go in here once completely standardized, using a similar
+ naming convention, because we don't want to break old versions.
+ i.e. if somebody implements vcard 3.0 spec, it should go in as GetOutputVersion30()
+ </remarks>
+</member>
+<member name="P:SatLib.SatExtra.SatVCard.PersonNameFirst">
+ <summary>
+ Person's First Name
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatVCard.PersonNameMiddle">
+ <summary>
+ Person's Middle Name
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatVCard.PersonNameLast">
+ <summary>
+ Person's Last Name
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatVCard.PersonNamePrefix">
+ <summary>
+ Person's Name Prefix
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatVCard.PersonNameSuffix">
+ <summary>
+ Person's Name Suffix
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatVCard.PersonFormattedName">
+ <summary>
+ Person's Full Name Formatted
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatVCard.PersonTitle">
+ <summary>
+ Person's Title
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatVCard.PersonPhone1">
+ <summary>
+ Person's First Phone Number
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatVCard.PersonPhone2">
+ <summary>
+ Person's Second Phone Number
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatVCard.PersonPhoneCell">
+ <summary>
+ Person's Cell Phone Number
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatVCard.PersonFax1">
+ <summary>
+ Person's First Fax Phone Number
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatVCard.PersonFax2">
+ <summary>
+ Person's Second Fax Phone Number
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatVCard.PersonEmail">
+ <summary>
+ Person's Email Address 
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatVCard.PersonEmailOther">
+ <summary>
+ Person's "Other" Email Address
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatVCard.PersonNote">
+ <summary>
+ Person's Note Area in the Vcard. This is the lower right hand text in the Vcard 
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatVCard.OrgName">
+ <summary>
+ Organization's Full Name 
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatVCard.OrgURL">
+ <summary>
+ Organization's website URL 
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatVCard.OrgUrlType">
+ <summary>
+ Organization's website URL type (default "WORK", can be "WORK" or "HOME")
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatVCard.Loc1Name">
+ <summary>
+ Business Address One Location Full Name 
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatVCard.Loc1Street">
+ <summary>
+ Business Address One Street Address 
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatVCard.Loc1City">
+ <summary>
+ Business Address One Location Full Name 
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatVCard.Loc1State">
+ <summary>
+ Business Address One State Full Name 
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatVCard.Loc1Zip">
+ <summary>
+ Business Address One ZipCode 
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatVCard.Loc1Country">
+ <summary>
+ Business Address One Country Full Name 
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatVCard.Loc2Name">
+ <summary>
+ Business Address Two Full Name 
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatVCard.Loc2Type">
+ <summary>
+ Address two "TYPE" for vcard  (optional) takes Vcard ADR types in singular or comma delimited (dom,intl,postal,parcel,home,work,pref)
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatVCard.Loc2Street">
+ <summary>
+ Business Address Two Street Address 
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatVCard.Loc2City">
+ <summary>
+ Business Address Two City Full Name 
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatVCard.Loc2State">
+ <summary>
+ Business Address Two State 
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatVCard.Loc2Zip">
+ <summary>
+ Business Address Two Zip Code/ Postal Code 
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatVCard.Loc2Country">
+ <summary>
+ Business Address Two Country Full Name 
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatVCard.ImagePath">
+ <summary>
+ NOTE: MOST BE THE FULLY MAPPED PATH - Use Server.MapPath on the full path and use that value. -
+ EXAMPLE: Server.MapPath("/Images/bios/1235496.jpg")
+ This is an Image Option for Outlook and other V Card reading devices. The path must be the full path and 
+ not just the image referance stored in the db itself.
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatVCard.LocMicrosoftDefaultAddressIndex">
+ <summary>
+ Tells Outlook which address in the addresses found is the default address. Only used by outlook.
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatVCard.CustomVCardExtras">
+ <summary>
+ Any content stored here will be appended at the end of the vcard output before the "END:VCARD" line. Use this for any custom additions not supported by the base vcard.
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatVCard.SendHttpResponse(System.String,System.String,System.String)">
+ <summary>
+ Call this function externally to send back a complete HTTP response with a vcard download.  Pass in the output you got from the vcard object itself.
+ </summary>
+ <param name="strCardContent">Full vcard string output, generated from a function like SatVCard.GetOutputVersion21()</param>
+ <param name="strOutputFileName">Default filename for this vcard, will be shown in-browser to the client</param>
+ <param name="strContentEncoding">Encoding for this HTTP transmission, should almost always be SatVCard.ENCODING_DEFAULT</param>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatExtra.SatVCard.GetEncodedImageStringForVCard(System.String)">
+ <summary>
+ Given the path to an image file (local only, no network URLs), return an encoded string suitable for use in vCard output.
+ </summary>
+ <param name="strPathToImage"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatExtra.SatVCard.GetLineWrappedStringForVCard(System.String)">
+ <summary>
+ Convert the given long string into a vCard-safe string. Lines will be wrapped after 73 characters according to the vCard spec.
+ </summary>
+ <param name="input"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatExtra.SatVCard.GetOutputVersion21">
+ <summary>
+ Get Output Version 2.1, returns the V Card as a string with all of the correct Markup 
+ for the V Card format. Call this on the instantiated class after the values have been assigned
+ </summary>
+ <returns>String of text that is formated as a Vcard</returns>
+ <remarks>
+ Last worked on and commented by Tyler Wall, Originally built by Brian Babey
+ </remarks>
+</member>
+<member name="M:SatLib.SatExtra.SatVCard.GetOutputVersion30">
+ <summary>
+ Get output version 3.0 (recommended for tablet/mobile), returns VCard as string with all markup. 
+ Call this on the instantiated class after setting properties.
+ </summary>
+ <returns>String of text that is formated as a Vcard</returns>
+ <remarks>
+ Updated for ipad/iphone devices which will not import below version 3.0
+ </remarks>
+</member>
+<member name="M:SatLib.SatExtra.SiteHealth.SendSimpleErrorEmail(System.String,System.String)">
+ <summary>
+ Send an error email with a named "type" of error, and the text of the error. This should go to the "ErrorEmail" recipient from web.config.
+ </summary>
+ <remarks>Previously in LibTools - Updated to use newer .NET mailing components (Brian 02/14/2011)</remarks>
+</member>
+<member name="T:SatLib.SatFrontEnd.SatMeta">
+ <summary>
+ Integrated SatPage meta tag info, has properties for WebBack-supported meta values. 
+ Add your own random tags/strings using "ExtraStrings", check SatMetaOptions class for further tweaks.
+ </summary>
+</member>
+<member name="F:SatLib.SatFrontEnd.SatMeta.GlobalFallbackSocialTitle">
+ <summary>
+ Global fallback value used in this application if social title is blank (set in Global::Application_Start if necessary)
+ </summary>
+</member>
+<member name="F:SatLib.SatFrontEnd.SatMeta.GlobalFallbackSocialDescription">
+ <summary>
+ Global fallback value used in this application if social description is blank (set in Global::Application_Start if necessary)
+ </summary>
+</member>
+<member name="F:SatLib.SatFrontEnd.SatMeta.GlobalFallbackSocialImage">
+ <summary>
+ Global fallback value used in this application if social image is blank (set in Global::Application_Start if necessary)
+ </summary>
+</member>
+<member name="F:SatLib.SatFrontEnd.SatMeta.GlobalDomainOverride">
+ <summary>
+ Global domain to use for creating links and images, if different than SatOptions.UrlBaseExternal (ex: "http://www.site.com/").
+ Set in Global::Application_Start if necessary.
+ </summary>
+</member>
+<member name="F:SatLib.SatFrontEnd.SatMeta.GlobalExtraStrings">
+ <summary>
+ Global collection of strings to be added to the end of the SatMeta when it is rendered as a tag
+ </summary>
+</member>
+<member name="P:SatLib.SatFrontEnd.SatMeta.DomainOverrride">
+ <summary>
+ Domain to use for creating links and images, if different than SatOptions.UrlBaseExternal (ex: "http://www.site.com/").
+ This property must be set on a PER-PAGE basis.
+ </summary>
+</member>
+<member name="P:SatLib.SatFrontEnd.SatMeta.OGType">
+ <summary>
+ Value used for "og:type" meta tag, defaults to "website"
+ </summary>
+</member>
+<member name="P:SatLib.SatFrontEnd.SatMeta.ExtraStrings">
+ <summary>
+ Extra string contents to be appended to the bottom of the SatMeta when it is rendered as a tag
+ </summary>
+</member>
+<member name="P:SatLib.SatFrontEnd.SatMeta.SocialImage">
+ <summary>
+ Social image for this instance of SatMeta, in the format of an absolute URL.
+ </summary>
+</member>
+<member name="P:SatLib.SatFrontEnd.SatMeta.SharingDomain">
+ <summary>
+ Get the domain for any share links/images on this site. Uses cascading fallback to check DomainOverride, GlobalDomainOverride, then SatOptions.UrlBaseExternal.
+ Looks like "http://www.site.com" ... NO TRAILING SLASH!
+ </summary>
+</member>
+<member name="M:SatLib.SatFrontEnd.SatMeta.SatMeta">
+ <summary>
+ Constructor for a new blank SatMeta object
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatFrontEnd.SatMeta.SatMeta(System.Data.DataRow)">
+ <summary>
+ Constructor! Initialize this SatMeta object with values based on the supplied ShowData
+ </summary>
+ <param name="rowData">A DataRow with values containing meta content</param>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatFrontEnd.SatMeta.Populate(System.Data.DataRow)">
+ <summary>
+ Populate values in this object based on the supplied DataRow (MetaKeywords, MetaTitle, MetaDescription, SocialTitle, SocialDescription, SocialImage)
+ </summary>
+ <param name="rowData"></param>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatFrontEnd.SatMeta.ToString">
+ <summary>
+ Get a string representation of this SatMeta information, using tags
+ </summary>
+</member>
+<member name="M:SatLib.SatFrontEnd.SatMeta._getSafeColumnString(System.Data.DataRow,System.String)">
+ <summary>
+ Get the string value in the given datarow[column]. Returns empty string if any null or missing column is found.
+ </summary>
+ <param name="dr"></param>
+ <param name="col"></param>
+</member>
+<member name="M:SatLib.SatFrontEnd.SatMeta.GetFormattedMetaTag(System.Object,System.Object,System.Object)">
+ <summary>
+ Get a usable meta tag string, including only non-blank value attributes (name, property, content). Tag will be blank if no real values were supplied.
+ </summary>
+ <param name="nameValue"></param>
+ <param name="propertyValue"></param>
+ <param name="contentValue"></param>
+</member>
+<member name="M:SatLib.SatFrontEnd.SatMeta.GetSharingDomain">
+ <summary>
+ Get the domain for any share links/images on this site. Uses cascading fallback to check GlobalDomainOverride, then SatOptions.UrlBaseExternal. Can NOT use DomainOverride property.
+ Looks like "http://www.site.com" ... NO TRAILING SLASH!
+ </summary>
+</member>
+<member name="P:SatLib.SatFrontEnd.SatControl.ShowID">
+ <summary>
+ Get the ShowID configured by the current SatPage object. Note the page life cycle events to make sure you access this value after any mods made by the SatPage.
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:SatLib.SatFrontEnd.SatControl.MySatPage">
+ <summary>
+ Get a SatPage-typed reference to the current Page object.
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatFrontEnd.SatControl.AutoHideRepeater(System.Web.UI.WebControls.Repeater,System.Object)">
+ <summary>
+ Convenience call for SatUtil.AutoHideRepeater()
+ Bind the supplied data source to a repeater, then hide the repeater if it is empty after binding.
+ </summary>
+ <param name="repeaterObj">The repeater</param>
+ <param name="dataSrc">Data source, this can be any valid type for DataBinding</param>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatFrontEnd.SatControl.AutoHideString(System.String,System.Object)">
+ <summary>
+ Convenience call for SatUtil.AutoHideString()
+ Perform a String.Format operation using the supplied parameters, but hide the entire string if the value is null/empty.
+ </summary>
+ <param name="strFormat">Formatting template</param>
+ <param name="obj">Value to be formatted</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatFrontEnd.SatControl.BuildURL(System.Object)">
+ <summary>
+ Convenience call for MySatPage.BuildURL()
+ Return the appropriate link URL for a WebBack object with the given ID.  If no Rewriter URLs are found, the ID itself will be returned.
+ </summary>
+ <param name="id"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatFrontEnd.SatControl.Coalesce(System.Object,System.Object[])">
+ <summary>
+ Convenience call for SatUtil.Coalesce()
+ Returns the first non-empty value from the list of parameters (unlimited number of params)
+ </summary>
+ <param name="mainObject">First priority object (required)</param>
+ <param name="fallbackObjects">Fallback objects, in order of priority</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:SatLib.SatFrontEnd.SatMaster">
+ <summary>
+ Foundational class for a master page of a Saturno WebBack site. 
+ Critical components: ShowID, MySatPage, AddSatMasterMetaControls(), GetSatMasterBodyClasses(), GetSatMasterPageTitle().
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:SatLib.SatFrontEnd.SatMaster.ShowID">
+ <summary>
+ Get the ShowID configured by the current SatPage object. Note the page life cycle events to make sure you access this value after any mods made by the SatPage.
+ </summary>
+ <value></value>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="P:SatLib.SatFrontEnd.SatMaster.MySatPage">
+ <summary>
+ Get a SatPage-typed reference to the current Page object.
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatFrontEnd.SatMaster.AddSatMasterMetaControls">
+ <summary>
+ Dynamically adds meta controls to the SatMaster head tag. Includes only the WebBack tags (title, keywords, description).
+ Should be called only after the SatPage has already configured the ShowData for this page.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatFrontEnd.SatMaster.GetSatMasterBodyClasses">
+ <summary>
+ Get a string of CSS class names (for "body" tag) from the standard SatMaster/SatPage hierarchy.
+ Includes: (filename)_page, ActiveLayout, ActiveSection.CSSClass, ActiveSubSection.CSSClass
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatFrontEnd.SatMaster.GetSatMasterPageTitle(System.String,System.String,System.String,System.Boolean)">
+ <summary>
+ Get a usable page title by wrapping the SatPage.PageTitle value with an optional prefix and suffix.
+ Should be called only after the SatPage configures the ShowData, typically *after* Page_Load.
+ END RESULT: Prefix [Sep?] Title [Sep?] Suffix
+ </summary>
+ <param name="strPrefix"></param>
+ <param name="strSeparator">Optional separator string, will be automatically padded with a space when used</param>
+ <param name="strSuffix"></param>
+ <param name="allowMetaTitleOverride">Allow a non-empty MetaTitle to override the configured SatPage.PageTitle value</param>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatFrontEnd.SatMaster.AutoHideRepeater(System.Web.UI.WebControls.Repeater,System.Object)">
+ <summary>
+ Convenience call for SatUtil.AutoHideRepeater()
+ Bind the supplied data source to a repeater, then hide the repeater if it is empty after binding.
+ </summary>
+ <param name="repeaterObj">The repeater</param>
+ <param name="dataSrc">Data source, this can be any valid type for DataBinding</param>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatFrontEnd.SatMaster.AutoHideString(System.String,System.Object)">
+ <summary>
+ Convenience call for SatUtil.AutoHideString()
+ Perform a String.Format operation using the supplied parameters, but hide the entire string if the value is null/empty.
+ </summary>
+ <param name="strFormat">Formatting template</param>
+ <param name="obj">Value to be formatted</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatFrontEnd.SatMaster.BuildURL(System.Object)">
+ <summary>
+ Convenience call for MySatPage.BuildURL()
+ Return the appropriate link URL for a WebBack object with the given ID.  If no Rewriter URLs are found, the ID itself will be returned.
+ </summary>
+ <param name="id"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatFrontEnd.SatMaster.Coalesce(System.Object,System.Object[])">
+ <summary>
+ Convenience call for SatUtil.Coalesce()
+ Returns the first non-empty value from the list of parameters (unlimited number of params)
+ </summary>
+ <param name="mainObject">First priority object (required)</param>
+ <param name="fallbackObjects">Fallback objects, in order of priority</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:SatLib.SatFrontEnd.SatPage">
+ <summary>
+ Foundational class for a page of a WebBack-powered site. 
+ Critical components: ShowID, SetShowData(), ShowDataItem(), PageTitle, ActiveSection, ActiveLayout, Meta.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:SatLib.SatFrontEnd.SatPage.ShowID">
+ <summary>
+ The WebBack ID of the main record being displayed on this page, read during PreInit from the query string parameter "show". 
+ Please set manually (as early as possible in page life cycle) if the ID is not present in query string. 
+ When displaying a child record, set this to the ID of the parent record.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:SatLib.SatFrontEnd.SatPage.ShowData">
+ <summary>
+ A storage variable for the main WebBack data loaded for this page. This should not be populated directly, but via the "SetShowData()" function.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:SatLib.SatFrontEnd.SatPage.PageTitle">
+ <summary>
+ The unadorned title of this page. Should NOT include any addons such as the firm name or separators. Will automatically be populated by calls to SetShowData().
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:SatLib.SatFrontEnd.SatPage.ActiveLayout">
+ <summary>
+ A string that will be placed as a CSS class in the body tag, it should be used for identifying any shared layout overrides used by this page.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:SatLib.SatFrontEnd.SatPage.ActiveSection">
+ <summary>
+ The highest-level SatSection the current page belongs to.  Typically these are hardcoded in your CustomSite class and accessed by reference.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:SatLib.SatFrontEnd.SatPage.ActiveSubSection">
+ <summary>
+ The secondary SatSection the current page belongs to.  Not always used, sometimes declared within the page on a one-off bases for special nesting needs.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:SatLib.SatFrontEnd.SatPage.Meta">
+ <summary>
+ The meta data for this current page.  Will be auto-populated with SetShowData, and can be manipulated after that.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:SatLib.SatFrontEnd.SatPage.SyndicationData">
+ <summary>
+ The syndication data for this current page.  You will need to populate manually if you want to support SatSyndication.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:SatLib.SatFrontEnd.SatPage._extras">
+ <summary>
+ Collection of extra data ... store values/objects here and then access them from any reference to SatPage
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatFrontEnd.SatPage.OnPreInit(System.EventArgs)">
+ <summary>
+ Override of standard OnPreInit function. For SatPage, the important extra step is reading the ShowID from the query string.
+ </summary>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatFrontEnd.SatPage.OnShowDataLoaded">
+ <summary>
+ Function to be called after the show data has been loaded for this page - override this method if you need to perform operations here.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatFrontEnd.SatPage.SatPage_PreRender">
+ <summary>
+ Simple function to handle tasks that need to happen on PreRender at the SatPage level
+ </summary>
+</member>
+<member name="M:SatLib.SatFrontEnd.SatPage.ExecuteSyndicationOutput(System.Web.HttpRequest,System.Web.UI.Page,SatLib.SatExtra.SatSyndication.SatSyndicationData)">
+ <summary>
+ Execute the output processing for SatSyndicationData, pulling all formatters in and managing
+ </summary>
+</member>
+<member name="M:SatLib.SatFrontEnd.SatPage.BuildURL(System.Object)">
+ <summary>
+ Convenience function for SatWB.BuildURL()
+ Return the appropriate link URL for a WebBack object with the given ID.  If no Rewriter URLs are found, the ID itself will be returned.
+ </summary>
+ <param name="id"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatFrontEnd.SatPage.GetExtra(System.Object)">
+ <summary>
+ Get an item from the "Extras" collection in this SatPage. Returns an empty string if the key was not defined.
+ </summary>
+</member>
+<member name="M:SatLib.SatFrontEnd.SatPage.SetExtra(System.Object,System.Object)">
+ <summary>
+ Set a key/value pair in the "Extras" collection in this SatPage.
+ </summary>
+</member>
+<member name="M:SatLib.SatFrontEnd.SatPage.SetShowData(System.Data.DataRow,System.String)">
+ <summary>
+ Store data from the given row as the "ShowData" for this page. 
+ Auto-populates PageTitle using the "Title" column if possible, and sets ShowID using the "ID" column unless ShowID already has a positive value.
+ These values should be accessed using the ShowDataItem(colName) function of SatPage.
+ </summary>
+ <param name="objRow">DataRow containing the data for this record (can be null or empty)</param>
+ <param name="strNotFoundURL">Visitor will get a Response.Redirect to this URL if the ShowData is null or empty (pass an empty string to disable this behavior)</param>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatFrontEnd.SatPage.SetShowData(System.Data.DataTable,System.String)">
+ <summary>
+ Store data from the first row of the given table as the "ShowData" for this page. Auto-populates PageTitle using the "Title" column if found. 
+ These values should be accessed using the ShowDataItem(colName) function of SatPage.
+ </summary>
+ <param name="objTable">DataTable containing the data for this record in its first row (can be null or empty)</param>
+ <param name="strNotFoundURL">Visitor will get a Response.Redirect to this URL if the ShowData is null or empty (pass an empty string to disable this behavior)</param>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatFrontEnd.SatPage.ShowDataItem(System.String)">
+ <summary>
+ Get a value from this page's ShowData, guaranteed not to be NULL.  Any NULL value will be returned as an empty string.
+ </summary>
+ <param name="columnName"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatFrontEnd.SatPage.AutoHideRepeater(System.Web.UI.WebControls.Repeater,System.Object)">
+ <summary>
+ Convenience call for SatUtil.AutoHideRepeater()
+ Bind the supplied data source to a repeater, then hide the repeater if it is empty after binding.
+ </summary>
+ <param name="repeaterObj">The repeater</param>
+ <param name="dataSrc">Data source, this can be any valid type for DataBinding</param>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatFrontEnd.SatPage.AutoHideString(System.String,System.Object)">
+ <summary>
+ Convenience call for SatUtils.AutoHideString()
+ Perform a String.Format operation using the supplied parameters, but hide the entire string if the value is null/empty.
+ </summary>
+ <param name="strFormat">Formatting template</param>
+ <param name="obj">Value to be formatted</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatFrontEnd.SatPage.Coalesce(System.Object,System.Object[])">
+ <summary>
+ Convenience call for SatUtils.Coalesce()
+ Returns the first non-empty value from the list of parameters (unlimited number of params)
+ </summary>
+ <param name="mainObject">First priority object (required)</param>
+ <param name="fallbackObjects">Fallback objects, in order of priority</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:SatLib.SatFrontEnd.SatSection">
+ <summary>
+ A logical "section" of a webback site, typically used for menu highlights, thematic separation, content grouping, or breadcrumbs.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:SatLib.SatFrontEnd.SatSection.Title">
+ <summary>
+ Title of the section
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:SatLib.SatFrontEnd.SatSection.URL">
+ <summary>
+ URL of the landing/home page for this section
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:SatLib.SatFrontEnd.SatSection.CSSClass">
+ <summary>
+ CSS class that should be applied to the body tag for all pages in this section
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:SatLib.SatFrontEnd.SatSection.IsActiveSection">
+ <summary>
+ Is this section set as the active section on the current SatPage?
+ </summary>
+</member>
+<member name="P:SatLib.SatFrontEnd.SatSection.IsActiveSubSection">
+ <summary>
+ Is this section set as the active sub section on the current SatPage?
+ </summary>
+</member>
+<member name="M:SatLib.SatFrontEnd.SatSection.#ctor(System.String,System.String,System.String)">
+ <summary>
+ Define a new logical section using the specified Title, Home URL, and CSS class.
+ </summary>
+ <param name="theTitle"></param>
+ <param name="theURL"></param>
+ <param name="theCSSClass"></param>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatFrontEnd.SatSection.Equals(System.Object)">
+ <summary>
+ Checks if this section's fields matches those of another section.
+ </summary>
+ <param name="otherSection">Section object to be compared</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:SatLib.SatOptions">
+ <summary>
+ Collection of site-wide options for SatLib-related behaviors, set values in Global / Application_Start if you wish to use
+ </summary>
+</member>
+<member name="F:SatLib.SatOptions._domainRedirects">
+ <summary>
+ List of all explicit domain redirects, populated with AddDomainRedirect()
+ </summary>
+</member>
+<member name="F:SatLib.SatOptions._domainRequireWWW">
+ <summary>
+ List of all forced-WWW domains, populated with AddDomainRequireWWW()
+ </summary>
+</member>
+<member name="M:SatLib.SatOptions.AddDomainRedirect(System.String,System.String)">
+ <summary>
+ Configure a domain for which page requests will be redirected to another domain. All matches are explicit including subdomains.
+ </summary>
+ <param name="sourceDomain">Original requested domain (ex: "healthlawandassociates.com")</param>
+ <param name="destDomain">Domain where user will be sent (ex: "www.healthlaw.com")</param>
+</member>
+<member name="M:SatLib.SatOptions.AddDomainRequireWWW(System.String)">
+ <summary>
+ Configure a domain that should only serve pages with a "www." subdomain to be accessed. If another (or blank) subdomain of this
+ domain is requested, the page will be redirected to the "www." version.
+ </summary>
+ <param name="domain">Pass the domain with no prefix, ex: "site.com".</param>
+</member>
+<member name="P:SatLib.SatOptions.AllowPrivateViewingOnCurrentRequest">
+ <summary>
+ Should private viewing (unrestricted publish status) be allowed for this request?
+ </summary>
+</member>
+<member name="P:SatLib.SatOptions.AutoAppendFirmInformationToCustomMetaTitle">
+ <summary>
+ Should we automatically append firm information when the user defines a custom meta title?  Default: TRUE
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatOptions.ExecuteDomainRedirects(System.Web.HttpRequest,System.Web.HttpResponse)">
+ <summary>
+ Execute any redirection rules configured within SatOptions.  NOTE: THIS SHOULD NOT TYPICALLY BE CALLED OUTSIDE THE LIBRARY.
+ </summary>
+ <param name="req">Request to consider for redirection activity</param>
+ <param name="resp">Response for our output behavior</param>
+</member>
+<member name="P:SatLib.SatOptions.SatSyndicationFormatters">
+ <summary>
+ List of ISatSyndicationFormatter objects that will be applied in this application, defaults to SatSyndicationFormatterAmp
+ </summary>
+</member>
+<member name="P:SatLib.SatOptions.LinkCheckerRefreshMinutes">
+ <summary>
+ How many minutes will we wait between runs of the Link Checker?  Default 15, use -1 to disable
+ </summary>
+</member>
+<member name="P:SatLib.SatOptions.MobileFolder">
+ <summary>
+ Undecorated subfolder name for a standalone mobile site, if this project has one. Default: "mobile"
+ </summary>
+</member>
+<member name="P:SatLib.SatOptions.TaskCycleMinutes">
+ <summary>
+ How many minutes will we wait between runs of the WebBack Tasks?  Default 10, use -1 to disable
+ </summary>
+</member>
+<member name="P:SatLib.SatOptions.UseResponsivePreview">
+ <summary>
+ Should responsive preview mode be used for this site?
+ </summary>
+</member>
+<member name="P:SatLib.SatOptions.UrlBaseExternal">
+ <summary>
+ Base Url used for "external" access of the site. Set with web.config key "UrlBaseExternal". Format: "http://www.site.com/"
+ </summary>
+</member>
+<member name="P:SatLib.SatOptions.UrlBaseInternal">
+ <summary>
+ Base Url used for "internal" access of the site. Set with web.config key "UrlBaseInternal", defaults to same as UrlBaseExternal. Format: "http://www.site.com/"
+ </summary>
+</member>
+<member name="P:SatLib.SatOptions.WebBackFolder">
+ <summary>
+ Undecorated subfolder name where WebBack is located. Default: "admin"
+ </summary>
+</member>
+<member name="T:SatLib.SatHttp">
+ <summary>
+ Class containing Saturno utility functions related to the HTTP request/response cycle.
+ </summary>
+ <remarks>Managed by the library curator. Do not edit without permission.</remarks>
+</member>
+<member name="M:SatLib.SatHttp.Error403">
+ <summary>
+ Send an error code for HTTP 403 Forbidden, and end response.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatHttp.Error500">
+ <summary>
+ Send an error code for HTTP 500 Internal Server Error, and end response.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatHttp.GetSimpleHostName">
+ <summary>
+ Get a simple short representation of the requesting hostname, removing the "www." prefix if found.
+ </summary>
+</member>
+<member name="M:SatLib.SatHttp.GetURLContentsAsString(System.String,System.Int32@)">
+ <summary>
+ Request the contents of a URL and return the response as a string. Does not throw any exceptions.
+ </summary>
+ <param name="url">URL to request</param>
+ <param name="errorStatus">Return param which will hold any HTTP error code if something breaks</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatHttp.Redirect301(System.String)">
+ <summary>
+ Redirect the client to a new URL using a HTTP "301 Moved Permanently" status.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatHttp.SetTraceViaQueryString">
+ <summary>
+ Activate Trace mode if (t=1) is found in the query string for this request.
+ Note: session persistence will not work if called from Application_BeginRequest (try calling from Page_Init if you need session persistence).
+ </summary>
+ <remarks>Originally written by Ron</remarks>
+</member>
+<member name="M:SatLib.SatHttp.EnforceBasicAuth(System.String,System.String,System.String)">
+ <summary>
+ When placed in your Application_BeginRequest it will turn on Basic auth login box with the given user/pass.  
+ exclude local ips so admin and hit rebuildbyid.aspx
+ For Azure ask Jabin how to find the list of local IPs for a service plan.
+ </summary>
+ <param name="user">Username (case insensitive)</param>
+ <param name="pass">Password (case insensitive)</param>
+ <param name="ignoredIPsCSV">Coma separated list of IPs that bypass the login requirement</param>
+</member>
+<member name="T:SatLib.ISatRewriterProxy">
+ <summary>
+ Rewriter Proxy Interface - implemented by a class which is able to handle standard Rewriter requests
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:SatLib.SatRewriterProxy">
+ <summary>
+ Proxy class for rewriter calls - this static class routes calls to the currently active SatRewriter proxy.
+ </summary>
+</member>
+<member name="F:SatLib.SatRewriterProxy.ActiveProxy">
+ <summary>
+ The currently active SatRewriter proxy ... SatPage, SatControl, SatMaster calls will all use this proxy by default.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatRewriterProxy.BuildURL(System.Object)">
+ <summary>
+ Return a custom URL for the given webback object ID. Will be routed to the active SatRewriter proxy.
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:SatLib.SatUtil">
+ <summary>
+ Collection of non-WebBack-specific simple utility functions that are used with high frequency when developing WebBack-based sites.
+ </summary>
+ <remarks>Managed by the library curator. Do not edit without permission.</remarks>
+</member>
+<member name="M:SatLib.SatUtil.AutoHideRepeater(System.Web.UI.WebControls.Repeater,System.Object)">
+ <summary>
+ Bind the supplied data source to a repeater, then hide the repeater if it is empty after binding.
+ </summary>
+ <param name="repeaterObj">The repeater</param>
+ <param name="dataSrc">Data source, this can be any valid type for DataBinding</param>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatUtil.AutoHideString(System.String,System.Object)">
+ <summary>
+ Perform a String.Format operation using the supplied parameters, but hide the entire string if the value is null/empty.
+ </summary>
+ <param name="strFormat">Formatting template</param>
+ <param name="obj">Value to be formatted</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatUtil.Coalesce(System.Object,System.Object[])">
+ <summary>
+ Returns the first non-empty value from the list of parameters (unlimited number of params)
+ </summary>
+ <param name="mainObject">First priority object (required)</param>
+ <param name="fallbackObjects">Fallback objects, in order of priority</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatUtil.DataAssignNestedRankIDs(System.Data.DataTable,System.String,System.Int32)">
+ <summary>
+ Given a table of rank-nested data, create new columns "_nestID, _nestParent, _nestRank" and populate with appropriate rank data for nesting lookups. 
+ Uses a 1/100/10000 base system for increasing rank depth.
+ </summary>
+ <param name="dt">DataTable with association data</param>
+ <param name="strRankCol">DataColumn name holding raw rank values (typically "rank")</param>
+ <param name="iNestLevels">Max ranking levels (1=no children, 2=single child, 3=double child)</param>
+</member>
+<member name="M:SatLib.SatUtil.DataClearNullsFromStringColumns(System.Data.DataTable)">
+ <summary>
+ Returns a new copy of the DataTable where all NULL values in String columns have been replaced with String.Empty.
+ </summary>
+ <param name="dt"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatUtil.DataGetRowsRandom(System.Data.DataTable,System.Int32)">
+ <summary>
+ Return a number of randomly-selected rows from the given DataTable.
+ </summary>
+ <param name="dt"></param>
+ <param name="desiredRows">Number of random rows desired</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatUtil.DataGetRowsTop(System.Data.DataTable,System.Int32)">
+ <summary>
+ Returns a new DataTable with the top N rows from the original DataTable.
+ </summary>
+ <param name="dt"></param>
+ <param name="desiredRows">Number of rows to pull</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatUtil.DataGetRowsTop(System.Data.DataView,System.Int32)">
+ <summary>
+ Returns a new DataView with the top N rows from the original DataView. The newly returned DataView has a reduced copy of the DataTable referenced by the original DataView.
+ </summary>
+ <param name="dv"></param>
+ <param name="desiredRows">Number of rows to pull</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatUtil.DataGetRowsTop(System.Data.DataTable,System.Int32,System.String)">
+ <summary>
+ Returns a new DataTable with the top N rows from the original DataTable, using the specified DataView-style "Sort" expression.
+ </summary>
+ <param name="dt"></param>
+ <param name="desiredRows">Number of rows to pull</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatUtil.FormatDateRange(System.Object,System.Object)">
+ <summary>
+ Given the start and end of a date range, format the combination into a clean human-style date range which removes duplicate day/month/year values.
+ </summary>
+ <param name="objDateStart">Start date</param>
+ <param name="objDateEnd">End date</param>
+ <returns>Cleanly-formatted date range string such as "January 2 - 5, 2014" or "January 29 - Feburary 1, 2014"</returns>
+ <remarks>If end date is empty or matches the start date, a single day will be output.</remarks>
+</member>
+<member name="M:SatLib.SatUtil.FormatFullName(System.Object,System.Object,System.Object,System.Object,System.Object)">
+ <summary>
+ Combine names into a standard output and strip extra spaces. Result: "Prefix First Middle Last, Suffix"
+ </summary>
+ <param name="prefix"></param>
+ <param name="first"></param>
+ <param name="middle"></param>
+ <param name="last"></param>
+ <param name="suffix"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatUtil.FormatPageTitle(System.String,System.String,System.String,System.String)">
+ <summary>
+ Get a usable page title by wrapping it with optional prefix/suffix and separators. Typically used to attach firm names to a simple page title.
+ END RESULT: Prefix [Sep?] Title [Sep?] Suffix
+ </summary>
+ <param name="strTitle">The undecorated title, e.g. "Our Services"</param>
+ <param name="strPrefix">Optional string to place before the title</param>
+ <param name="strSeparator">Optional separator string, automatically padded with a space when used</param>
+ <param name="strSuffix">Optional string to place after the title</param>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatUtil.FormatPhone(System.Object,System.String)">
+ <summary>
+ Attempt to perform a simple phone format operation into XXX-XXXX or XXX-XXX-XXXX, using a supplied separator.
+ </summary>
+ <param name="objInput">Input value to be parsed, typically a string</param>
+ <param name="strSeparator">String to be placed between digit groups, usually "-" or "."</param>
+ <returns>The formatted phone number string, or original string if it couldn't be parsed.</returns>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatUtil.FormatSmartString(System.Object[])">
+ <summary>
+ Assemble non-empty string fragments with a space delimiter, using "smart commas" if passed between fragments. Example: FormatSmartString("John","A.","Smith") ... FormatSmartString("Smith",",","John","A.")
+ </summary>
+ <param name="strFragments">String fragments in order, also accepts "," as a fragment to indicate comma connector</param>
+</member>
+<member name="M:SatLib.SatUtil.GetTruncatedString(System.Object,System.Int32,System.String)">
+ <summary>
+ Truncate the supplied content to a max of "charLimit" characters, appending an ending string if necessary. 
+ Strips HTML and attempts to avoid mid-word breaks, also strips final punctuation characters.
+ </summary>
+ <param name="objContent">Content to be chopped, typically a string</param>
+ <param name="charLimit">Chop length (number of characters)</param>
+ <param name="strEnding">String to be appended after truncation (e.g. "...")</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatUtil.GetSafeInteger(System.Object,System.Int32)">
+ <summary>
+ Safely parse the supplied object value into an integer.
+ </summary>
+ <param name="objInput">The input value, typically a string or object reference</param>
+ <param name="defaultValue">Fallback value to be used if the input cannot be parsed</param>
+ <returns>Integer version of the supplied input, or the defaultValue if the input could not be parsed</returns>
+ <remarks>NULLs are fine here.</remarks>
+</member>
+<member name="M:SatLib.SatUtil.GetSafeString(System.Object)">
+ <summary>
+ Safely convert the supplied object value into a string (Nulls will be replaced with "").
+ </summary>
+ <param name="objInput">The input value</param>
+ <returns>A non-null string representation of the supplied input</returns>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatUtil.GetTestHTML">
+ <summary>
+ Get a long sample of rich HTML content, used for testing body content formatting rules and styles.
+ </summary>
+</member>
+<member name="M:SatLib.SatUtil.IsEmpty(System.Object)">
+ <summary>
+ Check if the contents of an object are a null, DB NULL, or empty string. Also calls Trim().
+ </summary>
+ <param name="objInput">The input value, typically a string</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatUtil.IsSplitColumnIndex(System.Int32,System.Int32,System.Int32)">
+ <summary>
+ Call this function when rendering lists that need to be broken up into columns (typically in ItemTemplate of a Repeater). Returns True if a "splitting" delimiter is needed before the specified index.
+ </summary>
+ <param name="totalItemCount">Total number of items being rendered</param>
+ <param name="columnCount">Total number of columns desired</param>
+ <param name="index">Current item index (within the loop)</param>
+ <returns>True if a "splitting" delimiter should be rendered before the element at position "index"</returns>
+ <remarks>Use in conjunction with the IIf() function in a Repeater to output a column delimiter.</remarks>
+</member>
+<member name="M:SatLib.SatUtil.StripDiacritics(System.Object)">
+ <summary>
+ Remove diacritics from a string; accented characters are converted to the base letter (e.g. "é" -> "e")
+ </summary>
+ <param name="objInput">The input value, typically a string</param>
+ <returns>A copy of the original string with accented characters cleaned up.</returns>
+ <remarks>Reference: http://stackoverflow.com/questions/249087 </remarks>
+</member>
+<member name="M:SatLib.SatUtil.StripHTML(System.Object)">
+ <summary>
+ Remove HTML tags from the supplied content. Also converts NBSP and BR to spaces, wraps P and DIV tags with spaces, collapses whitespace areas to a single space.
+ </summary>
+ <param name="strInput">Input content, any objects provided will be converted to a string</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+</members>
+</doc>

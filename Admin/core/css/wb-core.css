@@ -1,0 +1,296 @@
+﻿/* core rules for webback styling - new rules go here for the site, or to override skin elements */
+
+/* on-page data passing */
+#wbdata {display:none!important;}
+
+/* TRACE overrides */
+.wb-trace-enabled.sidebar-wide .sidebar {min-height:0;}
+.wb-trace-enabled .page-container {min-height:1200px;}
+.wb-trace-enabled .login-wrapper {position:static;margin:50px auto;}
+.wb-trace-enabled #__asptrace {padding-top:100px;}
+
+/* londinium global theme overrides */
+img {-ms-interpolation-mode:bicubic;}
+.user-menu > a {padding:18px 0 18px 16px;}
+.user-menu h6 {margin-bottom:20px;}
+.user-menu .wb-user-profile-actions .btn {font-size:12px;}
+.page-title h1 {padding:29px 0;margin:0;font-size:32px;line-height:39px;font-weight:400;}
+.wb-globalsearch {width:200px;margin:32px 0;float:right;position:relative;z-index:8;}
+.wb-globalsearch-popup {display:none;width:540px;position:absolute;top:48px;right:0;box-shadow:1px 1px 5px #eee;}
+.wb-globalsearch-popup.in {display:block;}
+.wb-breadcrumb-clean > li:first-child > a {padding:0;background-image:none;}
+.wb-breadcrumb-clean li a {color:#999;}
+.wb-breadcrumb-clean li.active a {font-weight:700;color:#000;}
+.wb-breadcrumb-clean li i {vertical-align:top;}
+.wb-well-panelhead {border-width:0 0 1px 0;}
+.wb-well-panelnav {border-width:0px;padding-bottom:0;}
+.wb-loader {width:16px;height:16px;border:0;display:inline-block;vertical-align:middle;}
+.wb-message {padding:8px 16px;margin:0 0 10px 0;}
+.wb-message .close {color:#fff;}
+.wb-message p {margin:10px 0 0 0;}
+.wb-message p:first-child {margin:0;}
+.navigation > li > a.level-opened {background:linear-gradient(to bottom,#65b688,#47805f);}
+.panel-default .panel-heading.panel-heading-noborder {border-bottom:0px;}
+.wb-hidden {display:none!important;}
+
+.ui-datepicker-month {color:#000;}
+.ui-datepicker-year {color:#000;}
+.ui-datepicker-buttonpane {background-color:#3a4b55;background-color:#ddd;padding-left:4px;}
+.ui-datepicker-buttonpane button {display:inline-block;padding:4px 8px;margin:4px;border:1px solid #ddd;border-radius:4px;background-color:#fcfcfc;color:#444;}
+.ui-datepicker-buttonpane button:hover {border-radius:4px;border:1px solid #aaa;background-color:#eee;color:#444;}
+.ui-datepicker-buttonpane .ui-priority-primary {float:right;}
+
+.ui-timepicker-wrapper {z-index:20;}
+.ui-timepicker-list {width:118px;}
+
+
+/* londinium large-screen responsive overrides */
+@media (min-width: 768px) {
+    body {font-size:13px;}
+    .btn {font-size:13px;}
+    .navigation > li ul {font-size:13px;}
+    .panel-title-large {font-size:16px;}
+    .wb-listnav.nav-pills {float:left;}
+    .wb-listnav>li.wb-langnav {margin-left:15px;}
+    .wb-navbuttons a {font-size:13px;}
+    .wb-listcol-actions {max-width:200px;}
+    .wb-listactions {white-space:nowrap;}
+    .wb-liststatus {white-space:nowrap;}
+
+    .wb-detail-page {margin:0 225px 0 0;position:relative;}
+    .wb-detail-pagesidebar {position:absolute;width:200px;right:-225px;z-index:6;}
+    .wb-detail-pagesidebar hr {margin:15px 0;}
+    .wb-detail-pagemain {min-height:600px;max-width:800px;}
+    .wb-detail-page .form-control {font-size:13px;padding-bottom:7px;}
+    .wb-detail-tabinline-strip {padding-top:15px;}
+    
+    .wb-search {max-width:800px;}
+    .wb-search-inputcol {width:33%;float:left;font-size:12px;}
+}
+
+/* londinium small-screen responsive overrides */
+@media (max-width: 767px) {
+    .page-header .page-title h1 {font-size:24px;line-height:32px;margin:15px 0;padding:0;}
+    .page-header .page-title h3 {padding:0;margin:15px 0;}
+    .wb-globalsearch {width:100%;margin:15px 0;float:none;}
+    .wb-globalsearch-popup {display:none!important;}
+    .wb-navbuttons {float:none!important;margin:15px 0 0 0;}
+    
+    .wb-detail-pageactions .btn {display:inline-block;width:auto;margin-top:1px;margin-bottom:1px}
+    
+    .wb-upload div.wb-upload-current {min-height:0;padding-right:0;}
+    .wb-upload-current .wb-upload-current-left {min-height:0;}
+    .wb-upload-current .wb-upload-current-right {min-height:75px;position:relative;margin:15px 0;}
+}
+
+/* ============================== LIST PAGE ================================ */
+/* list page, filters */
+.wb-filterelements-init {display:none;}
+.datatable-filteradv {display:none;}
+.datatable-filteradv.active {display:block;}
+.wb-langswap {position:relative;padding:16px 0 0 14px;margin:0 14px 0 0;float:right;}
+.wb-listfilters-toggler {padding:16px 14px 0 0;margin:0;float:left;}
+.wb-listfilters {padding:0 14px;font-size:12px;}
+.wb-listfilter select[multiple] {height:125px;}
+
+/* datatable overrides */
+.wb-datatable-ajax .datatable-scroll {overflow-x:visible;}
+.wb-datatable-ajax th {border-left:1px solid #ddd;}
+.wb-datatable-ajax th:first-child {border-left:0;}
+.wb-datatable-ajax th:nth-child(2) {/*border-left:0;*/}
+.wb-datatable-ajax th:last-child {border-left:0;}
+.wb-datatable-ajax tr:hover td {cursor:pointer;background-color:#F2FCF7;}
+.panel .wb-datatable-ajax .dataTables_filter {padding-right:0;margin-right:2px;}
+.wb-datatable-ajax .dataTables_filter span {display:none;}
+.wb-datatable-ajax .dataTables_length > label > span {padding:6px 0;font-size:1em;line-height:14px;font-weight:normal;}
+.wb-datatable-ajax .dataTables_length select {margin-top:2px;}
+.wb-datatable-ajax .dataTables_info {font-size:1em;line-height:14px;padding-top:22px;}
+td.wb-listcol-snug {padding-top:2px!important;padding-bottom:2px!important;}
+td.wb-listcol-nowrap {white-space:nowrap;}
+th.wb-listcol-status {background-position:21px 50%;}
+
+/* datatable STATUS */
+tr.wb-listrow-checkout .wb-liststatus-btn .wb-liststatus-locked {display:inline-block;}
+tr.wb-listrow-checkout .wb-liststatus-btn .wb-liststatus-normal {display:none;}
+tr.wb-listrow-checkout td {color:#999;}
+.wb-liststatus-hoverzone {cursor:default;display:inline-block;margin-right:-4px;}
+.wb-liststatus-hoverzone a {cursor:default;}
+.wb-liststatus-hoverzone a.wb-liststatus-lang {cursor:pointer;}
+.wb-liststatus-btn .icon-lock3 {margin-left:3px;margin-right:-3px;}
+.wb-liststatus-btn .wb-liststatus-locked {display:none;}
+.wb-liststatus-langcode {display:inline-block;padding:1px 0 0 0;margin:2px 0 0 0;width:20px;height:18px;background-color:#E48561;color:#fff;border-radius:6px;text-align:center;}
+ul.wb-liststatus-dropdown {width:360px;left:-4px;padding-bottom:1px;margin-top:3px;background-color:#F5FBFD;border-color:#3CA2BB;color:#426A7E;box-shadow:1px 1px 5px #aaa;}
+ul.wb-liststatus-dropdown>li {padding:8px 8px 8px 108px;border-bottom:1px solid #bcd;position:relative;}
+ul.wb-liststatus-dropdown>li:first-child {background-color:#3CA2BB;color:#fff;}
+ul.wb-liststatus-dropdown>li:last-child {border-bottom:0px;}
+ul.wb-liststatus-dropdown>li:before {border-bottom-color:#3CA2BB!important;}
+ul.wb-liststatus-dropdown>li:after {border-bottom-color:#3CA2BB!important;}
+.wb-liststatus-dropdown label {width:100px;padding:8px 0 0 8px;margin:0;position:absolute;left:0;top:0px;}
+
+/* datatable ACTIONS */
+.wb-listcol-actions {text-align:right;}
+.wb-listcol-actions .wb-listactions a {opacity:.05;}
+.wb-datatable-ajax tr:hover .wb-listactions a {opacity:1.0;}
+.wb-listactions a.wb-listaction-edit {display:none;}
+.wb-listactions .wb-listaction-preview {display:none;}
+.wb-listrow-checkout .wb-listaction-preview {display:inline-block;}
+.wb-archive-actions {white-space:nowrap;}
+.wb-listactions-rank {display:inline-block;padding:0 0 0 8px;margin:0 0 0 5px;border-left:1px solid #ddd;}
+.wb-listactions-rank a {opacity:1.0!important;}
+
+/* ============================== DETAIL PAGE ================================ */
+.wb-checkbox-text {font-weight:600;}
+.wb-detail-pagemain .form-group {padding-left:15px;padding-right:15px;margin-left:-15px;margin-right:-15px;position:relative;z-index:5;}
+.wb-detail-pagemain .form-group-separator {padding-top:20px;border-top:6px solid #ddd;}
+.wb-detail-valsummary .label {display:inline-block;margin:0 0 10px 0;}
+.wb-detail-valsummary ul {display:none;}
+.wb-detail-page .note-delete {color:#d65c4f!important;}
+.wb-detail-page .wb-detail-btn-discard {border-color:#d65c4f;}
+
+.wb-subrecs ul.list-group {border-top:1px solid #ddd;}
+.wb-subrecs li.list-group-item:last-child {border-bottom:0;}
+body.wb-confidential #detailmain {padding-right:10px;}
+
+.wb-detail-text-labelrow .btn {padding-top:0;padding-bottom:4px;font-size:12px;font-weight:normal;}
+.form-group .wb-detail-subhead {padding:4px 17px;margin:15px -15px 0 -15px;background-color:#ddd;border-bottom:0;}
+.wb-detail-field .wb-required-marker {margin:0 5px;}
+.wb-detail-field .wb-required-warning {color:#fff!important;position:relative;top:-1px;}
+.wb-detail-helptext-icon {color:#888;vertical-align:top;}
+
+.js-dynamic-preview-dummy {display:none;}
+.wb-detail-pageactions.js-dynamic-preview .wb-detail-btn-preview {margin-top:0;}
+.wb-detail-pageactions.js-dynamic-preview-disabled .wb-detail-btn-preview {display:none;}
+.wb-detail-pageactions.js-dynamic-preview-disabled .js-dynamic-preview-dummy {display:block;}
+
+.wb-detail-pubdate-header a.wb-detail-pubdate-close {padding:0 3px 0 0;margin:-2px 0 0 0;color:#ccc!important;}
+.wb-detail-puboptions {margin:15px 0 0 0;padding:15px 0 0 0;border-top:1px solid #eee;}
+.wb-detail-puboptions label {margin-bottom:0;}
+.wb-detail-puboptions label.wb-sidebarfield {display:block;position:relative;padding-left:26px;margin-bottom:15px;}
+.wb-detail-puboptions .wb-sidebarfield .checker {display:block;position:absolute;margin:0;left:0;top:0;}
+.wb-detail-pubdates .control-label {padding-top:6px;font-weight:normal;font-size:12px;color:#999;}
+.wb-detail-pubdates .row {margin-bottom:2px;}    
+
+.wb-upload label {color:#999;font-weight:normal;}
+.wb-upload-desc {padding:10px;}
+.wb-upload-desc .label {padding-top:7px;}
+.wb-upload-current {padding-right:115px;position:relative;}
+.wb-upload-current-left {min-height:90px;}
+.wb-upload-current-right {width:190px;position:absolute;right:0;top:0;}
+.wb-upload-current-buttons {width:100px;position:absolute;right:0;top:0;}
+.wb-upload-current-buttons .btn + .btn {margin-left:0;}
+.wb-upload-thumb {width:75px;height:75px;padding:0;position:relative;background-color:#fff;overflow:hidden;border:1px solid #ccc;}
+.wb-upload-thumb img {display:block;max-width:100%;border:0;padding:0;margin:0 auto;}
+.wb-imageupload .wb-upload-current {padding-right:205px;}
+
+
+/* ============================ ASSOCIATIONS ================================= */
+.wb-ass-panel .form-group {padding-left:0;padding-right:0;}
+.wb-ass-header {border-bottom:0;}
+.wb-ass-loading {padding:15px;background-color:#fcfcfc;}
+.wb-ass-body {display:none;border-top:1px solid #ddd;padding-bottom:4px;position:relative;}
+.wb-ass-panel.js-initialized .wb-ass-loading {display:none!important;}
+.wb-ass-panel.js-initialized .wb-ass-body {display:block;}
+.wb-ass-choices-controls {position:relative;}
+.wb-ass-statusecho {display:block;width:150px;height:18px;position:absolute;top:-33px;right:50px;text-align:right;font-size:13px;line-height:18px;padding:0;margin:0;}
+.wb-detail-field .wb-ass-statusecho {right:15px;top:-23px;}
+.wb-ass-existing-list {padding:0;margin:15px 0;list-style:none outside;position:relative;}
+.wb-ass-existing-item {padding:5px 40px 5px 12px;margin:2px 0;position:relative;background-color:#fafafa;border:1px solid #ddd;}
+.wb-ass-placeholder {height:32px;background-color:#ccc;}
+.wb-ass-ranked .wb-ass-existing-item {padding-left:40px;}
+.wb-ass-ranked-handle {display:none;width:30px;height:21px;padding:0px 0 0 0;position:absolute;top:4px;left:0px;text-align:center;cursor:move;border-right:1px solid #ddd;}
+.wb-ass-ranked-handle i {position:relative;top:-1px;}
+.wb-ass-ranked .wb-ass-ranked-handle {display:block;}
+.wb-ass-existing-delete {position:absolute;top:0px;right:0px;color:#D65C4F!important;}
+.wb-ass-existing-title {font-weight:600;font-size:13px;line-height:19px;}
+.wb-ass-existing-list .wb-ass-detail-field {padding:0;margin-top:5px;margin-bottom:5px;}
+.wb-ass-detail-field-label {font-weight:400;font-size:12px;}
+.wb-ass-detail-field .wb-ass-detail-field-checkbox {display:inline-block;margin:9px 0 0 0;}
+.wb-ass-detail-actions {padding-bottom:8px;}
+/* list nesting */
+.wb-ass-nesting-item {margin:2px 0;position:relative;}
+.wb-ass-nested .wb-ass-nesting-item {margin:8px 0;}
+.wb-ass-nesting-box {padding:5px 40px 5px 12px;position:relative;background-color:#fafafa;border:1px solid #ddd;}
+.wb-ass-ranked .wb-ass-nesting-box {padding-left:40px;}
+.wb-ass-nesting-item > ul {margin:8px 0;padding:0 0 0 32px;list-style:none outside;}
+.wb-ass-existing-list .mjs-nestedSortable-error {background-color:#d65c4f;}
+
+/* tweaks for inline view */
+.wb-detail-field .wb-ass-header {display:none;}
+.wb-detail-field .wb-ass-body {border-width:0;}
+.wb-detail-toggleconf i {color:#888 !important;}
+.wb-detail-toggleconf.active i {color:#D65C4F !important;}
+.wb-detail-toggleconf {width:25px;position:absolute;top:25px;right:-10px;text-align:center;}
+/* read-only mode hides some controls */
+.wb-ass-readonly .wb-ass-bodytoggle {display:none;}
+.wb-ass-readonly .wb-ass-choices-add {display:none;}
+.wb-ass-readonly .wb-ass-existing-delete {display:none;}
+.wb-ass-readonly .wb-ass-detail-actions {display:none;}
+/* high volume types */
+a.wb-ass-hv-launch {display:none;}
+.wb-ass-panel-highvolume .wb-ass-hv-launch {display:block;}
+.wb-ass-panel-highvolume .wb-combobox-toggle {display:none;}
+.wb-ass-popup select {display:block;width:100%;}
+.wb-ass-popup-controls {line-height:32px;}
+.wb-ass-popup-echo {display:none;padding:0 15px;}
+
+/* jQueryUI ComboBox Plugin Styles */
+.wb-combobox {position:relative;display:block;}
+.wb-combobox-actionbtn {display:block;width:32px;height:32px;padding:0;margin:0;position:absolute;top:1px;right:1px;border:0px;background-color:#fafafa;color:#666!important;line-height:28px;text-align:center;text-decoration:none!important;border-left:1px solid #ddd;}
+.wb-combobox-input {margin:0!important;padding: 0.3em;}
+.ui-autocomplete {max-height:240px;}
+
+/* =============================== GALLERY =================================== */
+.wbg-list {display:block;padding:0;margin:0;list-style:none outside;position:relative;}
+.wbg-item {display:block;padding:5px 40px;margin:0 0 8px 0;position:relative;background-color:#fafafa;border:1px solid #ddd;}
+.wbg-placeholder {display:block;height:70px;margin:0 0 8px 0;background-color:#ccc;}
+.wbg-handle {display:block;width:30px;height:21px;padding:0px 0 0 0;position:absolute;top:4px;left:0px;text-align:center;cursor:move;border-right:1px solid #ddd;}
+.wbg-handle i {position:relative;top:-1px;}
+.wbg-deletebutton {position:absolute;top:0px;right:0px;color:#D65C4F!important;}
+.wbg-displayimage {padding-top:3px;padding-bottom:3px;}
+a.wbg-imagethumblink {display:block;width:75px;height:75px;overflow:hidden;text-decoration:none!important;outline:0;cursor:pointer;background-color:#000;}
+.wbg-imagethumb {display:block;border:0;max-height:100%;margin:0 auto;}
+.wbg-titleecho {padding:8px 0 8px 0;font-weight:bold;}
+.wbg-editpanel {display:none;}
+.wbg-item .wbg-field {margin-bottom:5px;margin-top:5px;padding:0;}
+.wbg-statusecho {margin-left:8px;}
+.wbg-label {font-size:12px;font-weight:400;}
+input.wbg-checkbox {display:inline-block;margin:9px 0 0 0;}
+.wbg-select-loading {display:block;line-height:18px;padding:7px 9px;border:1px solid #ddd;}
+.wbg-select-loading.js-complete {display:none;}
+.wbg-select-preinit {display:none;}
+.wbg-actions {margin:15px 0 0 0;}
+.wbg-uploadstatus {color:#999;}
+.wbg-uploadstatus span {margin:0 0 0 10px;}
+.wbg-panel-noimages .wbg-titleecho {padding-top:0px;}
+.wbg-panel-noimages .wbg-displayimage {display:none;}
+.wbg-panel-noimages .wbg-uploadbutton {display:none;}
+.wbg-panel-images .wbg-addbutton {display:none;}
+.wbg-panel-readonly .wbg-handle, .wbg-panel-readonly .wbg-editbutton, .wbg-panel-readonly .wbg-deletebutton, .wbg-panel-readonly .wbg-actions {display:none;}
+
+
+
+/* ============================== URLS ================================= */
+.wb-urls-list {padding:0;margin:0;list-style:none outside;position:relative;}
+.wb-urls-list li {padding:5px 40px 5px 40px;margin:2px 0;position:relative;background-color:#fafafa;border:1px solid #ddd;}
+.wb-urls-existing {margin-top:15px;}
+.wb-ranking-handle {display:block;width:30px;height:21px;padding:0;position:absolute;top:3px;left:0px;text-align:center;cursor:move;border-right:1px solid #ddd;}
+.wb-urls-delete {position:absolute;top:0px;right:0px;color:#D65C4F!important;}
+
+/* ============================ SEARCH ======================================== */
+.wb-search .panel-heading {border-bottom:0px;}
+.wb-search-inputs .panel-body {border-top:1px solid #ddd;}
+.wb-search-inputs .wb-search-actions {margin:12px 0 2px 0;}
+.wb-search-actions .btn {padding-bottom:7px;}
+.wb-search-results .panel-title {font-size:16px;}
+
+/* ============================ SatStats (this needs to get cleaned up) ====================================== */
+.wb-stats-main-frame {width:100%;height:730px;border:none;}
+#maintable {position:relative;}
+.SatStatsFrame {display:none;}
+.SatStatsFrame.active {display:block;height:85px;width:200px;position:absolute;right:33px;top:125px;border:none;}
+.PrintChart {display:block;height:50px;width:200px;position:absolute;right:33px;top:125px;border:none;cursor:pointer;}
+
+/* ============================ Widgets ====================================== */
+.wb-widget-dashboard {padding-bottom:10px;}
+.wb-widget-recentchanges {padding-bottom:10px;}
+.wb-widget-recentchanges .form-control {width:150px;display: inline;}

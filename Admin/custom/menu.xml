@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Menu>
+  <AppLinks>
+    <!-- Add Product links to menu-->
+    <!--
+    <Item Text="Email Marketing Center" Icon="mail" Link="#" />
+    <Item Text="Experience &amp; Proposal Center" Icon="file4" Link="#" />
+    <Item Text="Google Analytics" Icon="stats-up" Link="#" />
+    -->
+  </AppLinks>
+
+  <!-- Menu Usage -->
+  <Group Icon="home3" Text="Homepage">
+    <Item ObjectName="Homepageslide"/>
+  </Group>
+
+  <Group Text="Bios" >
+    <Item ObjectName="Bio"></Item>
+    <Item ObjectName="BioTitle"></Item>
+    <Item ObjectName="School"></Item>
+    <Item ObjectName="EducationLevel"></Item>
+    <Item ObjectName="BarAdmission"></Item>
+    <Item ObjectName="CourtAdmission"></Item>
+    <Item ObjectName="Case"></Item>
+  </Group>
+
+  <Group Text="Services" >
+    <Item ObjectName="Area"></Item>
+    <Item ObjectName="Industry"></Item>
+  </Group>
+
+  <Group Text="Media" Icon="newspaper">
+    <Item ObjectName="News"/>
+    <Item ObjectName="Event"/>
+  </Group>
+
+  <Group Text="Firm Information">
+    <Item ObjectName="AboutPage"/>
+    <Item ObjectName="Office"/>
+  </Group>
+
+  <Group Text="Blogs">
+    <Item ObjectName="Blog"/>
+    <Item ObjectName="BlogPost"/>
+  </Group>
+
+  <Group Text="Miscellaneous" Icon="image">
+    <Item ObjectName="LandingPage" />
+    <Item ObjectName="OtherPage" />
+    <Item ObjectName="Widget" />
+  </Group>
+
+</Menu>

@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebBackRows>
+
+  <!-- commonly used with all types
+    <Configuration>
+      <Label>Title</Label>
+      <Separator>False</Separator>
+      <HelpText>HELP TEXT</HelpText>
+    </Configuration>
+  -->
+
+  <!-- string -->
+  <WebBackRow>
+    <Configuration>
+      <Label>Title</Label>
+      <Separator>False</Separator>
+    </Configuration>
+    <WebBackFields>
+      <WebBackField>
+        <Required>True</Required>
+        <MaxLength>300</MaxLength>
+        <DBField>Title</DBField>
+        <Type>string</Type>
+      </WebBackField>
+    </WebBackFields>
+  </WebBackRow>
+
+  <!-- string with default value -->
+  <WebBackRow>
+    <Configuration>
+      <Label>Title</Label>
+      <Separator>False</Separator>
+    </Configuration>
+    <WebBackFields>
+      <WebBackField>
+        <DefaultValue>A DEFAULT STRING</DefaultValue>
+        <Required>True</Required>
+        <MaxLength>300</MaxLength>
+        <DBField>TitleDefault</DBField>
+        <Type>string</Type>
+      </WebBackField>
+    </WebBackFields>
+  </WebBackRow>
+
+
+  <!-- string readonly -->
+  <WebBackRow>
+    <Configuration>
+      <Label>Title</Label>
+      <ReadOnly>True</ReadOnly>
+      <Separator>False</Separator>
+    </Configuration>
+    <WebBackFields>
+      <WebBackField>
+        <Required>True</Required>
+        <MaxLength>300</MaxLength>
+        <DBField>TitleReadonly</DBField>
+        <Type>string</Type>
+      </WebBackField>
+    </WebBackFields>
+  </WebBackRow>
+
+  <!-- date picker -->
+  <WebBackRow>
+    <Configuration>
+      <Label>Date</Label>
+    </Configuration>
+    <WebBackFields>
+      <WebBackField>
+        <Required>False</Required>
+        <DBField>DateField</DBField>
+        <Type>date</Type>
+      </WebBackField>
+    </WebBackFields>
+  </WebBackRow>
+
+  <!-- time picker -->
+  <WebBackRow>
+    <Configuration>
+      <Label>Time</Label>
+    </Configuration>
+    <WebBackFields>
+      <WebBackField>
+        <Required>False</Required>
+        <DBField>TimeField</DBField>
+        <Type>time</Type>
+      </WebBackField>
+    </WebBackFields>
+  </WebBackRow>
+
+
+  <!-- dropdown list -->
+  <WebBackRow>
+    <Configuration>
+      <Label>Job Title</Label>
+      <Separator>False</Separator>
+    </Configuration>
+    <WebBackFields>
+      <WebBackField>
+        <DBField>BioTitle</DBField>
+        <Type>WebBack.BioTitle</Type>
+      </WebBackField>
+    </WebBackFields>
+  </WebBackRow>
+
+  <!-- richtext editor -->
+  <WebBackRow>
+    <Configuration>
+      <Label>Body</Label>
+      <Separator>False</Separator>
+    </Configuration>
+    <WebBackFields>
+      <WebBackField>
+        <DBField>Body</DBField>
+        <Type>text</Type>
+      </WebBackField>
+    </WebBackFields>
+  </WebBackRow>
+
+  <!-- a textarea without richtext editor REF:https://sites.google.com/a/saturnodesign.com/saturno-kb/development/webback-cm2/xml-setup---fields -->
+  <WebBackRow>
+    <Configuration>
+      <Label>Simple Textarea</Label>
+      <Separator>False</Separator>
+    </Configuration>
+    <WebBackField>
+      <DBField>simbleBody</DBField>
+      <Type>text</Type>
+      <SimpleRender>true</SimpleRender>
+      <Size>7</Size> <!-- number of rows high -->
+    </WebBackField>
+  </WebBackRow>
+
+  <!-- Inline Association: normal -->
+  <WebBackRow>
+    <Configuration>
+      <Label>Practice Contact(s)</Label>
+      <Separator>False</Separator>
+    </Configuration>
+    <WebBackFields>
+      <WebBackField>
+        <Type>association</Type>
+        <Associations>
+          <Association objectname="Bio">
+            <AssociationConfiguration>
+              <Rankable>True</Rankable>
+              <Detailed>False</Detailed>
+              <Name>AreaContacts</Name>
+            </AssociationConfiguration>
+          </Association>
+        </Associations>
+      </WebBackField>
+    </WebBackFields>
+  </WebBackRow>
+  
+  
+  <!-- Inline Association: Ranked + Detail Fields -->
+  <WebBackRow>
+    <Configuration>
+      <Label>Education</Label>
+      <Separator>True</Separator>
+    </Configuration>
+    <WebBackFields>
+      <WebBackField>
+        <Type>association</Type>
+        <Associations>
+          <Association objectname="School">
+            <AssociationConfiguration>
+              <Rankable>True</Rankable>
+              <Name>BioSchool</Name>
+              <DetailFields>
+                <WebBackField>
+                  <Title>Degree</Title>
+                  <DBField>Degree</DBField>
+                  <Type>string</Type>
+                  <MaxLength>300</MaxLength>
+                </WebBackField>
+                <WebBackField>
+                  <Title>Year &amp; Honors</Title>
+                  <DBField>YearHonor</DBField>
+                  <Type>string</Type>
+                  <MaxLength>300</MaxLength>
+                </WebBackField>
+                <WebBackField>
+                  <Title>a checkbox</Title>
+                  <DBField>aCheckBox</DBField>
+                  <Type>checkbox</Type>
+                </WebBackField>
+                <WebBackField>
+                  <Title>a dropdown</Title>
+                  <DBField>adropdown</DBField>
+                  <Type>WebBack.WBType</Type>
+                </WebBackField>
+              </DetailFields>
+            </AssociationConfiguration>
+          </Association>
+        </Associations>
+      </WebBackField>
+    </WebBackFields>    
+  </WebBackRow>
+  
+  <!-- Nested hierarchy inline association REF:https://sites.google.com/a/saturnodesign.com/saturno-kb/development/webback-cm2/nested-associations -->
+  <WebBackRow>
+    <Configuration>
+      <Label>Specialty Areas</Label>
+    </Configuration>
+    <WebBackFields>
+      <WebBackField>
+        <Type>association</Type>
+        <Associations>
+          <Association objectname="Service">
+            <AssociationConfiguration>
+              <Name>Company_Service</Name>
+              <Rankable levels="2">True</Rankable>
+            </AssociationConfiguration>
+          </Association>
+        </Associations>
+      </WebBackField>
+    </WebBackFields>
+  </WebBackRow>  
+  
+
+  <!-- Image Upload -->
+  <WebBackRow>
+    <Configuration>
+      <Label>Image</Label>
+      <Separator>False</Separator>
+    </Configuration>
+    <WebBackFields>
+      <WebBackField>
+        <DBField>imagefield</DBField>
+        <Type>image</Type>
+      </WebBackField>
+    </WebBackFields>
+  </WebBackRow>
+
+  <!-- File Upload -->
+  <WebBackRow>
+    <Configuration>
+      <Label>File</Label>
+      <Separator>False</Separator>
+    </Configuration>
+    <WebBackFields>
+      <WebBackField>
+        <DBField>filefield</DBField>
+        <Type>file</Type>
+      </WebBackField>
+    </WebBackFields>
+  </WebBackRow>
+
+  <!-- Gallery Controls REF:https://sites.google.com/a/saturnodesign.com/saturno-kb/development/webback-cm2/gallery-control -->
+  <WebBackRow>
+    <Configuration>
+      <Label>Advanced Gallery</Label>
+    </Configuration>
+    <WebBackFields>
+      <WebBackField>
+        <Type>gallery</Type>
+        <DBField>AdvGallery</DBField>
+        <Gallery hasimage="1" maxwidth="1024" maxheight="768" thumbsize="60">
+          <GalleryField type="string" column="string1">Caption</GalleryField>
+          <GalleryField type="text" column="text1">Blurb</GalleryField>
+          <GalleryField type="checkbox" column="checkbox1">Important?</GalleryField>
+          <GalleryField type="fkey" column="fkey1" fkeyobject="Bio">Person</GalleryField>
+        </Gallery>
+      </WebBackField>
+    </WebBackFields>
+  </WebBackRow>
+  
+
+  <!-- checkbox -->
+  <WebBackRow>
+    <Configuration>
+      <Label>Awesome Checkbox?</Label>
+      <Separator>False</Separator>
+    </Configuration>
+    <WebBackFields>
+      <WebBackField>
+        <DBField>isAwesome</DBField>
+        <Type>checkbox</Type>
+      </WebBackField>
+    </WebBackFields>
+  </WebBackRow>
+
+
+  <!-- checkbox - default checked -->
+  <WebBackRow>
+    <Configuration>
+      <Label>Awesome Checkbox?</Label>
+      <Separator>False</Separator>
+    </Configuration>
+    <WebBackFields>
+      <WebBackField>
+        <DBField>isAwesomeDefault</DBField>
+        <Type>checkbox</Type>
+        <DefaultValue>True</DefaultValue>
+      </WebBackField>
+    </WebBackFields>
+  </WebBackRow>
+
+  <!-- checkbox in right hand sidebar -->
+  <WebBackRow>
+    <Configuration>
+      <Label>Awesome Sidebar Checkbox?</Label>
+      <SideBar>True</SideBar>
+    </Configuration>
+    <WebBackFields>
+      <WebBackField>
+        <DBField>isAwesome</DBField>
+        <Type>checkbox</Type>
+      </WebBackField>
+    </WebBackFields>
+  </WebBackRow>
+
+  <!-- put fields in a custom inline tab section REF:https://sites.google.com/a/saturnodesign.com/saturno-kb/development/webback-cm2/xml-setup---fields -->
+  <WebBackRow>
+    <Configuration>
+      <Label>Field Label</Label>
+      <TabInline>Custom Tab Name</TabInline>
+    </Configuration>
+    <WebBackFields>
+      <!-- any of the field types -->
+    </WebBackFields>
+  </WebBackRow>
+  
+  <!-- inserting a custom control -->
+  <WebBackRow>
+    <Configuration>
+      <Label>Custom Control</Label>
+      <Separator>True</Separator>
+    </Configuration>
+    <WebBackFields>
+      <WebBackField>
+        <DBField>CustomControl.ascx</DBField>
+        <Type>custom</Type>
+      </WebBackField>
+    </WebBackFields>
+  </WebBackRow>
+  
+  <!-- sub heading text separator -->
+  <WebBackRow>
+    <Configuration>
+      <Label>Subheading</Label>
+      <RowType>subhead</RowType>
+      <Separator>True</Separator>
+    </Configuration>
+    <WebBackFields>
+    </WebBackFields>
+  </WebBackRow>
+
+</WebBackRows>

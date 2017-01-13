@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebBackRows>
+  <WebBackRow>
+    <Configuration>
+      <Label>Name</Label>
+    </Configuration>
+    <WebBackFields>
+      <WebBackField>
+        <Required>True</Required>
+        <MaxLength>100</MaxLength>
+        <Size>50</Size>
+        <DBField>Name</DBField>
+        <Type>string</Type>
+      </WebBackField>
+    </WebBackFields>
+  </WebBackRow>
+</WebBackRows>

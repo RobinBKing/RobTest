@@ -1,0 +1,1170 @@
+﻿/**************/
+/* Responsive */
+/**************/
+/*.@media screen and (max-width: 480px) {
+    content-detail {
+        padding: 0 20px;
+    }
+
+    .top-banner.with-image .banner-content-block {
+        padding-left: 1.625rem;
+        padding-right: 1.625rem;
+    }
+
+    .pagination-wrap > * {
+        float: none;
+        display: block;
+    }
+
+    .attorneys > .row > .columns {
+        padding: 0;
+    }
+
+    .estate-mobile-banner h1 {
+        font-size: 32px;
+    }
+
+    .contact-banner h1 {
+        margin-bottom: 25px !important;
+        font-size: 37px;
+    }
+
+    .contact-banner blockquote {
+        padding: 0 26px 0 0;
+    }
+
+    body form #MainContent, .site-header {
+        min-width: 320px;
+    }
+}*/
+
+
+/*@media screen and (max-width: 600px) {
+    body form {
+        overflow: auto;
+        height: auto;
+    }
+
+    .site-header {
+        background: none;
+        height: auto;
+        padding-top: 80px;
+        position: fixed !important;
+        background: #fff;
+        padding-top: 0px;
+        padding-bottom: 27px;
+    }
+
+    .mobile-header {
+        margin-bottom: 30px;
+    }
+
+    .site-header .logo {
+        margin-bottom: 0;
+        width: 100%;
+    }
+
+        .site-header .logo img {
+            margin: 0 auto;
+            display: none;
+        }
+
+    .site-header nav.top-bar, nav.site-header .top-bar ul {
+        display: none;
+    }
+
+    .list-trigger {
+        display: block;
+    }
+
+    .show-for-small-only {
+        display: block !important;
+    }
+
+    .animate-initial {
+        animation: initial !important;
+    }
+
+    .sidebar .cat-links {
+        display: none;
+    }
+
+    select {
+        text-transform: uppercase;
+    }
+
+    .full-width-page {
+        height: auto;
+    }
+
+    .mobile-space, .top-banner.full-image {
+        padding-top: 199px;
+    }
+
+
+    .slider-outer {
+        position: static;
+        padding-top: 198px;
+    }
+
+    .picture-area, .caption-area, .sub-content .content-area {
+        width: 100%;
+    }
+
+    .picture-area {
+        display: none;
+    }
+
+    .caption-area:before {
+        display: none;
+    }
+
+    .slide-wrap, .caption-area {
+        height: auto;
+    }
+
+    .caption-area {
+        float: none;
+        width: 100%;
+        height: auto !important;
+        padding: 30px 0;
+    }
+
+
+        .caption-area > div {
+            position: static;
+            -moz-transform: translateY(0);
+            -ms-transform: translateY(0);
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+            top: 0;
+            padding: 0 25px;
+        }
+
+    .slide-blue .caption-area {
+        background-color: rgba(63, 134, 200, 1);
+    }
+
+    .slide-green .caption-area {
+        background-color: rgba(91, 122, 21, 1);
+    }
+
+    .slide-red .caption-area {
+        background-color: rgba(192, 22, 27, 1);
+    }
+
+    .slide-purple .caption-area {
+        background-color: rgba(109, 62, 124, 1);
+    }
+
+    .slide-light-purple .caption-area {
+        background-color: rgba(144, 82, 121, 1);
+    }
+
+    .slide-dark-green .caption-area {
+        background-color: rgba(32, 84, 32, 1);
+    }
+
+    .slide-bottle-green .caption-area {
+        background-color: rgba(51, 155, 142, 1);
+    }
+
+    .text-main p br {
+        display: none;
+    }
+
+    .text h1, .text h1 small {
+        font-size: 26px;
+    }
+
+    .button-wrap {
+        padding-top: 25px;
+    }
+
+    .site-footer, .site-footer .container, .site-footer .container > .row {
+        position: static !important;
+    }
+
+    .tab-2-col .content-detail {
+        padding: 0 30px;
+    }
+
+    .site-footer .container {
+        background: #3a3a3c;
+        height: auto;
+    }
+
+    .site-footer .copyright p, .site-footer .copyright p a {
+        color: #fff;
+    }
+
+    .site-footer .container .copyright {
+        padding: 20px 0 33px 0;
+    }
+
+    .home-slider .cb-slideshow li span {
+        height: 300px;
+        animation: initial !important;
+        -webkit-animation: initial !important;
+        position: static;
+        display: block;
+        opacity: 1;
+    }
+
+    .cb-slideshow li {
+        height: auto;
+    }
+
+    .slider-outer, .home-slider, .slider-outer .bx-wrapper {
+        height: auto !important;
+    }
+
+    .single-col-main .site-header {
+        position: static;
+        height: auto;
+    }
+
+    .main {
+        padding-top: 25px;
+    }
+
+        .main > .row > .columns {
+            padding: 0 20px;
+            width: 100%;
+        }
+
+    .single-col-main .logo {
+        padding-left: .625rem;
+    }
+
+    .content-detail .content-head {
+        display: block !important;
+    }
+
+    .sub-page .top-banner.with-image, .with-image .top-banner-bg {
+        height: 340px;
+    }
+
+    .single-attorneys .sub-page .top-banner.with-image, .with-image .top-banner-bg {
+        height: 340px;
+        background-position: left top;
+    }
+
+    .with-image .top-banner-bg {
+        background-size: 200%;
+    }
+
+    .top-banner.with-image .banner-content-block {
+        padding: 0 60px 40px 60px;
+        top: auto;
+        bottom: 0;
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    .top-banner .banner-content, .content-area {
+        width: 100%;
+    }
+
+    .banner-content.sub-blue-slide:before {
+        background-color: rgba(63, 134, 200, 0.50);
+    }
+
+    .banner-content.sub-dark-green-slide:before {
+        background-color: rgba(0, 79, 69, 0.50);
+    }
+
+    .banner-content.business-planning-and-organizations-gradient:before {
+        background-color: rgba(53,85,0, 0.5);
+    }
+
+    .banner-content.business-transactions-gradient:before {
+        background-color: rgba(0,35,78, 0.5);
+    }
+
+    .banner-content.commercial-litigation-gradient:before {
+        background-color: rgba(150,0,4, 0.5);
+    }
+
+    .banner-content.community-association-law-gradient:before {
+        background-color: rgba(107,140,46, 0.5);
+    }
+
+    .banner-content.construction-defect-litigation-gradient:before {
+        background-color: rgba(124,44,37, 0.5);
+    }
+
+    .banner-content.criminal-defense-gradient:before {
+        background-color: rgba(79,79,79, 0.5);
+    }
+
+    .banner-content.estate-planning-gradient:before {
+        background-color: rgba(14,71,14, 0.5);
+    }
+
+    .banner-content.land-development-gradient:before {
+        background-color: rgba(124,66,25, 0.5);
+    }
+
+    .banner-content.litigation-gradient:before {
+        background-color: rgba(138,81,29, 0.5);
+    }
+
+    .banner-content.probate-and-estate-administration-gradient:before {
+        background-color: rgba(116,106,59, 0.5);
+    }
+
+    .banner-content.real-estate-closings-gradient:before {
+        background-color: rgba(0,100,142, 0.5);
+    }
+
+    .banner-content.real-estate-tax-assessment-gradient:before {
+        background-color: rgba(57,39,135, 0.5);
+    }
+
+    .banner-content.real-estate-transactions-gradient:before {
+        background-color: rgba(71,14,88, 0.5);
+    }
+
+    .banner-content.real-property-litigation-gradient:before {
+        background-color: rgba(68,140,175, 0.5);
+    }
+
+    .banner-content.taxation-gradient:before {
+        background-color: rgba(0,130,114, 0.5);
+    }
+
+    .banner-content.zoning-and-land-use-planning-gradient:before {
+        background-color: rgba(116,39,88, 0.5);
+    }
+
+    .top-banner.with-image .banner-content:before {
+        border: none;
+    }
+
+    .top-banner h1 {
+        text-align: center;
+        font-size: 32px;
+        margin: 0 0 47px;
+    }
+
+    .estate-mobile-banner h1 {
+        text-align: left;
+        font-size: 47px;
+        margin: 0 0 35px;
+    }
+
+    .top-banner.full-image {
+        height: auto;
+    }
+
+        .top-banner.full-image .top-banner-bg {
+            position: static;
+            display: block;
+        }
+
+        .top-banner.full-image .banner-content-block {
+            position: static;
+            top: 0;
+            -moz-transform: translateY(0);
+            -ms-transform: translateY(0);
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+
+        .top-banner.full-image .banner-content:before {
+            display: none;
+        }
+
+        .top-banner.full-image .banner-content {
+            background-color: #004f45;
+            padding: 82px 0;
+            height: auto;
+        }
+
+            .top-banner.full-image .banner-content h1 {
+                margin-bottom: 0;
+            }
+
+    .content-head h1 {
+        color: #000 !important;
+    }
+
+    .caption-area, .home-slider .text h1, .home-slider .text .text-main {
+        -webkit-animation-name: fadeIn !important;
+        animation-name: fadeIn !important;
+        -webkit-animation-duration: 1s !important;
+        animation-duration: 1s !important;
+        animation-delay: initial !important;
+    }
+
+    .pagination-wrap {
+        text-align: center;
+        border-bottom: 1px solid #000;
+        border-top: none;
+        padding: 0 20px 26px 20px;
+        margin: 0 -40px 57px;
+    }
+
+    .content .post {
+        padding-right: 0 !important;
+    }
+
+    .prev {
+        float: left;
+    }
+
+    .next {
+        float: right;
+    }
+
+    .sidebar .section h2 {
+        font-size: 20px;
+        margin: 0 0 15px;
+    }
+
+    .section.pages {
+        margin-bottom: 38px;
+    }
+
+    .sidebar .section.search-box input {
+        margin: 0 0 10px 0;
+    }
+
+    .main-page {
+        padding-top: 38px;
+        padding-bottom: 0;
+    }
+
+    .areas-list {
+        margin: 0;
+    }
+
+        .areas-list li {
+            padding: 0;
+            width: 100%;
+        }
+
+    .attorneys > .row > .columns {
+        padding: 0 70px;
+    }
+
+    .attorneys-wrap > .columns {
+        width: 100%;
+    }
+
+    .contact-head {
+        text-align: left;
+    }
+
+    .form-2-col .form-field:first-child {
+        margin-right: 0;
+    }
+
+    .form-2-col .form-field {
+        width: 100%;
+    }
+
+    .button-group {
+        text-align: right;
+    }
+
+    .contact-banner .banner-content {
+        padding: 72px 0 69px 0;
+    }
+
+    .contact-banner h1 {
+        padding: 0;
+        margin-bottom: 30px !important;
+        font-size: 46px;
+    }
+
+    .sidebar .selectric .label {
+        background: #ecf6f5;
+        color: #00544a;
+        font-family: Lato;
+    }
+
+    .sidebar .selectric-items li {
+        font-family: Lato;
+    }
+
+    .contact-banner .quote-before {
+        top: -7px;
+    }
+}*/
+
+/*@media screen and (min-width: 1400px) {
+    .content-head h1 {
+        margin-bottom: 44px;
+    }
+
+    .content-block.custom-bar {
+        height: 600px;
+    }
+
+    .tab-1-col .content-block.custom-bar {
+        height: 400px;
+    }
+
+    .contact-custom-bar {
+        height: auto;
+    }
+
+    .page-id-270 .mm-page {
+        min-height: 860px !important;
+    }
+}
+
+@media screen and (min-width: 1650px) {
+    .site-header {
+        height: 238px;
+    }
+
+    .contact-custom-bar {
+        height: auto;
+    }
+
+    .content-detail.contact-block {
+        padding-right: 0;
+        padding-left: 25em;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .tab-1-col .content-block.custom-bar {
+        height: 260px;
+    }
+
+    .estate-detail {
+        top: 44%;
+    }
+
+        .estate-detail h1 {
+            margin-bottom: 26px;
+        }
+
+        .estate-detail .selectric-wrapper {
+            width: 100%;
+        }
+
+    .sub-full-wrap .container .copyright {
+        padding-top: 96px;
+    }
+
+    .selectric-items li {
+        padding: 2px 10px 2px 10px;
+    }
+
+    .blog-top-block .banner-content-block {
+        padding: 0 3em 0 0;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .site-header .logo, .picture-area, .top-banner .banner-picture, .sub-content .sub-picture {
+        width: 30%;
+    }
+
+    .site-header .logo {
+        padding-left: 1em;
+    }
+
+    .site-header {
+        height: 150px;
+    }
+
+    .single-col-main .site-header {
+        height: 140px;
+    }
+
+    .site-header .navigation-col, .caption-area, .top-banner .banner-content, .sub-content .content-area {
+        width: 70%;
+    }
+
+        .caption-area:before {
+            right: -7em;
+            transform: skewX(11deg);
+        }
+
+    .top-bar-section .dropdown {
+        width: 680px;
+        right: 33%;
+    }
+
+    .sub-full-wrap .top-bar-section .dropdown {
+        right: 22.96%;
+    }
+
+    .caption-area > div {
+        padding: 0 3em 0 0;
+    }
+
+    .text h1 {
+        margin-bottom: 25px;
+    }
+
+        .text h1, .text h1 small {
+            font-size: 36px;
+        }
+
+    .text-main p {
+        font-size: 18px;
+    }
+
+    .navigation-col {
+        padding-right: 0.5em;
+    }
+
+    .sub-full-wrap .navigation-col {
+        padding-right: 1em;
+    }
+
+    .site-header .top-bar ul > li > a, .button, .sub-full-wrap .site-header .top-bar-section > ul > li > a {
+        font-size: 12px;
+    }
+
+    .area-detail {
+        padding: 0;
+    }
+
+    .contact-left {
+        text-align: center;
+    }
+
+        .contact-left blockquote {
+            right: 0;
+            text-align: center;
+            margin-left: 24px;
+        }
+
+    .area-detail h1 {
+        font-size: 32px;
+    }
+
+    .content-area:before {
+        right: -7.3em;
+        transform: skewX(11deg);
+    }
+
+    .content-detail {
+        padding: 0 1em 0 17em;
+    }
+
+        .content-detail.contact-block {
+            padding-right: 0;
+        }
+
+    .content-head h1 {
+        font-size: 40px;
+    }
+
+    .top-banner h1 {
+        font-size: 39px;
+    }
+
+    .content .post {
+        margin-right: 0;
+    }
+
+    .main {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+        .main .content, .sidebar {
+            padding: 0 20px !important;
+        }
+
+    .post {
+        padding-right: 2em !important;
+    }
+
+    .sidebar {
+        margin: 0 0 20px;
+    }
+
+    .areas-list {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .quote-before {
+        left: -21px !important;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .show-for-tab-mobile-only {
+        display: none;
+    }
+
+    #menu {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    body form .logged-in {
+        padding-top: 0;
+    }
+
+    #ijm-theme-bar,
+    html #wpadminbar {
+        display: none !important;
+    }
+
+    .sticky-container {
+        min-height: 0;
+    }
+
+    body form .logged-in .sticky-container .sticky {
+        top: 0;
+    }
+
+    body form .full-width-sub-wrap {
+        overflow: auto;
+        height: auto;
+    }
+
+    .hide-for-tab-mobile {
+        display: none;
+    }
+
+    .sub-full-wrap .logo {
+        padding-left: 2.3em;
+    }
+
+    .sub-full-wrap .site-footer, .sub-full-wrap .container > .row {
+        position: static;
+    }
+
+    .sub-full-width, .sub-full-width .area-detail, .sub-full-width .content-detail {
+        position: static;
+        height: auto;
+    }
+
+    .sub-full-width {
+        padding: 46px 0 20px 0;
+    }
+
+        .sub-full-width .content-detail, .sub-full-width .area-detail {
+            -moz-transform: translateY(0);
+            -ms-transform: translateY(0);
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+
+    .sub-page-bg, .sub-content .content-area:before, .sub-content:before {
+        display: none;
+    }
+
+    .tab-2-col .sub-picture {
+        float: right;
+    }
+
+    .sub-content, .content-block.custom-bar {
+        height: auto;
+    }
+
+    .tab-2-col .sub-picture {
+        width: 41.66667%;
+    }
+
+    .sub-content .content-area {
+        width: 58.33333%;
+    }
+
+    .area-detail h1, .links li a {
+        color: #000;
+    }
+
+    .area-detail {
+        padding: 0.5em 2em 0 3em;
+        text-align: left;
+    }
+
+    .links li a {
+        font-size: 20px;
+    }
+
+    .tab-2-col .content-detail {
+        padding: 0 0em 0 2.5em;
+    }
+
+    .sub-full-wrap .site-header .top-bar-section > ul > li:hover > a {
+        color: #fff !important;
+    }
+
+    .sub-full-wrap .container {
+        background: #3a3a3c;
+        height: auto;
+        background-image: none;
+    }
+
+        .sub-full-wrap .container p, .sub-full-wrap .container p a {
+            color: #fff;
+        }
+
+    .show-for-tab-mobile-only {
+        display: block;
+    }
+
+    .sub-full-wrap .site-header .top-bar-section > ul > li > a, .sub-full-wrap .site-header .top-bar-section > ul > li.active > a {
+        color: #fff;
+    }
+
+    .sub-full-wrap .site-header .top-bar-section > ul {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .sub-page .top-banner, .top-banner-bg, .top-banner {
+        height: 240px;
+    }
+
+    .banner-content:before {
+        border-width: 240px 0 0 100px;
+    }
+
+    .banner-content-block {
+        top: 55%;
+    }
+
+    .attorneys-wrap > .columns {
+        padding: 0 20px;
+    }
+
+    .single-page-head {
+        padding: 0 0 38px 0;
+    }
+
+    .attorneys > .row > .columns {
+        padding: 0 10px;
+    }
+
+    .single-lawyer {
+        padding-bottom: 20px;
+    }
+
+    .single-col-main .site-footer {
+        margin-top: 0;
+    }
+
+    .single-col-main .container {
+        background-image: none;
+        height: auto;
+        background: #3a3a3c;
+        padding-top: 14px;
+        top: 54%;
+        padding-bottom: 0;
+    }
+
+    .banner-content-block {
+        width: 100%;
+        right: 0;
+        padding: 0;
+        text-align: center;
+        transform: translateY(-25%);
+        -webkit-transform: translateY(-25%);
+        -ms-transform: translateY(-25%);
+        -moz-transform: translateY(-25%);
+    }
+
+    .single-col-main .banner-content-block {
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .sub-full-wrap .container .copyright, .single-col-main .container .copyright {
+        padding: 20px 0 33px 0;
+    }
+
+    .tab-1-col .content-area {
+        width: 100%;
+    }
+
+    .content-detail {
+        padding: 0 1.5em;
+    }
+
+    .tab-1-col .content-block.custom-bar {
+        height: auto;
+    }
+
+    .sub-bio-slide .banner-content-block {
+        text-align: left;
+        padding-left: 9em;
+    }
+
+        .sub-bio-slide .banner-content-block h1 {
+            font-size: 42px;
+            margin: 0 0 27px;
+        }
+
+            .sub-bio-slide .banner-content-block h1 span {
+                display: block;
+                font-size: 28px;
+            }
+
+    .content .post {
+        border-bottom: none;
+        margin: 0 0 10px;
+    }
+
+    .content > .post:last-child {
+        border-bottom: 1px solid #000;
+    }
+
+    .pagination-wrap {
+        text-align: center;
+        padding-top: 40px;
+        border-top: 1px solid #000;
+    }
+
+        .pagination-wrap > * {
+            float: none;
+            display: inline-block;
+        }
+
+    .sidebar .section.search-box input {
+        text-transform: uppercase;
+    }
+
+    .areas-list {
+        border-bottom: none;
+        padding-bottom: 0;
+        margin: 0 -20px;
+    }
+
+        .areas-list li {
+            padding: 0 20px;
+        }
+
+    .estate-detail h1 {
+        display: none;
+    }
+
+    .contact-custom-bar {
+        height: auto;
+    }
+
+    .contact-head {
+        background: none;
+        text-align: center;
+        margin-bottom: 57px;
+    }
+
+    .content-detail.contact-block {
+        width: 100%;
+        padding-right: 1.5em;
+    }
+
+    .contact-form label {
+        padding-bottom: 22px;
+    }
+
+    .form-field {
+        margin-bottom: 20px;
+    }
+
+    .button-group {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .submit-btn {
+        float: none;
+    }
+
+    .form-2-col .form-field:first-child input {
+        border-right: 1px solid #ddd;
+    }
+
+    .form-2-col .form-field:first-child {
+        margin-right: 4%;
+    }
+
+    .form-2-col .form-field {
+        width: 48%;
+    }
+
+    .section.rss-feed {
+        margin-bottom: 20px;
+    }
+
+    .sidebar .section h2 {
+        font-size: 24px;
+    }
+
+    .caption-area:before {
+        right: -5em;
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .site-header .top-bar ul > li > a, .sub-full-wrap .site-header .top-bar-section > ul > li > a {
+        padding: 10px 6px 9px 6px;
+        font-size: 11px;
+    }
+
+    .site-header .top-bar ul li ul li a {
+        font-size: 11px;
+    }
+
+    .top-bar-section .dropdown {
+        width: 600px;
+        right: 52%;
+    }
+
+    .sub-full-wrap .top-bar-section .dropdown {
+        right: 52%;
+    }
+
+    .site-header .top-bar-section .dropdown li {
+        padding: 2px 0;
+    }
+
+    .banner-picture {
+        width: 30%;
+    }
+
+    .banner-content {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .site-header .logo, .picture-area, .banner-picture {
+        width: 27%;
+    }
+
+    .single-col-main .logo {
+        padding-left: 1.9375rem;
+    }
+
+    .site-header .navigation-col, .caption-area, .top-banner .banner-content {
+        width: 73%;
+    }
+
+    .site-header .top-bar ul > li > a, .sub-full-wrap .site-header .top-bar-section > ul > li > a {
+        padding: 10px 3px 9px 4px;
+        font-size: 10px;
+    }
+
+    .top-bar-section .dropdown {
+        right: 95%;
+    }
+
+    .text-main p {
+        font-size: 16px;
+    }
+
+    .button {
+        font-size: 10px;
+    }
+
+    .area-detail {
+        padding-left: 0;
+    }
+
+    .sub-bio-slide .banner-content-block h1 {
+        font-size: 35px;
+    }
+
+    .sub-bio-slide .banner-content-block {
+        padding-left: 8em;
+    }
+
+    .top-banner h1 {
+        font-size: 30px;
+    }
+
+    .sidebar .section.pages ul li a {
+        font-size: 20px;
+    }
+
+    .contact-banner blockquote p {
+        font-size: 18px;
+        line-height: 1.2;
+    }
+
+    .contact-banner h1 {
+        padding: 0 2.5em 0 0;
+    }
+
+    .sidebar {
+        margin: 0;
+    }
+}
+
+@media screen and (max-height: 580px) and (min-width: 1024px) {
+    .page-id-270 .mm-page {
+        min-height: 585px;
+    }
+}
+
+@media only screen and (min-device-width : 641px) and (max-device-width : 767px) and (orientation : landscape) {
+    .text h1, .text h1 small {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .text-main p {
+        font-size: 14px;
+    }
+
+    .text-main .button-wrap {
+        padding-top: 9px;
+    }
+
+    .text-main .button {
+        margin: 0;
+        min-height: 35px;
+        padding: 10px 14px;
+    }
+
+    .caption-area:before {
+        right: -3em;
+        transform: skewX(16deg);
+    }
+}
+
+@media screen and (min-width: 641px) {
+    .slider-outer .bx-wrapper .bx-viewport {
+        height: 100% !important;
+    }
+
+    .cb-slideshow {
+        height: 100%;
+    }
+}*/
+
+
+@media print {
+    .site-header {
+        top: 0;
+        border: none;
+        height: auto;
+    }
+
+    a[href]:after {
+        content: none !important;
+    }
+
+    .theme-switcher,
+    .site-header .show-for-medium-only,
+    .site-header .show-for-small-only,
+    .search-box,
+    .portfolio-box,
+    .top-bar,
+    .banner,
+    .breadcrumbs,
+    .right-bar,
+    .sidebar,
+    .site-footer {
+        display: none !important;
+    }
+}

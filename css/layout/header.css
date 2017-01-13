@@ -1,0 +1,109 @@
+﻿/********************************/
+/*       Header Styles          */
+/********************************/
+/* - Logo                       */
+/* - Top right                  */
+/* - Portfolio                  */
+/* - Search                     */
+/********************************/
+.header {
+    padding: 17px 0;
+    width: 100%;
+    background: url(images/top-shadow.png) no-repeat center top;
+    background-size: cover;
+    height: 200px;
+}
+
+.single-col-main .header {
+    height: 230px;
+}
+
+.full-width-page .header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
+
+/* Logo */
+.header .logo {
+    padding-top: 10px;
+    padding-bottom: 15px;
+    padding-left: 3.5em;
+}
+
+    .header .logo img {
+        margin: 0;
+        display: block;
+    }
+
+/* Top right */
+.header .top-right {
+    padding: 16px 0 10px;
+}
+
+/* Portfolio */
+.header .portfolio-box {
+    float: right;
+    margin-right: 15px;
+    padding: 5px 0 0;
+}
+
+    .header .portfolio-box a {
+        color: #000000;
+        font-size: 16px;
+    }
+
+        .header .portfolio-box a:hover {
+            color: #1d85f5;
+        }
+
+/* Search */
+.header .search-box {
+    float: right;
+    border: #000000 solid 1px;
+    width: 242px;
+    display: inline-block;
+    margin: 0;
+}
+
+    .header .search-box fieldset {
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .header .search-box .input {
+        width: 207px;
+        border: none;
+        color: #000000 !important;
+        font-size: 13px;
+        font-family: 'Libre Baskerville', serif;
+        font-weight: 400;
+        background: none;
+        height: 33px;
+        float: left;
+        font-style: italic;
+        margin: 0;
+        box-shadow: none;
+        display: inline-block;
+    }
+
+        .header .search-box .input:focus {
+            box-shadow: none;
+            color: #000000 !important;
+        }
+
+    .header .search-box .btn {
+        width: 30px;
+        float: left;
+        display: block;
+        margin: 7px 0 0;
+        color: #000000;
+        background-color: #ffffff;
+        padding: 0;
+    }
+
+        .header .search-box .btn:hover {
+            color: #1d85f5;
+        }

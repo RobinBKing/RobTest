@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="True" CodeBehind="~/core/ajax/recordlist_data.aspx.cs" Inherits="WebBack.core.ajax.recordlist_data" %>

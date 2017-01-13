@@ -1,0 +1,8 @@
+Z:\products\WebBack CM2\Admin\bin\ClientAdmin.dll.config
+Z:\products\WebBack CM2\Admin\bin\ClientAdmin.dll
+Z:\products\WebBack CM2\Admin\bin\ClientAdmin.pdb
+Z:\products\WebBack CM2\Admin\obj\Release\ClientAdmin.csprojResolveAssemblyReference.cache
+Z:\products\WebBack CM2\Admin\obj\Release\Admin.fileuploader.resources
+Z:\products\WebBack CM2\Admin\obj\Release\ClientAdmin.csproj.GenerateResource.Cache
+Z:\products\WebBack CM2\Admin\obj\Release\ClientAdmin.dll
+Z:\products\WebBack CM2\Admin\obj\Release\ClientAdmin.pdb

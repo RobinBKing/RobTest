@@ -1,0 +1,6 @@
+﻿.wb-editor-form { }
+.wb-editor-form .wb-editor-form-title { }
+.wb-editor-form .wb-editor-form-content { padding: 8px 10px; background: #FFFFFF; }
+.wb-editor-form .wb-editor-form-element { padding: 8px 10px; width: 100%; box-sizing: border-box; }
+.wb-editor-form .wb-editor-form-element[type='submit'] { width: auto; }
+.wb-editor-form .wb-editor-form-invalid { }

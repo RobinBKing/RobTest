@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebBackRows>
+  <WebBackRow>
+    <Configuration>
+      <Label>Title</Label>
+    </Configuration>
+    <WebBackFields>
+      <WebBackField>
+        <Required>True</Required>
+        <MaxLength>100</MaxLength>
+        <Size>50</Size>
+        <DBField>Title</DBField>
+        <Type>string</Type>
+      </WebBackField>
+    </WebBackFields>
+  </WebBackRow>
+
+  <!--<WebBackRow>
+    <Configuration>
+      <Label>Locations</Label>
+    </Configuration>
+    <WebBackFields>
+      <WebBackField>
+        <Type>association</Type>
+        <Associations>
+          <Association objectname="Location">
+            <AssociationConfiguration>
+              <Name>SiteLocation</Name>
+              <Rankable>True</Rankable>
+            </AssociationConfiguration>
+          </Association>
+        </Associations>
+      </WebBackField>
+    </WebBackFields>
+  </WebBackRow>-->
+</WebBackRows>

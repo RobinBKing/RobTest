@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebBackRows>
+  <WebBackRow>
+    <Configuration>
+      <Label>School Name</Label>
+      <Separator>True</Separator>
+    </Configuration>
+    <WebBackFields>
+      <WebBackField>
+        <Required>True</Required>
+        <MaxLength>300</MaxLength>
+        <DBField>Title</DBField>
+        <Type>string</Type>
+      </WebBackField>
+    </WebBackFields>
+  </WebBackRow>
+</WebBackRows>

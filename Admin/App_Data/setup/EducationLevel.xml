@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebBackRows>
+  <WebBackRow>
+    <Configuration>
+      <Label>Educational Level</Label>
+    </Configuration>
+    <WebBackFields>
+      <WebBackField>
+        <Required>True</Required>
+        <MaxLength>300</MaxLength>
+        <DBField>Title</DBField>
+        <Type>string</Type>
+      </WebBackField>
+    </WebBackFields>
+  </WebBackRow>
+  <WebBackRow>
+    <Configuration>
+      <Label>Image</Label>
+      <Separator>True</Separator>
+    </Configuration>
+    <WebBackFields>
+      <WebBackField>
+        <Required>True</Required>
+        <DBField>Image</DBField>
+        <Type>Image</Type>
+      </WebBackField>
+    </WebBackFields>
+  </WebBackRow>
+</WebBackRows>

@@ -1,0 +1,121 @@
+﻿/********************/
+/*   Footer Styles  */
+/* - Menu           */
+/* - Social         */
+/* - Copyright text */
+/* - FontAwesome    */
+/********************/
+.site-footer {
+    color: #000000;
+    margin: 0;
+    z-index: 99;
+}
+
+    .site-footer .content {
+        position: relative;
+        padding: 14px 0 0 0;
+        width: 100%;
+        bottom: 0;
+        background: url(img/bottom-shadow.png) no-repeat center bottom;
+        background-size: cover;
+    }
+
+.single-col-main .site-footer .content > .row {
+    position: initial;
+}
+
+/* Menu */
+/*.site-footer .menu {
+    margin: 0 0 10px;
+}
+
+    .footer .menu ul {
+        margin: 0;
+        padding: 0;
+    }
+
+        .footer .menu ul li {
+            display: inline-block;
+            margin: 0;
+        }
+
+            .footer .menu ul li a {
+                color: #000000;
+                text-decoration: none;
+                padding: 0 .5rem;
+            }
+
+            .footer .menu ul li:first-child a {
+                padding-left: 0;
+            }
+
+            .footer .menu ul li a:hover {
+                color: #1d85f5;
+            }
+
+            .footer .menu ul li ul {
+                display: none;
+            }*/
+
+/* Social */
+/*.footer .social ul {
+    list-style: none;
+    float: right;
+    padding-top: 3px;
+    margin: 0;
+}
+
+.footer .social li {
+    margin: 0 0 0 15px;
+    float: left;
+}
+
+    .footer .social li a {
+        display: block;
+        text-align: center;
+        color: #627082;
+    }
+
+        .footer .social li a.facebook {
+            text-align: right;
+        }
+
+        .footer .social li a:hover {
+            color: #1d85f5;
+        }
+
+        .footer .social li a i {
+            font-size: 15px;
+        }
+
+        .footer .social li a .hide {
+            display: none;
+        }*/
+
+/* Copyright text */
+.site-footer .content .copyright {
+    padding-top: 53px;
+    padding-bottom: 14px;
+    position: relative;
+    z-index: 9;
+}
+
+    .site-footer .content .copyright p {
+        font-size: 14px;
+        font-weight: 300;
+        color: #cfcfcf;
+        margin: 0;
+        text-align: center;
+    }
+
+
+        .site-footer .content .copyright p a {
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 300;
+            color: #cfcfcf;
+        }
+
+            .site-footer .content .copyright p a:hover {
+                color: #7abaf3;
+            }

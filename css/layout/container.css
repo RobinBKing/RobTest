@@ -1,0 +1,46 @@
+﻿/*******************************/
+/*     container styles        */
+/*******************************/
+/* Pagination */
+.wp-pagenavi {
+    margin: 0 13px;
+}
+
+    .wp-pagenavi a, .wp-pagenavi .current {
+        color: #363636;
+    }
+
+    .wp-pagenavi a, .wp-pagenavi span {
+        text-decoration: none;
+    }
+
+.pagination-wrap li:before {
+    display: none !important;
+}
+
+.pagination-wrap li {
+    display: inline-block;
+}
+
+.wp-pagenavi .current {
+    font-size: 16px;
+    color: #fff;
+    background-color: #136464;
+    padding: 7px 11px;
+    display: inline-block;
+}
+
+.wp-pagenavi a {
+    padding: 7px 6px;
+    display: inline-block;
+}
+
+.prev, .next {
+    font-size: 16px;
+    color: #363636 !important;
+    padding: 7px 0 0 0;
+}
+
+.pagination-wrap > * {
+    float: left;
+}

@@ -1,0 +1,841 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebBackObjects>
+<WebBackObject name="AboutPage">
+    <Configuration>
+      <LongName>About Us Pages</LongName>
+      <LongPluralName>About Us Pages</LongPluralName>
+      <DBTable>AboutPages</DBTable>
+      <PreviewPage>ShowAbout.aspx?show=</PreviewPage>
+      <HasRank>True</HasRank>
+    </Configuration>
+    <Lists>
+      <DropDownLists>
+        <ListFieldSql>[AboutPages].Title</ListFieldSql>
+        <OrderField>Title</OrderField>
+      </DropDownLists>
+      <ListPages>
+        <ListConfiguration>
+          <DefaultOrder>Title</DefaultOrder>
+        </ListConfiguration>
+        <QueryFields>
+          <QueryField name="">Title</QueryField>
+        </QueryFields>
+      </ListPages>
+    </Lists>
+    <Associations />
+  </WebBackObject><WebBackObject name="Area">
+    <Configuration>
+      <LongName>Practice Area</LongName>
+      <LongPluralName>Practice Areas</LongPluralName>
+      <DBTable>Areas</DBTable>
+      <PreviewPage>ShowArea.aspx?show=</PreviewPage>
+    </Configuration>
+    <Lists>
+      <DropDownLists>
+        <ListFieldSql>[Areas].Title</ListFieldSql>
+        <OrderField>Title</OrderField>
+      </DropDownLists>
+      <ListPages>
+        <ListConfiguration>
+          <DefaultOrder>Title</DefaultOrder>
+        </ListConfiguration>
+        <QueryFields>
+          <QueryField name="">Title</QueryField>
+        </QueryFields>
+        <ListActions>
+          <ListAction title="Word Output" icon="file-word" href="/getpdf.aspx?area={id}&amp;word=1" target="_blank" />
+        </ListActions>
+      </ListPages>
+    </Lists>
+    <Associations>
+      <Association objectname="Industry">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Area_Industry</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="Bio">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Area_Bio</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="Area">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Area_Area</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="News">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Area_News</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="Event">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Area_Event</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="Blog">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Area_Blog</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="BlogPost">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Area_BlogPost</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="Widget">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Area_Widget</Name>
+        </AssociationConfiguration>
+      </Association>
+    </Associations>
+  </WebBackObject>
+  
+  <WebBackObject name="BarAdmission">
+    <Configuration>
+      <LongName>Bar Admission</LongName>
+      <LongPluralName>Bar Admissions</LongPluralName>
+      <DBTable>BarAdmissions</DBTable>
+      <HidePubToggle>True</HidePubToggle>
+    </Configuration>
+    <Lists>
+      <DropDownLists>
+        <ListFieldSql>[BarAdmissions].Title</ListFieldSql>
+        <OrderField>Title</OrderField>
+      </DropDownLists>
+      <ListPages>
+        <ListConfiguration>
+          <DefaultOrder>Title</DefaultOrder>
+        </ListConfiguration>
+        <QueryFields>
+          <QueryField name="">Title</QueryField>
+        </QueryFields>
+      </ListPages>
+    </Lists>
+    <Associations />
+  </WebBackObject>
+
+  <WebBackObject name="CourtAdmission">
+    <Configuration>
+      <LongName>Court Admission</LongName>
+      <LongPluralName>Court Admissions</LongPluralName>
+      <DBTable>CourtAdmissions</DBTable>
+      <HidePubToggle>True</HidePubToggle>
+    </Configuration>
+    <Lists>
+      <DropDownLists>
+        <ListFieldSql>[CourtAdmissions].Title</ListFieldSql>
+        <OrderField>Title</OrderField>
+      </DropDownLists>
+      <ListPages>
+        <ListConfiguration>
+          <DefaultOrder>Title</DefaultOrder>
+        </ListConfiguration>
+        <QueryFields>
+          <QueryField name="">Title</QueryField>
+        </QueryFields>
+      </ListPages>
+    </Lists>
+    <Associations />
+  </WebBackObject>
+ 
+  <WebBackObject name="Bio">
+    <Configuration>
+      <LongName>Professional</LongName>
+      <LongPluralName>Professionals</LongPluralName>
+      <DBTable>Bios</DBTable>
+      <PreviewPage>ShowBio.aspx?show=</PreviewPage>
+    </Configuration>
+    <Lists>
+      <DropDownLists>
+        <ListFieldSql>[Bios].[LastName] + ', ' + [Bios].[FirstName]</ListFieldSql>
+      </DropDownLists>
+      <ListPages>
+        <ListConfiguration>
+          <DefaultOrder>LastName</DefaultOrder>
+        </ListConfiguration>
+        <QueryFields>
+          <QueryField name="Last Name">LastName</QueryField>
+          <QueryField name="First Name">FirstName</QueryField>
+        </QueryFields>
+        <ListFilters>
+          <Filter name="AlphaSearch">
+            <TitleText>Alpha Search</TitleText>
+            <Type>Alpha</Type>
+            <CustomClause>LastName</CustomClause>
+          </Filter>
+          <Filter name="Search">
+            <TitleText>Text Search</TitleText>
+            <Type>TextBox</Type>
+            <Fields>FirstName,LastName</Fields>
+            <SearchType>Wildcard</SearchType>
+          </Filter>
+        </ListFilters>
+        <ListActions>
+          <ListAction title="Word Output" icon="file-word" href="/getpdf.aspx?bio={id}&amp;word=1" target="_blank" />
+        </ListActions>
+      </ListPages>
+    </Lists>
+    <Associations>
+      <Association objectname="Area">
+        <AssociationConfiguration>
+          <Rankable>True</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Area_Bio</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="Industry">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Bio_Industry</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="News">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Bio_News</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="BarAdmission">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>BarAdmission_Bio</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="CourtAdmission">
+        <AssociationConfiguration>
+          <Rankable>True</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Bio_CourtAdmission</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="Event">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Bio_Event</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="Blog">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Bio_Blog</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="BlogPost">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Bio_BlogPost</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="Case">
+        <AssociationConfiguration>
+          <Rankable>True</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Bio_Case</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="Widget">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Bio_Widget</Name>
+        </AssociationConfiguration>
+      </Association>
+    </Associations>
+    
+  </WebBackObject>
+  
+  <WebBackObject name="BioTitle">
+    <Configuration>
+      <LongName>Professional Title</LongName>
+      <LongPluralName>Professional Titles</LongPluralName>
+      <DBTable>BioTitles</DBTable>
+      <HidePubToggle>True</HidePubToggle>
+    </Configuration>
+    <Lists>
+      <DropDownLists>
+        <ListFieldSql>[BioTitles].Title</ListFieldSql>
+        <OrderField>BioTitles.Title</OrderField>
+      </DropDownLists>
+      <ListPages>
+        <ListConfiguration>
+          <DefaultOrder>Title</DefaultOrder>
+        </ListConfiguration>
+        <QueryFields>
+          <QueryField name="">Title</QueryField>
+        </QueryFields>
+      </ListPages>
+    </Lists>
+    <Associations />
+  </WebBackObject>
+
+  <WebBackObject name="Case">
+    <Configuration>
+      <LongName>Representative Case</LongName>
+      <LongPluralName>Representative Cases</LongPluralName>
+      <DBTable>Cases</DBTable>
+      <HidePubToggle>True</HidePubToggle>
+    </Configuration>
+    <Lists>
+      <DropDownLists>
+        <ListFieldSql>[Cases].Title</ListFieldSql>
+        <OrderField>Title</OrderField>
+      </DropDownLists>
+      <ListPages>
+        <ListConfiguration>
+          <DefaultOrder>Title</DefaultOrder>
+        </ListConfiguration>
+        <QueryFields>
+          <QueryField name="">Title</QueryField>
+        </QueryFields>
+      </ListPages>
+    </Lists>
+    <Associations />
+  </WebBackObject>
+
+  <WebBackObject name="Blog">
+    <Configuration>
+      <LongName>Blog</LongName>
+      <LongPluralName>Blogs</LongPluralName>
+      <DBTable>Blogs</DBTable>
+      <PreviewPage>ShowBlog.aspx?show=</PreviewPage>
+    </Configuration>
+    <Lists>
+      <DropDownLists>
+        <ListFieldSql>[Blogs].Title</ListFieldSql>
+        <OrderField>Title</OrderField>
+      </DropDownLists>
+      <ListPages>
+        <ListConfiguration>
+          <DefaultOrder>Title</DefaultOrder>
+        </ListConfiguration>
+        <QueryFields>
+          <QueryField name="">Title</QueryField>
+        </QueryFields>
+      </ListPages>
+    </Lists>
+    <Associations>
+      <Association objectname="Area">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Area_Blog</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="Bio">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Bio_Blog</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="Industry">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Blog_Industry</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="BlogPost">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Blog_BlogPost</Name>
+        </AssociationConfiguration>
+      </Association>
+    </Associations>
+  </WebBackObject>
+ 
+  <WebBackObject name="BlogPost">
+    <Configuration>
+      <LongName>Blog Post</LongName>
+      <LongPluralName>Blog Posts</LongPluralName>
+      <DBTable>BlogPosts</DBTable>
+      <PreviewPage>ShowPost.aspx?show=</PreviewPage>
+    </Configuration>
+    <Lists>
+      <DropDownLists>
+        <ListFieldSql>[BlogPosts].Title</ListFieldSql>
+        <OrderField>Title</OrderField>
+      </DropDownLists>
+      <ListPages>
+        <ListConfiguration>
+          <DefaultOrder>Date DESC</DefaultOrder>
+        </ListConfiguration>
+        <QueryFields>
+          <QueryField name="">Title</QueryField>
+          <QueryField name="">Date</QueryField>
+        </QueryFields>
+      </ListPages>
+    </Lists>
+    <Associations>
+      <Association objectname="Bio">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Bio_News</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="Blog">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Blog_BlogPost</Name>
+        </AssociationConfiguration>
+      </Association>
+    </Associations>
+  </WebBackObject>
+  
+  <WebBackObject name="EducationLevel">
+    <Configuration>
+      <LongName>Education Level</LongName>
+      <LongPluralName>Education Levels</LongPluralName>
+      <DBTable>EducationLevels</DBTable>
+      <HidePubToggle>True</HidePubToggle>
+    </Configuration>
+    <Lists>
+      <DropDownLists>
+        <ListFieldSql>[EducationLevels].Title</ListFieldSql>
+        <OrderField>Title</OrderField>
+      </DropDownLists>
+      <ListPages>
+        <ListConfiguration>
+          <DefaultOrder>Title</DefaultOrder>
+        </ListConfiguration>
+        <QueryFields>
+          <QueryField name="">Title</QueryField>
+        </QueryFields>
+      </ListPages>
+    </Lists>
+    <Associations />
+  </WebBackObject>
+  
+  <WebBackObject name="Event">
+    <Configuration>
+      <LongName>Event</LongName>
+      <LongPluralName>Events</LongPluralName>
+      <DBTable>Events</DBTable>
+      <PreviewPage>ShowEvent.aspx?show=</PreviewPage>
+    </Configuration>
+    <Lists>
+      <DropDownLists>
+        <ListFieldSql>[Events].Title</ListFieldSql>
+        <OrderField>Title</OrderField>
+      </DropDownLists>
+      <ListPages>
+        <ListConfiguration>
+          <DefaultOrder>Title</DefaultOrder>
+        </ListConfiguration>
+        <QueryFields>
+          <QueryField name="">Title</QueryField>
+        </QueryFields>
+      </ListPages>
+    </Lists>
+    <Associations>
+      <Association objectname="Area">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Area_Event</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="Bio">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Bio_Event</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="Industry">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Event_Industry</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="Widget">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Event_Widget</Name>
+        </AssociationConfiguration>
+      </Association>
+    </Associations>
+  </WebBackObject>
+  
+  <WebBackObject name="HomepageSlide">
+    <Configuration>
+      <LongName>Homepage Slide</LongName>
+      <LongPluralName>Homepage Slides</LongPluralName>
+      <DBTable>HomepageSlides</DBTable>
+      <HasRank>True</HasRank>
+    </Configuration>
+    <Lists>
+      <DropDownLists>
+        <ListFieldSql>[HomepageSlides].Title</ListFieldSql>
+        <OrderField>Title</OrderField>
+      </DropDownLists>
+      <ListPages>
+        <ListConfiguration>
+          <DefaultOrder>Title</DefaultOrder>
+        </ListConfiguration>
+        <QueryFields>
+          <QueryField name="">Title</QueryField>
+        </QueryFields>
+      </ListPages>
+    </Lists>
+    <Associations />
+  </WebBackObject>
+  
+  <WebBackObject name="Industry">
+    <Configuration>
+      <LongName>Industries</LongName>
+      <LongPluralName>Industry</LongPluralName>
+      <DBTable>Industries</DBTable>
+      <ListSqlQuery>Title</ListSqlQuery>
+      <PreviewPage>ShowIndustry.aspx?show=</PreviewPage>
+    </Configuration>
+    <Lists>
+      <DropDownLists>
+        <ListFieldSql>[Industries].Title</ListFieldSql>
+        <OrderField>Title</OrderField>
+      </DropDownLists>
+      <ListPages>
+        <ListConfiguration>
+          <DefaultOrder>Title</DefaultOrder>
+        </ListConfiguration>
+        <QueryFields>
+          <QueryField name="">Title</QueryField>
+        </QueryFields>
+      </ListPages>
+    </Lists>
+    <Associations>
+      <Association objectname="Bio">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Bio_Industry</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="Area">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Area_Industry</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="News">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Industry_News</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="Event">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Event_Industry</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="Blog">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Blog_Industry</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="BlogPost">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>BlogPost_Industry</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="Widget">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Industry_Widget</Name>
+        </AssociationConfiguration>
+      </Association>
+    </Associations>
+  </WebBackObject>
+  
+  <WebBackObject name="LandingPage">
+    <Configuration>
+      <LongName>Landing Page</LongName>
+      <LongPluralName>Landing Pages</LongPluralName>
+      <DBTable>LandingPages</DBTable>
+      <HidePubToggle>True</HidePubToggle>
+      <PreviewPage>ShowLandingPage.aspx?show=</PreviewPage>  uncomment this if SEO Info is needed on a landing page 
+    </Configuration>
+    <Lists>
+      <DropDownLists>
+        <ListFieldSql>[LandingPages].Title</ListFieldSql>
+        <OrderField>Title</OrderField>
+      </DropDownLists>
+      <ListPages>
+        <ListConfiguration>
+          <DefaultOrder>Title</DefaultOrder>
+        </ListConfiguration>
+        <QueryFields>
+          <QueryField name="">Title</QueryField>
+        </QueryFields>
+      </ListPages>
+    </Lists>
+    <Associations>
+      <Association objectname="News">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>LandingPage_News</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="Event">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Event_LandingPage</Name>
+        </AssociationConfiguration>
+      </Association>
+    </Associations>
+  </WebBackObject>
+  
+  <WebBackObject name="OtherPage">
+    <Configuration>
+      <LongName>Other Page</LongName>
+      <LongPluralName>Other Pages</LongPluralName>
+      <DBTable>OtherPages</DBTable>
+      <PreviewPage>ShowOtherPage.aspx?show=</PreviewPage>
+    </Configuration>
+    <Lists>
+      <DropDownLists>
+        <ListFieldSql>[OtherPages].Title</ListFieldSql>
+        <OrderField>Title</OrderField>
+      </DropDownLists>
+      <ListPages>
+        <ListConfiguration>
+          <DefaultOrder>Title</DefaultOrder>
+        </ListConfiguration>
+        <QueryFields>
+          <QueryField name="">Title</QueryField>
+        </QueryFields>
+      </ListPages>
+    </Lists>
+    <Associations />
+  </WebBackObject>
+  
+  <WebBackObject name="News">
+    <Configuration>
+      <LongName>Firm News</LongName>
+      <LongPluralName>Firm News</LongPluralName>
+      <DBTable>News</DBTable>
+      <PreviewPage>ShowNews.aspx?show=</PreviewPage>
+    </Configuration>
+    <Lists>
+      <DropDownLists>
+        <ListFieldSql>[News].Title</ListFieldSql>
+        <OrderField>Title</OrderField>
+      </DropDownLists>
+      <ListPages>
+        <ListConfiguration>
+          <DefaultOrder>Title</DefaultOrder>
+        </ListConfiguration>
+        <QueryFields>
+          <QueryField name="">Title</QueryField>
+        </QueryFields>
+      </ListPages>
+    </Lists>
+    <Associations>
+      <Association objectname="Area">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Area_News</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="Bio">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Bio_News</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="Industry">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Industry_News</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="Widget">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>News_Widget</Name>
+        </AssociationConfiguration>
+      </Association>
+    </Associations>
+  </WebBackObject>
+  
+  <WebBackObject name="Office">
+    <Configuration>
+      <LongName>Office</LongName>
+      <LongPluralName>Offices</LongPluralName>
+      <DBTable>Offices</DBTable>
+      <PreviewPage>ShowOffice.aspx?show=</PreviewPage>
+      <HasRank>True</HasRank>
+    </Configuration>
+    <Lists>
+      <DropDownLists>
+        <ListFieldSql>[Offices].Title</ListFieldSql>
+        <OrderField>Title</OrderField>
+      </DropDownLists>
+      <ListPages>
+        <ListConfiguration>
+          <DefaultOrder>Title</DefaultOrder>
+        </ListConfiguration>
+        <QueryFields>
+          <QueryField name="">Title</QueryField>
+        </QueryFields>
+      </ListPages>
+    </Lists>
+    <Associations>
+      <Association objectname="Bio">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Bio_Office</Name>
+        </AssociationConfiguration>
+      </Association>
+    </Associations>
+  </WebBackObject>
+  
+  <WebBackObject name="School">
+    <Configuration>
+      <LongName>School</LongName>
+      <LongPluralName>Schools</LongPluralName>
+      <DBTable>Schools</DBTable>
+      <HidePubToggle>True</HidePubToggle>
+    </Configuration>
+    <Lists>
+      <DropDownLists>
+        <ListFieldSql>[Schools].Title</ListFieldSql>
+        <OrderField>Title</OrderField>
+      </DropDownLists>
+      <ListPages>
+        <ListConfiguration>
+          <DefaultOrder>Title</DefaultOrder>
+        </ListConfiguration>
+        <QueryFields>
+          <QueryField name="">Title</QueryField>
+        </QueryFields>
+      </ListPages>
+    </Lists>
+    <Associations />
+  </WebBackObject>
+  
+  <WebBackObject name="Widget">
+    <Configuration>
+      <LongName>Widget</LongName>
+      <LongPluralName>Widgets</LongPluralName>
+      <DBTable>Widgets</DBTable>
+    </Configuration>
+    <Lists>
+      <DropDownLists>
+        <ListFieldSql>[Widgets].Title</ListFieldSql>
+        <OrderField>Title</OrderField>
+      </DropDownLists>
+      <ListPages>
+        <ListConfiguration>
+          <DefaultOrder>Title</DefaultOrder>
+        </ListConfiguration>
+        <QueryFields>
+          <QueryField name="">Title</QueryField>
+        </QueryFields>
+      </ListPages>
+    </Lists>
+    <Associations>
+      <Association objectname="Bio">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Bio_Widget</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="Area">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Area_Widget</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="Industry">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Industry_Widget</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="News">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>News_Widget</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="Event">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>Event_Widget</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="BlogPost">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>BlogPost_Widget</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="LandingPage">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>LandingPage_Widget</Name>
+        </AssociationConfiguration>
+      </Association>
+      <Association objectname="AboutPage">
+        <AssociationConfiguration>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+          <Name>AboutPage_Widget</Name>
+        </AssociationConfiguration>
+      </Association>
+    </Associations>
+  </WebBackObject>
+  
+</WebBackObjects>

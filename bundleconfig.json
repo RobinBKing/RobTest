@@ -1,0 +1,110 @@
+﻿[
+  {
+    "outputFileName": "js/site.js",
+    "inputFiles": [
+      "js/main.js",
+      "js/jquery-3.1.1.js",
+      "js/modernizr-3.3.1.js",
+      "js/materialize.js",
+      "js/sitewide.js"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    },
+    "sourceMap": true
+  },
+  {
+    "outputFileName": "css/utils.css",
+    "inputFiles": [
+      "css/utils/utils.css",
+      "css/utils/variables.css",
+      "css/utils/animate.css"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    },
+    "sourceMap": true
+  },
+  {
+    "outputFileName": "css/base.css",
+    "inputFiles": [
+      "css/base/base.css",
+      "css/base/reset.css",
+      "css/base/fonts.css",
+      "css/base/typography.css",
+      "css/base/helpers.css"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    },
+    "sourceMap": true
+  },
+  {
+    "outputFileName": "css/layout.css",
+    "inputFiles": [
+      "css/layout/layout.css",
+      "css/layout/container.css",
+      "css/layout/nav.css",
+      "css/layout/header.css",
+      "css/layout/content.css",
+      "css/layout/footer.css"
+      //"css/layout/responsive.css"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    },
+    "sourceMap": true
+  },
+  {
+    "outputFileName": "css/components.css",
+    "inputFiles": [
+      "css/components/components.css",
+      "css/components/buttons.css",
+      "css/components/icons.css"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    },
+    "sourceMap": true
+  },
+  {
+    "outputFileName": "css/pages.css",
+    "inputFiles": [
+      "css/pages/pages.css",
+      "css/pages/home.css",
+      "css/pages/about.css",
+      "css/pages/bios.css",
+      "css/pages/areas.css",
+      "css/pages/contact.css",
+      "css/pages/news_resources.css"
+    ],
+    "minify": {
+      "enabled": false,
+      "renameLocals": false
+    },
+    "sourceMap": true
+  },
+  {
+    "outputFileName": "css/site.css",
+    "inputFiles": [
+      "css/main.css",
+      "css/materialize/materialize.css",
+      "css/font-awesome.min.css",
+      "css/utils.css",
+      "css/base.css",
+      "css/layout.css",
+      "css/components.css",
+      "css/pages.css"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": false
+    },
+    "sourceMap": true
+  }
+]

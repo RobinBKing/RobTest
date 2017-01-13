@@ -1,0 +1,247 @@
+﻿/**********************/
+/*    bios styles     */
+/**********************/
+/* - Attorney landing */
+/* - Attorney profile */
+/**********************/
+
+    /* Attorney landing */
+    .content .sort-list {
+        margin: 0 0 20px;
+    }
+
+        .content .sort-list .sort-by {
+            width: 7%;
+            float: left;
+            padding-top: 7px;
+        }
+
+        .content .sort-list .character {
+            width: 85%;
+            float: left;
+            padding: 5px 0 4px;
+            border-bottom: 1px solid #e5e5e5;
+            border-top: 1px solid #e5e5e5;
+        }
+
+            .content .sort-list .character ul {
+                margin: 0;
+                padding: 0;
+            }
+
+                .content .sort-list .character ul li {
+                    margin: 0 10px 0 4px;
+                    padding: 0;
+                    list-style: none;
+                    display: inline-block;
+                }
+
+                    .content .sort-list .character ul li:before {
+                        content: "";
+                        padding: 0;
+                    }
+
+                    .content .sort-list .character ul li a {
+                        color: #1d85f5;
+                        display: inline-block;
+                        padding: 1px 6px 0;
+                        text-decoration: none;
+                    }
+
+                        .content .sort-list .character ul li.current a,
+                        .content .sort-list .character ul li a:hover {
+                            color: #ffffff;
+                            text-decoration: none;
+                            background-color: #1d85f5;
+                        }
+
+                    .content .sort-list .character ul li.disabled {
+                        color: #c6c6c6;
+                        padding: 1px 6px 0;
+                    }
+
+            .content .sort-list .character .active {
+                color: #ffffff;
+                text-decoration: none;
+                background-color: #1d85f5;
+            }
+
+            .content .sort-list .character ul li:last-child {
+                margin: 0;
+            }
+
+        .content .sort-list .view-all {
+            width: 8%;
+            float: right;
+        }
+
+            .content .sort-list .view-all a {
+                display: inline-block;
+                background-color: #1d85f5;
+                padding: 13px;
+                color: #ffffff;
+                font-size: 10px;
+                text-transform: uppercase;
+                text-decoration: none;
+                font-weight: 700;
+            }
+
+                .content .sort-list .view-all a:hover {
+                    background-color: #000000;
+                }
+
+    .content form .columns {
+        padding-left: 0;
+    }
+
+    .content form input,
+    .content form select {
+        font-size: 16px;
+    }
+
+    .content input[type="submit"] {
+        display: inline-block;
+        background-color: #1d85f5;
+        padding: 13px;
+        color: #ffffff;
+        font-size: 10px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 700;
+        border: none;
+        width: 100%;
+    }
+
+        .content input[type="submit"]:hover {
+            background-color: #000000;
+        }
+
+.attorney-banner-bg {
+    background-image: url(images/attorneys-banner.jpg);
+}
+
+.content .single-lawyer {
+    text-align: center;
+}
+
+    .content .single-lawyer .image-box a {
+        display: block;
+    }
+
+    .content .single-lawyer h3 {
+        margin: 24px 0 20px;
+        padding: 0;
+        font-size: 21px;
+        color: #000000;
+        display: inline-block;
+    }
+
+    .content .single-lawyer a:hover h3 {
+        color: #1d85f5;
+    }
+
+    .content .single-lawyer a.button {
+        margin: 0 auto;
+    }
+
+.attorneys-wrap > .columns {
+    padding: 0;
+}
+
+    .attorneys-wrap > .columns:last-child:not(:first-child) {
+        float: left;
+    }
+
+.single-lawyer .image-box {
+    background-color: #004f45;
+}
+
+    .single-lawyer .image-box > a, .single-lawyer .image-box > a img {
+        display: block;
+    }
+
+        .single-lawyer .image-box > a:hover:after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(5, 25, 48, 0.67);
+        }
+
+        .single-lawyer .image-box > a, .single-lawyer .image-box > a:hover, .single-lawyer .image-box > a:focus, .single-lawyer .image-box > a:active {
+            color: #fff;
+        }
+
+            .single-lawyer .image-box > a img {
+                width: 100%;
+            }
+
+    .single-lawyer .image-box > a {
+        position: relative;
+    }
+
+    .single-lawyer .image-box a span {
+        position: absolute;
+        width: 100%;
+        font-weight: 600;
+        text-align: center;
+        left: 0;
+        bottom: 0;
+        background: rgba(5, 25, 48, 0.67);
+        color: #fff;
+        font-family: JoseFin;
+        text-transform: uppercase;
+        font-size: 15px;
+        padding: 29px 0;
+    }
+
+.attorney-top-block .banner-content-block {
+    top: 59%;
+}
+
+/* Attorney profile */
+.content h1.attorney-name {
+    margin-bottom: 0;
+}
+
+.content h3.attorney-title {
+    font-size: 18px;
+    font-style: italic;
+    font-weight: normal;
+}
+
+/* Practice landing */
+.content .practice-landing .columns:last-child {
+    float: left;
+}
+
+.content .practice-landing a {
+    display: block;
+    text-align: center;
+    padding: 20px;
+}
+
+    .content .practice-landing a:hover {
+        background-color: #cccccc;
+    }
+
+    .content .practice-landing a h2 {
+        text-transform: uppercase;
+        font-size: 16px;
+        margin: 0 0 5px;
+        color: #1d85f5;
+    }
+
+    .content .practice-landing a p {
+        color: #000000;
+        margin: 0;
+    }
+
+    .content .practice-landing a .view {
+        color: #1d85f5;
+        text-transform: uppercase;
+        margin-top: 5px;
+    }
+

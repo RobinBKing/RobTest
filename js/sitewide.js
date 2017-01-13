@@ -1,0 +1,5 @@
+/**********/
+/* Custom */
+/**********/
+$(document).ready(function () {
+});

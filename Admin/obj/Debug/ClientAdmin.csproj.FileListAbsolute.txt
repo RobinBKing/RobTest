@@ -1,0 +1,45 @@
+Y:\projects\Lewis\admin2_5\obj\Debug\ClientAdmin.csprojResolveAssemblyReference.cache
+Y:\projects\Lewis\admin2_5\obj\Debug\Admin.fileuploader.resources
+Y:\projects\Lewis\admin2_5\obj\Debug\ClientAdmin.csproj.GenerateResource.Cache
+Y:\projects\Lewis\admin2_5\bin\ClientAdmin.dll.config
+Y:\projects\Lewis\admin2_5\bin\ClientAdmin.dll
+Y:\projects\Lewis\admin2_5\bin\ClientAdmin.pdb
+Y:\projects\Lewis\admin2_5\bin\Microsoft.Owin.dll
+Y:\projects\Lewis\admin2_5\bin\Owin.dll
+Y:\projects\Lewis\admin2_5\bin\CKSource.CKFinder.Connector.Host.Owin.dll
+Y:\projects\Lewis\admin2_5\bin\CKSource.CKFinder.Connector.Core.dll
+Y:\projects\Lewis\admin2_5\bin\CKSource.FileSystem.Local.dll
+Y:\projects\Lewis\admin2_5\bin\CKSource.CKFinder.Connector.Config.dll
+Y:\projects\Lewis\admin2_5\bin\Autofac.dll
+Y:\projects\Lewis\admin2_5\bin\System.Net.Http.Formatting.dll
+Y:\projects\Lewis\admin2_5\bin\CKSource.FileSystem.dll
+Y:\projects\Lewis\admin2_5\bin\ImageProcessor.dll
+Y:\projects\Lewis\admin2_5\bin\Newtonsoft.Json.dll
+Y:\projects\Lewis\admin2_5\obj\Debug\ClientAdmin.dll
+Y:\projects\Lewis\admin2_5\obj\Debug\ClientAdmin.pdb
+Z:\products\WebBack CM 2.5\Admin\bin\ClientAdmin.dll.config
+Z:\products\WebBack CM 2.5\Admin\bin\ClientAdmin.dll
+Z:\products\WebBack CM 2.5\Admin\bin\ClientAdmin.pdb
+Z:\products\WebBack CM 2.5\Admin\obj\Debug\ClientAdmin.csprojResolveAssemblyReference.cache
+Z:\products\WebBack CM 2.5\Admin\obj\Debug\Admin.fileuploader.resources
+Z:\products\WebBack CM 2.5\Admin\obj\Debug\ClientAdmin.csproj.GenerateResource.Cache
+Z:\products\WebBack CM 2.5\Admin\obj\Debug\ClientAdmin.dll
+Z:\products\WebBack CM 2.5\Admin\obj\Debug\ClientAdmin.pdb
+W:\RobTest\Admin\bin\ClientAdmin.dll.config
+W:\RobTest\Admin\bin\ClientAdmin.dll
+W:\RobTest\Admin\bin\ClientAdmin.pdb
+W:\RobTest\Admin\obj\Debug\ClientAdmin.csprojResolveAssemblyReference.cache
+W:\RobTest\Admin\obj\Debug\Admin.fileuploader.resources
+W:\RobTest\Admin\obj\Debug\ClientAdmin.csproj.GenerateResource.Cache
+W:\RobTest\Admin\obj\Debug\ClientAdmin.dll
+W:\RobTest\Admin\obj\Debug\ClientAdmin.pdb
+C:\Visual Studio 2015\Projects\RobTest\Admin\bin\ClientAdmin.dll.config
+C:\Visual Studio 2015\Projects\RobTest\Admin\bin\ClientAdmin.dll
+C:\Visual Studio 2015\Projects\RobTest\Admin\bin\ClientAdmin.pdb
+C:\Visual Studio 2015\Projects\RobTest\Admin\bin\ClientAdmin.dll.CodeAnalysisLog.xml
+C:\Visual Studio 2015\Projects\RobTest\Admin\bin\ClientAdmin.dll.lastcodeanalysissucceeded
+C:\Visual Studio 2015\Projects\RobTest\Admin\obj\Debug\ClientAdmin.csprojResolveAssemblyReference.cache
+C:\Visual Studio 2015\Projects\RobTest\Admin\obj\Debug\Admin.fileuploader.resources
+C:\Visual Studio 2015\Projects\RobTest\Admin\obj\Debug\ClientAdmin.csproj.GenerateResource.Cache
+C:\Visual Studio 2015\Projects\RobTest\Admin\obj\Debug\ClientAdmin.dll
+C:\Visual Studio 2015\Projects\RobTest\Admin\obj\Debug\ClientAdmin.pdb

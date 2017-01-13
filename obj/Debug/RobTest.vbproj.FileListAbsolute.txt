@@ -1,0 +1,57 @@
+W:\RobTest\RobTest\bin\RobTest.dll.config
+W:\RobTest\RobTest\bin\RobTest.dll
+W:\RobTest\RobTest\bin\RobTest.pdb
+W:\RobTest\RobTest\bin\RobTest.xml
+W:\RobTest\RobTest\bin\SatLib.Base.dll
+W:\RobTest\RobTest\bin\SatLib.WBCM2.dll
+W:\RobTest\RobTest\bin\System.Web.Optimization.dll
+W:\RobTest\RobTest\bin\WebGrease.dll
+W:\RobTest\RobTest\bin\Microsoft.Web.Infrastructure.dll
+W:\RobTest\RobTest\bin\Antlr3.Runtime.dll
+W:\RobTest\RobTest\bin\SatLib.Base.pdb
+W:\RobTest\RobTest\bin\SatLib.Base.xml
+W:\RobTest\RobTest\bin\SatLib.WBCM2.pdb
+W:\RobTest\RobTest\bin\SatLib.WBCM2.xml
+W:\RobTest\RobTest\obj\Debug\RobTest.vbprojResolveAssemblyReference.cache
+W:\RobTest\RobTest\obj\Debug\RobTest.Resources.resources
+W:\RobTest\RobTest\obj\Debug\RobTest.vbproj.GenerateResource.Cache
+W:\RobTest\RobTest\obj\Debug\RobTest.dll
+W:\RobTest\RobTest\obj\Debug\RobTest.xml
+W:\RobTest\RobTest\obj\Debug\RobTest.pdb
+W:\RobTest\bin\RobTest.dll.config
+W:\RobTest\bin\RobTest.dll
+W:\RobTest\bin\RobTest.pdb
+W:\RobTest\bin\RobTest.xml
+W:\RobTest\bin\SatLib.Base.dll
+W:\RobTest\bin\SatLib.WBCM2.dll
+W:\RobTest\bin\System.Web.Optimization.dll
+W:\RobTest\bin\WebGrease.dll
+W:\RobTest\bin\Microsoft.Web.Infrastructure.dll
+W:\RobTest\bin\Antlr3.Runtime.dll
+W:\RobTest\bin\SatLib.Base.pdb
+W:\RobTest\bin\SatLib.Base.xml
+W:\RobTest\bin\SatLib.WBCM2.pdb
+W:\RobTest\bin\SatLib.WBCM2.xml
+W:\RobTest\obj\Debug\RobTest.vbprojResolveAssemblyReference.cache
+W:\RobTest\obj\Debug\RobTest.Resources.resources
+W:\RobTest\obj\Debug\RobTest.vbproj.GenerateResource.Cache
+W:\RobTest\obj\Debug\RobTest.dll
+W:\RobTest\obj\Debug\RobTest.xml
+W:\RobTest\obj\Debug\RobTest.pdb
+C:\Visual Studio 2015\Projects\RobTest\bin\RobTest.dll.config
+C:\Visual Studio 2015\Projects\RobTest\bin\RobTest.dll
+C:\Visual Studio 2015\Projects\RobTest\bin\RobTest.pdb
+C:\Visual Studio 2015\Projects\RobTest\bin\RobTest.xml
+C:\Visual Studio 2015\Projects\RobTest\bin\WebGrease.dll
+C:\Visual Studio 2015\Projects\RobTest\bin\Microsoft.Web.Infrastructure.dll
+C:\Visual Studio 2015\Projects\RobTest\bin\Antlr3.Runtime.dll
+C:\Visual Studio 2015\Projects\RobTest\bin\SatLib.Base.pdb
+C:\Visual Studio 2015\Projects\RobTest\bin\SatLib.Base.xml
+C:\Visual Studio 2015\Projects\RobTest\bin\SatLib.WBCM2.pdb
+C:\Visual Studio 2015\Projects\RobTest\bin\SatLib.WBCM2.xml
+C:\Visual Studio 2015\Projects\RobTest\obj\Debug\RobTest.vbprojResolveAssemblyReference.cache
+C:\Visual Studio 2015\Projects\RobTest\obj\Debug\RobTest.Resources.resources
+C:\Visual Studio 2015\Projects\RobTest\obj\Debug\RobTest.vbproj.GenerateResource.Cache
+C:\Visual Studio 2015\Projects\RobTest\obj\Debug\RobTest.dll
+C:\Visual Studio 2015\Projects\RobTest\obj\Debug\RobTest.xml
+C:\Visual Studio 2015\Projects\RobTest\obj\Debug\RobTest.pdb

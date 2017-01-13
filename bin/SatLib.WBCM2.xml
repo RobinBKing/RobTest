@@ -1,0 +1,697 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+SatLib.WBCM2
+</name>
+</assembly>
+<members>
+<member name="T:SatLib.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:SatLib.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:SatLib.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="T:SatLib.SatGlobalProxy">
+ <summary>
+ Class that helps connect the SatLib WBCM2 library into the main web application.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:SatLib.SatGlobalProxy._isOneTimeSetupComplete">
+ <summary>
+ Have the one-time jobs been run?
+ </summary>
+</member>
+<member name="M:SatLib.SatGlobalProxy.Init(System.Web.HttpApplication)">
+ <summary>
+ Initialize the connections between current application and the SatLib WBCM2 library, called from Global / Init().
+ This will run each time a new worker process is built and configured.
+ </summary>
+</member>
+<member name="M:SatLib.SatGlobalProxy.Application_BeginRequest(System.Object,System.EventArgs)">
+ <summary>
+ Default library actions for Application_BeginRequest
+ </summary>
+</member>
+<member name="M:SatLib.SatGlobalProxy.Application_PreSendRequestHeaders(System.Object,System.EventArgs)">
+ <summary>
+ Default library actions for Application_PreSendRequestHeaders
+ </summary>
+</member>
+<member name="M:SatLib.SatGlobalProxy.Application_Error(System.Object,System.EventArgs)">
+ <summary>
+ Default library actions for Application_Error
+ </summary>
+</member>
+<member name="M:SatLib.SatGlobalProxy.CleanResponseForSafety(System.Object)">
+ <summary>
+ Attempts to sanitize the response by removing any unsafe information that may be packaged
+ </summary>
+</member>
+<member name="M:SatLib.SatGlobalProxy.SatSignalWatcher_InstanceActivated(System.Object,System.EventArgs)">
+ <summary>
+ Default internal library handler for SatSignalWatcher event
+ </summary>
+</member>
+<member name="M:SatLib.SatGlobalProxy.SatSignalWatcher_RecordModified(System.Object,System.EventArgs)">
+ <summary>
+ Default internal library handler for SatSignalWatcher event
+ </summary>
+</member>
+<member name="M:SatLib.SatGlobalProxy.WebBack_RunLinkChecker(System.String,System.String,System.Int32)">
+ <summary>
+ Execute the LinkChecker behavior, dispatches a call to the specified CM2 admin link checker.
+ </summary>
+ <param name="strBaseUrl">Base Url to use for the request, ex: "http://www.site.com/"</param>
+ <param name="strAdminFolder">Undecorated name of the admin folder, ex: "admin"</param>
+ <param name="iMinutesToWait">Minutes to wait between runs</param>
+</member>
+<member name="M:SatLib.SatGlobalProxy.WebBack_RunTasks(System.String,System.String,System.Int32)">
+ <summary>
+ Execute the WebBack Tasks behavior, dispatches a call to the specified CM2 admin.
+ </summary>
+ <param name="strBaseUrl">Base Url to use for the request, ex: "http://www.site.com/"</param>
+ <param name="strAdminFolder">Undecorated name of the admin folder, ex: "admin"</param>
+ <param name="iMinutesToWait">Minutes to wait between runs</param>
+</member>
+<member name="T:SatLib.SatCache">
+ <summary>
+ Collection of cache-related functions that are commonly used when developing WebBack-based sites.
+ </summary>
+ <remarks>Managed by the library curator. Do not edit without permission.</remarks>
+</member>
+<member name="M:SatLib.SatCache.ClearCache">
+ <summary>
+ Remove every item in the HttpContext.Current.Cache by explicitly grabbing all keys and removing one by one
+ </summary>
+</member>
+<member name="M:SatLib.SatCache.GetRecordID(System.String,System.String)">
+ <summary>
+ Get the "ID" value from a SQL query result, taken from cache if possible. Used mostly for saving landing page or important navigation IDs.
+ </summary>
+ <param name="strSQL">SQL query whose result will be cached - must include an "ID" column</param>
+ <param name="strCacheKey">Unique cache key used to identify the saved result</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatCache.GetSimpleValue(System.String,System.Int32,System.String)">
+ <summary>
+ Get a value from a single record in the DB, using a cache if possible.
+ </summary>
+ <param name="tableName">Name of the DB table to query</param>
+ <param name="ID">ID of the lookup record</param>
+ <param name="strValueColumn">Column holding the desired value</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatCache.GetSimpleValueHash(System.String,System.String,System.String)">
+ <summary>
+ Get a hashtable mapping ID->Value for a WebBack table in the DB, stored in a cache if possible.
+ </summary>
+ <param name="tableName">Name of the DB table to query</param>
+ <param name="strIDColumn">SQL column expression to be selected as the ID</param>
+ <param name="strValueColumn">SQL column expression to be selected as the value</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="T:SatLib.SatExtra.SatRebuildPage">
+ <summary>
+ This base class exposes the WebBack publish notification values (WBActionType, WBObjectID, WBObjectName) and clears the application cache on init.
+ Tasks to be defined here: search index population, SEO url population.
+ </summary>
+</member>
+<member name="F:SatLib.SatExtra.SatRebuildPage.WBActionType">
+ <summary>
+ WebBack publish action, always lowercase. Taken from the query string "Type".
+ </summary>
+</member>
+<member name="F:SatLib.SatExtra.SatRebuildPage.WBObjectID">
+ <summary>
+ WebBack published object ID. Taken from the query string "ID".
+ </summary>
+</member>
+<member name="F:SatLib.SatExtra.SatRebuildPage.WBObjectName">
+ <summary>
+ WebBack published object name, always lowercase. Taken from the query string "ObjectName".
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatRebuildPage.OnPreInit(System.EventArgs)">
+ <summary>
+ Override of standard OnPreInit function. We read the default WebBack publish values from the query string and clear the application cache.
+ </summary>
+ <param name="e"></param>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatExtra.SatRebuildPage.RebuildSearchIndex">
+ <summary>
+ Executes standard search-index-rebuild logic for query strings "RebuildAll", "RebuildTable"
+ </summary>
+</member>
+<member name="T:SatLib.SatExtra.SatSeoUrlGenerator">
+ <summary>
+ A class which simplifies the generation of WebBack vanity URLs for use with the SatRewriter.
+ </summary>
+</member>
+<member name="F:SatLib.SatExtra.SatSeoUrlGenerator._htNameToTitle">
+ <summary>
+ A mapping of WebBack object names to SQL Title selection values.  Should be populated by developer using AddRule() before using this class.
+ </summary>
+</member>
+<member name="F:SatLib.SatExtra.SatSeoUrlGenerator.WordLimit">
+ <summary>
+ Limit of how many words will be included in the vanity URL slug. -1 for unlimited number of words.
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatSeoUrlGenerator.#ctor(System.Int32)">
+ <summary>
+ Construct a new SatSeoUrlGenerator. 
+ After creation, use AddRule() function to configure, then Generate() or GenerateAll() to execute.
+ </summary>
+ <param name="iWordLimit">Limit of how many words will be included in the vanity URL slug. -1 for unlimited number of words.</param>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatExtra.SatSeoUrlGenerator.AddRule(System.String,System.String)">
+ <summary>
+ Create a new vanity URL creation rule which will be used on objects matching the specified filter.
+ </summary>
+ <param name="strObjectNameFilter">Comma-delimited list of WebBack object names to be impacted (ex: "article,location,practice")</param>
+ <param name="strUrlColumnSelect">SQL select value for the vanity URL. Typically this is just "Title"</param>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatExtra.SatSeoUrlGenerator.Generate(System.Int32,System.String)">
+ <summary>
+ Generate and save a vanity URL (if none exists) for the specified WebBack record, based on the rules currently added to this instance of SatSeoUrlGenerator.
+ </summary>
+ <param name="publishedObjectID">ID of the WebBack record</param>
+ <param name="publishedObjectName">ObjectName of the WebBack record</param>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatExtra.SatSeoUrlGenerator.GenerateAll">
+ <summary>
+ Generate a vanity URL (if none exists) for all records in the DB with a rule defined in this instance of SatSeoUrlGenerator.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatExtra.SatSeoUrlGenerator.GenerateAndSaveURL(System.String,System.String,System.String,System.Int32)">
+ <summary>
+ [STATIC] Generate and save (in the WBPageUrls table) a WebBack-approved vanity URL for the specified record, if it does not already have a vanity URL assigned.
+ </summary>
+ <param name="objectID">WebBack ID of the record</param>
+ <param name="objectName">WebBack Object Name (ex: "bio") of the record</param>
+ <param name="strUrlColumnSelect">SQL select value for the vanity URL. Typically this is just "Title"</param>
+ <param name="iWordLimit">Limit of how many words will be included in the vanity URL slug. -1 for unlimited number of words.</param>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatExtra.SatSeoUrlGenerator.GetUsableSeoSlug(System.String,System.Int32)">
+ <summary>
+ Given a desired vanity URL string, convert it to a safely-usable WebBack vanity URL. 
+ Slugifies input string using "-", checks WBPageURLs table for duplicates, appends numbers until safe value is found (litigation-1, litigation-2, etc.)
+ </summary>
+ <param name="strInput">Raw string for the desired SEO url, this will be slugified using hyphen (-) to connect words</param>
+ <param name="iWordLimit">Limit of how many words will be included in the vanity URL slug. -1 for unlimited number of words.</param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="F:SatLib.SatExtra.SatSearchBuilderOptions.TableObjects">
+ <summary>
+ DB table name for WebBack Objects data
+ </summary>
+</member>
+<member name="F:SatLib.SatExtra.SatSearchBuilderOptions.TableSearch">
+ <summary>
+ DB table name for WebBack Search
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatSearchBuilder.SaveToWBSearch(System.Int32,System.String,System.String)">
+ <summary>
+ Takes the html from the show page of the WBOID, cleans it up and puts it in the search table for sql fulltext indexing to search. Powers SatSearchParser.
+ </summary>
+ <param name="WBOID">ID of the item</param>
+ <param name="ObjectName">WB Type of the item</param>
+ <param name="ExtraQueryString">Optional string to append to the end of the request querystring that is called to gather the html to save in the search table. EX: &amp;Language=148 </param>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatExtra.SatSearchBuilder.AddSearchItem(System.Int32,System.String,System.String,System.String)">
+ <summary>
+ Add/update an indexed search record in the database.
+ </summary>
+ <param name="PageID">WebBack ID of the record</param>
+ <param name="ShowURL"></param>
+ <param name="WBObjectTable">WebBack table name for the type of this record</param>
+ <param name="pageData">Plaintext rendered search content for this record</param>
+</member>
+<member name="M:SatLib.SatExtra.SatSearchBuilder.AddSearchItem_SQL(System.Int32,System.String,System.String,System.String)">
+ <summary>
+ Add/update an indexed search record in the database.
+ </summary>
+ <param name="PageID">WebBack ID of the record</param>
+ <param name="ShowURL"></param>
+ <param name="WBObjectTable">WebBack table name for the type of this record</param>
+ <param name="pageData">Plaintext rendered search content for this record</param>
+</member>
+<member name="M:SatLib.SatExtra.SatSearchBuilder.AddSearchItem_Proc(System.Int32,System.String,System.String,System.String)">
+ <summary>
+ Function that dispatches calls to stored proc AddSearchItem (from legacy WebBack)
+ </summary>
+ <param name="PageID"></param>
+ <param name="ShowURL"></param>
+ <param name="WBObjectTable"></param>
+ <param name="pageData"></param>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatExtra.SatSearchBuilder.RemovePage(System.String,System.String)">
+ <summary>
+ Removes a page from the index when it's archived in webback this can be called manually from rebuildbyid.aspx to clean up data
+ </summary>
+ <param name="PageID"></param>
+ <param name="ObjectName"></param>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatExtra.SatSearchBuilder.IsWBIndexRequest">
+ <summary>
+ A simple check telling us whether the current request is from a search index
+ </summary>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatExtra.SatSearchParser.#ctor(System.Boolean)">
+ <summary>
+ Override for boolean isPublished(default=true)
+ </summary>
+ <param name="includePublishedFilter">True(default) to include SatWB.IsPublished(""); False to get all records</param>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatExtra.SatSearchParser.getDataTable(System.String,System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ Gets a Data Table using the Parameters provided, Calls build Search Query
+ </summary>
+ <param name="DataTable">This Table is inner Joined to the WB Search Table INNER JOIN [DataTable]</param>
+ <param name="ColQuery">What Columns do you want to have returned</param>
+ <param name="SearchTable">The Name of the Search Table EX- WBSearch</param>
+ <param name="joins">Allows for additional Joins, Values are appended to the end of the Query before the Where Clause</param>
+ <param name="whereClause">Where Clause- Leave out the Where it is already there</param>
+ <param name="orderClause">Full Order By Clause- EX- ORDER BY foo.foo</param>
+ <returns></returns>
+ <remarks>Sean K Added IsPublished 1-15-16.</remarks>
+</member>
+<member name="M:SatLib.SatExtra.SatSearchParser.getSearchDisplayString">
+ <summary>
+ Gets a string which lists a formated logical outcome of the last search that was made for use on your search page like "Your Search for " + getSearchDisplayString() + " returned X records"
+ </summary>
+ <returns>string</returns>
+ <remarks>Jabin 1-28-16.</remarks>
+</member>
+<member name="F:SatLib.SatExtra.SatSignalWatcher._SINGLETON_CACHE_KEY">
+ <summary>
+ Application cache key for the singleton
+ </summary>
+</member>
+<member name="F:SatLib.SatExtra.SatSignalWatcher._enabled">
+ <summary>
+ Is this SignalWatcher enabled?
+ </summary>
+</member>
+<member name="F:SatLib.SatExtra.SatSignalWatcher._lastCheckDate">
+ <summary>
+ UTC timestamp from the last signal check
+ </summary>
+</member>
+<member name="F:SatLib.SatExtra.SatSignalWatcher._lastSeenDate">
+ <summary>
+ Dictionary of "last seen" datetimes for all signals
+ </summary>
+</member>
+<member name="F:SatLib.SatExtra.SatSignalWatcher.CooldownSeconds">
+ <summary>
+ Duration, in seconds, to wait between checking for new signals.
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatSignalWatcher.Current">
+ <summary>
+ Get the current instance from the application cache
+ </summary>
+</member>
+<member name="E:SatLib.SatExtra.SatSignalWatcher.InstanceActivated">
+ <summary>
+ Event triggered when WebBack instance has been activated
+ </summary>
+</member>
+<member name="E:SatLib.SatExtra.SatSignalWatcher.RecordModified">
+ <summary>
+ Event triggered when a "live" record has been modified via publish/archive
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatSignalWatcher.#ctor">
+ <summary>
+ Constructor, privately called only when creating our singleton
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatSignalWatcher._processSignal(System.String,System.DateTime)">
+ <summary>
+ Process a signal found in the DB, decide whether or not to trigger its events.
+ </summary>
+ <param name="name">Signal title</param>
+ <param name="signalDate">Signal date</param>
+</member>
+<member name="M:SatLib.SatExtra.SatSignalWatcher._triggerEvent(System.String)">
+ <summary>
+ Actually trigger all event handlers for the specified signal
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatSignalWatcher.CheckForSignals">
+ <summary>
+ Check for new signals and dispatch events based on what we find.
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatSignalWatcher.SetLastSeenDate(System.String,System.DateTime)">
+ <summary>
+ Manually set a "last seen" date for a particular signal. 
+ Typically used when we've already carried out handler behavior and don't want to respond until a new signal arrives.
+ </summary>
+</member>
+<member name="T:SatLib.SatExtra.SatSiteMap">
+ <summary>
+ Represents an XML sitemap for use by services like Google
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:SatLib.SatExtra.SatSiteMap._lastSaveTime">
+ <summary>
+ Private tracking dictionary for last time we saved a particular sitemap config within this application
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:SatLib.SatExtra.SatSiteMap.SatSiteMapType">
+ <summary>
+ Currently supported types for SatSiteMap
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatSiteMap.Type">
+ <summary>
+ Type of the sitemap - impacts the output formatting
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatSiteMap.ExcludeTypes">
+ <summary>
+ Types to be excluded from this sitemap
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatSiteMap.IncludeTypes">
+ <summary>
+ Types to be included in this sitemap (if empty/unset, all types are included)
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatSiteMap.IncludeStaticUrls">
+ <summary>
+ Should URLs from the static table be automatically included?
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatSiteMap.CacheMinutes">
+ <summary>
+ Minutes to wait between saves of this sitemap. Default is 5, use 0 for no caching.
+ </summary>
+</member>
+<member name="P:SatLib.SatExtra.SatSiteMap.BaseUrl">
+ <summary>
+ Base Url for sitemap outputs, ex: "http://www.site.com/" ... defaults to SatOptions.UrlBaseExternal
+ </summary>
+ <value></value>
+</member>
+<member name="P:SatLib.SatExtra.SatSiteMap.Filter">
+ <summary>
+ Optional Filtering class which will manipulate the Url list before output. Columns: (ID, Parent, LangParent, Language, TableName, Url, LastUpdated)
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatSiteMap.#ctor">
+ <summary>
+ Create a new SatSiteMap object with default options (Type: Xml, Include: all objects, Cache: 5 minutes)
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatSiteMap.#ctor(SatLib.SatExtra.SatSiteMap.SatSiteMapType,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.Int32)">
+ <summary>
+ Create a new SatSiteMap object with the specified options.
+ </summary>
+ <param name="inType">One of the types from SatSiteMapTypes</param>
+ <param name="includeObjects">List of WebBackObject names to include (if empty, all types are included)</param>
+ <param name="excludeObjects">List of WebBackObject names to exclude</param>
+ <param name="iCacheMinutes">How many minutes to wait between saves of this sitemap?</param>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatExtra.SatSiteMap.GetOutput">
+ <summary>
+ Get the output of this sitemap as a string
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatSiteMap.GetUrls">
+ <summary>
+ Get a datatable of URLs based on this SatSiteMap's rules, columns {ID, Parent, LangParent, Language, TableName, Url, LastUpdated}
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.SatSiteMap.Save(System.String)">
+ <summary>
+ Save the output of this sitemap to the specified application-relative path. Respects "CacheMinutes" timing option.
+ </summary>
+ <param name="strAppPath">App-relative path, ex: "/sitemap.xml"</param>
+</member>
+<member name="M:SatLib.SatExtra.SatSiteMap._getCacheKey">
+ <summary>
+ Get the cache key for this particular SiteMap configuration
+ </summary>
+</member>
+<member name="T:SatLib.SatExtra.ISatSiteMapFilter">
+ <summary>
+ Interface implemented by SatSiteFilter classes
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.ISatSiteMapFilter.GetName">
+ <summary>
+ Get a (unique) string representation of this filter, for cache key usage
+ </summary>
+</member>
+<member name="M:SatLib.SatExtra.ISatSiteMapFilter.FilterUrlList(System.Data.DataTable)">
+ <summary>
+ Given the initial list of automatically generated Urls, return a "final" list of Urls to be used in the sitemap
+ </summary>
+ <param name="dtUrls">Table of URLs, with columns [ID, Parent, LangParent, Language, TableName, Url, LastUpdated]</param>
+</member>
+<member name="T:SatLib.ISatRewriterDataProvider">
+ <summary>
+ Rewriter Data Provider Interface - implemented by the classes that will provide lookup services for URL rewriting.
+ </summary>
+ <remarks>01/20/2011 - Brian created</remarks>
+</member>
+<member name="T:SatLib.SatRewriterOptions">
+ <summary>
+ Rewriter options that can be set at runtime within the application for special behaviors.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="F:SatLib.SatRewriterOptions.AllowSlashesInURLs">
+ <summary>
+ Set at runtime to enable the user of slashes in URLs. Probably needs to be set in the global application startup to make sure it's correct before it is used.
+ </summary>
+</member>
+<member name="F:SatLib.SatRewriterOptions.TableObjects">
+ <summary>
+ DB table name for WebBack Objects data
+ </summary>
+</member>
+<member name="F:SatLib.SatRewriterOptions.TablePageUrls">
+ <summary>
+ DB table name for WebBack Page Urls
+ </summary>
+</member>
+<member name="F:SatLib.SatRewriterOptions.TablePageUrlsStatic">
+ <summary>
+ DB table name for WebBack Page Urls Static
+ </summary>
+</member>
+<member name="M:SatLib.SatRewriterOptions.AutoDetectOptions">
+ <summary>
+ Attempt to automatically set the Table name properties based on which version of WebBack we find in the DB
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="T:SatLib.SatRewriterProxyImpl">
+ <summary>
+ Base implementation of the SatRewriterProxy, which routes BuildURL requests to SatRewriter.GetLinkURLFromObjectID.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatRewriterProxyImpl.BuildURL(System.Object)">
+ <summary>
+ Return usable vanity URL via SatRewriter.GetLinkURLFromObjectID(). Respects "SatRewriterOptions.AllowSlashesInUrls"
+ </summary>
+</member>
+<member name="T:SatLib.SatRewriter">
+ <summary>
+ Rewriter class, managing the WebBack ID:Vanity URL relationship. Override URL generation behavior with SatRewriterProxy.
+ </summary>
+ <remarks>Static class wrapping multiple ISatRewriterDataProvider implementations. Created by Brian B, 01/20/2011.</remarks>
+</member>
+<member name="P:SatLib.SatRewriter.Instance">
+ <summary>
+ Get a reference to the current application's SatRewriter.  Only a single SatRewriter should exist within an application, so all non-static calls should reference this.
+ </summary>
+</member>
+<member name="M:SatLib.SatRewriter.LookupAndTransferRequest">
+ <summary>
+ Lookup the vanity URL rewrite path for the current request, and actually execute the transfer to that new URL. No action will be taken if a vanity URL match is not found.
+ </summary>
+ <remarks>01/20/2011 - Brian created</remarks>
+</member>
+<member name="M:SatLib.SatRewriter.GetForwardingURLFromURL(System.String)">
+ <summary>
+ Return the (optional) forwarding destination for the given URL. 
+ "Forwarding" means browser location should change rather than being invisibly routed, typically happens only with multiple vanity URLs pointing to same record.
+ </summary>
+ <param name="strURL"></param>
+ <returns>The URL to which the client should be redirected</returns>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatRewriter.GetRewritePathFromURL(System.String)">
+ <summary>
+ Return the configured file path for a given vanity URL (e.g. "business" returns "showarea.aspx?show=752")
+ </summary>
+ <param name="strURL"></param>
+ <returns></returns>
+ <remarks></remarks>
+</member>
+<member name="M:SatLib.SatRewriter.GetLinkURLFromObjectID(System.String)">
+ <summary>
+ Return the top priority vanity URL for a given WebBack object ID. If no vanity URLs are found, the original ID value will be returned.
+ </summary>
+</member>
+<member name="M:SatLib.SatRewriter.BuildURL(System.Object)">
+ <summary>
+ Via the SatRewriterProxy, return the top priority vanity URL for a given WebBack object ID. If no vanity URLs are found, the original ID value will be returned.
+ </summary>
+</member>
+<member name="M:SatLib.SatRewriter.Refresh">
+ <summary>
+ Ask Rewriter to refresh itself. This should be called when the URL data may have changed and we want to make sure the data providers are all up to date.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="E:SatLib.SatRewriter.URLForward">
+ <summary>
+ Event raised when visitor is being forwarded from "oldUrl" to "newUrl" due to the ranking of SatRewriter urls
+ </summary>
+</member>
+<member name="M:SatLib.SatRewriter.OnURLForward(System.String,System.String)">
+ <summary>
+ Invocation method for the URLForward event
+ </summary>
+</member>
+<member name="M:SatLib.SatRewriter.GetCanonicalUrl(System.String)">
+ <summary>
+ Get the canonical url for the current request.  Attempts to be aware of SatOptions.MobileFolder value
+ </summary>
+ <param name="strProtocolAndDomain">Base protocol+domain string for URLs, ex: "http://www.site.com/"</param>
+</member>
+<member name="T:SatLib.SatRewriter.RewriterHashLookupImpl">
+ <summary>
+  A hashtable-cache implementation of the ISatRewriterDataProvider interface.
+ This implementation builds a set of hashtables from the DB on its first request, and then uses those hashes for lookups on subsequent requests.
+ </summary>
+ <remarks>01/21/2011 - Brian created</remarks>
+</member>
+<member name="T:SatLib.SatWB">
+ <summary>
+ Collection of shared/static utility functions which pertain to WebBack implementation details.
+ </summary>
+ <remarks>Managed by the library curator. Do not edit without permission.</remarks>
+</member>
+<member name="T:SatLib.SatWB.WBConnectionType">
+ <summary>
+ Enumeration of WebBack DB Connection Types
+ </summary>
+</member>
+<member name="M:SatLib.SatWB.ExecuteSql(System.String)">
+ <summary>
+ Execute a SQL statement, return a single value. Uses a WBConnectionType.ReadWrite connection. Replaces NULL returns with String.Empty.
+ </summary>
+ <param name="strSQL"></param>
+</member>
+<member name="M:SatLib.SatWB.ExecuteSql(System.String,System.Boolean)">
+ <summary>
+ Execute a SQL statement, return a single value. Uses a WBConnectionType.ReadWrite connection. Replaces NULL returns with String.Empty.
+ </summary>
+ <param name="strSQL"></param>
+ <param name="returnIdentity">If true, run a SELECT @@IDENTITY after the specified query, and return that result instead</param>
+</member>
+<member name="M:SatLib.SatWB.GetAssociated(System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+ <summary>
+ Creates a complete association string for CM2 association calls. Includes WHERE filters from IsPublished when getting the list of associations.
+ </summary>
+ <param name="showId">The id of the item to get the associations of</param>
+ <param name="associationName">The name of the association. Often A-Z order eg. "Area.Bio" or "PrimaryContact"</param>
+ <param name="detailNames">1. "Area_Bio" or "Area.Bio" as defined in the WebBack xml sheet.  
+ 2. "School, Year" Comma delimited lists will be split, trimmed, and associations generated in the order they are listed. 
+ They are returned as "Detail_" &amp; detailName. To access the detail (for a dropdown title), 
+ add a join "LEFT JOIN Schools on Schools.Id=AssocDetails0.Detail" and a Select ",Schools.Title AS SchoolTitle"</param>
+ <param name="tableName">The table name of the association you want to retrieve eg. "Bios". Does not take an alias.</param>
+ <param name="listFields">The list of fields to retrieve along with AssocDetail</param>
+ <param name="joinClause">Add extra join clauses to get additional Association Details</param>
+ <param name="whereClause">Appends the string to the end of the where clause.  Requires "AND" or "OR" in the string</param>
+ <param name="orderBy">Does not prepend table name</param>
+ <returns>A proper SQL query that can be used to get data.</returns>
+ <remarks>Sean K, 7-22-14, SK Updated 8-6-14 with DetailList</remarks>
+</member>
+<member name="M:SatLib.SatWB._getConnectionStringByName(System.String)">
+ <summary>
+ Attempt to look up a connection string by name, using the ConnectionStrings collection and then web.config keys
+ </summary>
+</member>
+<member name="M:SatLib.SatWB.GetConnectionString(SatLib.SatWB.WBConnectionType)">
+ <summary>
+ Returns a WebBack connection string, first searching in ConnectionStrings section and then in AppSettings. 
+ </summary>
+ <param name="ConnectionType">The SatWB.WBConnectionType that you want to return (read or read/write)</param>
+ <returns>Connection string for use in SqlConnection</returns>
+</member>
+<member name="M:SatLib.SatWB.GetDataTable(System.String)">
+ <summary>
+ Execute a SQL statement and return the results in a DataTable object. Uses a WBConnectionType.Read connection.
+ </summary>
+ <param name="strSQL"></param>
+</member>
+<member name="M:SatLib.SatWB.GetPreviewTable(System.String)">
+ <summary>
+ Returns table name with "Queued" appended if page request is in WebBack Preview mode, otherwise just gives the unchanged table name.
+ </summary>
+ <param name="strTableName">Table name</param>
+</member>
+<member name="M:SatLib.SatWB.GetReader(System.String)">
+ <summary>
+ Execute a SQL statement and return the results in a SqlDataReader object. Uses a WBConnectionType.Read connection.
+ </summary>
+ <param name="strSQL"></param>
+</member>
+<member name="M:SatLib.SatWB.GetSafeVanityUrl(System.Object)">
+ <summary>
+ Convert the string to a URL slug using the same filtering logic as WebBack CM2. Allowed characters are letter, number, hyphen, underscore; all others are removed.
+ </summary>
+ <remarks>Respects SatRewriterOptions.AllowSlashesInURLs setting.</remarks>
+</member>
+<member name="M:SatLib.SatWB.IsPublished(System.String)">
+ <summary>
+ Creates a WHERE clause that only accepts ACTIVE and PUBLISHED records (based on WB expire dates and wbc_showweb column)
+ Auto bypassed by VALID Indexing and Preview requests
+ </summary>
+ <param name="aliasName">The alias of the table to apply the filter to</param>
+ <returns>A string that can be used in a where clause: "WHERE " + IsPublished("SRC") + " AND SRC.ID=" + ShowId </returns>
+</member>
+</members>
+</doc>

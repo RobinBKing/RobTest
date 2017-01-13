@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebBackRows>
+  <WebBackRow>
+    <Configuration>
+      <Label>Title</Label>
+      <Separator>True</Separator>
+    </Configuration>
+    <WebBackFields>
+      <WebBackField>
+        <Required>True</Required>
+        <MaxLength>300</MaxLength>
+        <DBField>Title</DBField>
+        <Type>string</Type>
+      </WebBackField>
+    </WebBackFields>
+  </WebBackRow>
+  <WebBackRow>
+    <Configuration>
+      <Label>Body</Label>
+    </Configuration>
+    <WebBackFields>
+      <WebBackField>
+        <DBField>Body</DBField>
+        <Type>text</Type>
+      </WebBackField>
+    </WebBackFields>
+  </WebBackRow>
+  
+  <WebBackRow>
+    <Configuration>
+      <Label>Contact Us Form</Label>
+      <HelpText>If checked, the Contact Us form will show on this page.</HelpText>
+    </Configuration>
+    <WebBackFields>
+      <WebBackField>
+        <DBField>ContactForm</DBField>
+        <Type>checkbox</Type>
+      </WebBackField>
+    </WebBackFields>
+  </WebBackRow>
+  
+</WebBackRows>

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebBackObjects>
+
+  <!-- all options REF:https://sites.google.com/a/saturnodesign.com/saturno-kb/development/webback-cm2/xml-setup-all -->
+  <WebBackObject name="Bio">
+    <Configuration>
+      <DBTable>Bios</DBTable>
+      <LongName>Bio</LongName>
+      <LongPluralName>Bios</LongPluralName>
+      <PreviewPage>showbio.aspx?show=</PreviewPage>
+      <HasRank>False</HasRank>
+      <HideAddNew>False</HideAddNew>
+      <HidePubDate>False</HidePubDate>
+      <HidePubToggle>False</HidePubToggle>
+      <MetaTabVisible>False</MetaTabVisible>
+      <SubRecordField>Nickname</SubRecordField>
+      <CustomCss>False</CustomCss>
+      <CustomJavascript>False</CustomJavascript>
+      <PostPublishPopupUrl>../custom/page.aspx</PostPublishPopupUrl>
+    </Configuration>
+    <Lists>
+      <DropDownLists>
+        <LabelFieldSelect>IsNull(BioTitles.Title + ' ','') + [Bios].[lastname] + ', ' + [Bios].[firstname]</LabelFieldSelect>
+        <OrderField>[LastName],firstname</OrderField>
+        <Joins>LEFT JOIN BioTitles on [Bios].BioTitle=[BioTitles].Id</Joins>
+        <WhereClause>BioTitles.Title='Partner'</WhereClause>
+      </DropDownLists>
+      <ListPages>
+        <ListConfiguration>
+          <Joins>LEFT JOIN BioTitles ON WBCUR.BioTitle=BioTitles.ID</Joins>
+          <WhereClause>MyValue=1</WhereClause>
+          <DefaultOrder>Date DESC</DefaultOrder>
+        </ListConfiguration>
+        <QueryFields>
+          <QueryField name="Title">Title</QueryField>
+          <QueryField name="Last" alias="Last">LastName</QueryField><!-- name changes the column label, alias adds AS xxxx to the sql  -->
+          <QueryField name="Bio Title" dbtable="BioTitles" alias="BioTitle">Title</QueryField>
+        </QueryFields>
+        <ListActions>
+          <ListAction title="Word Output" icon="file-word" href="/getword.aspx?show={id}" target="_blank" />
+        </ListActions>
+        <ListFilters>
+          <Filter name="BioTitleFilter">
+            <TitleText>BioTitle Filter</TitleText>
+            <Type>DropDown</Type>
+            <WebbackObject>BioTitle</WebbackObject>
+            <CustomClause>WBCUR.[BioTitle]={value}</CustomClause>
+          </Filter>
+          <Filter name="AlphaSearch">
+            <TitleText>Alpha Search</TitleText>
+            <Type>Alpha</Type>
+            <CustomClause>Bios.LastName</CustomClause>
+          </Filter>
+          <Filter name="Search">
+            <TitleText>Text Search</TitleText>
+            <Type>TextBox</Type>
+            <Fields>FirstName,LastName</Fields>
+            <SearchType>Wildcard</SearchType>
+          </Filter>
+          <Filter name="ServiceSearch">
+            <TitleText>Services</TitleText>
+            <Type>MultiSelect</Type>
+            <Webbackobject>Service</Webbackobject>
+            <CustomClause>
+              exists (Select Id from WB_Associations where WB_Associations.wbid1={value} and WBCUR.Id=WB_Associations.wbid2)
+            </CustomClause>
+          </Filter>          
+        </ListFilters>
+      </ListPages>
+    </Lists>
+    <Associations>
+      <Association objectname="Area">
+        <AssociationConfiguration>
+          <Name>Bio_Area</Name>
+          <Rankable>False</Rankable>
+          <Detailed>False</Detailed>
+        </AssociationConfiguration>
+      </Association>
+    </Associations>
+  </WebBackObject>
+  
+</WebBackObjects>

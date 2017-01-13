@@ -1,0 +1,163 @@
+﻿<%@ Master Language="C#" AutoEventWireup="True" CodeBehind="WBSite.master.cs" Inherits="WebBack.core.WBSite" %>
+<%@ Register TagPrefix="wb" TagName="navbar" Src="~/core/controls/WBNavbar.ascx" %>
+<%@ Register TagPrefix="wb" TagName="sidebar" Src="~/core/controls/WBSidebar.ascx" %>
+<%@ Register TagPrefix="wb" TagName="messages" Src="~/core/controls/WBMessages.ascx" %>
+<%@ Register TagPrefix="wb" TagName="search" Src="~/core/controls/WBSearchBar.ascx" %>
+<!DOCTYPE html>
+<html lang="en">
+<head id="Head1" runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WebBack</title>
+    <link href="../core/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../core/css/londinium-theme.css" rel="stylesheet" type="text/css" />
+    <link href="../core/css/londinium.css" rel="stylesheet" type="text/css" />
+    <link href="../core/css/icons.css" rel="stylesheet" type="text/css" />
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=latin" rel="stylesheet" type="text/css" />    
+    <link href="../core/css/wb-core.css?mod=20160708" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="../core/js/respond.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+
+    <asp:PlaceHolder ID="PHMasterThemeScripts" Visible="false" runat="server">
+        <!--
+        ########### LIST OF ALL THE OPTIONAL SCRIPTS ORIGINALLY INCLUDED IN LONDINIUM THEME ####################
+        <script type="text/javascript" src="../core/js/plugins/forms/select2.min.js"></script>
+        <script type="text/javascript" src="../core/js/plugins/forms/inputmask.js"></script>
+        <script type="text/javascript" src="../core/js/plugins/forms/autosize.js"></script>
+        <script type="text/javascript" src="../core/js/plugins/forms/inputlimit.min.js"></script>
+        <script type="text/javascript" src="../core/js/plugins/forms/listbox.js"></script>
+        <script type="text/javascript" src="../core/js/plugins/forms/multiselect.js"></script>
+        <script type="text/javascript" src="../core/js/plugins/forms/tags.min.js"></script>
+        <script type="text/javascript" src="../core/js/plugins/forms/switch.min.js"></script>
+        <script type="text/javascript" src="../core/js/plugins/forms/uploader/plupload.full.min.js"></script>
+        <script type="text/javascript" src="../core/js/plugins/forms/uploader/plupload.queue.min.js"></script>
+
+        <script type="text/javascript" src="../core/js/plugins/interface/daterangepicker.js"></script>
+        <script type="text/javascript" src="../core/js/plugins/interface/jgrowl.min.js"></script>
+        <script type="text/javascript" src="../core/js/plugins/interface/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="../core/js/plugins/interface/colorpicker.js"></script>
+        <script type="text/javascript" src="../core/js/plugins/interface/fullcalendar.min.js"></script>
+        <script type="text/javascript" src="../core/js/plugins/interface/timepicker.min.js"></script>
+        -->
+    </asp:PlaceHolder>
+
+    <!-- script files referenced across all pages -->
+    <script type="text/javascript" src="../core/js/plugins/forms/uniform.min.js"></script>
+    <script type="text/javascript" src="../core/js/plugins/forms/validate.min.js"></script>
+    <script type="text/javascript" src="../core/js/plugins/interface/collapsible.min.js"></script>
+    <script type="text/javascript" src="../core/js/plugins/interface/moment.js"></script>
+    <script type="text/javascript" src="../core/js/plugins/interface/fancybox.min.js"></script>
+
+    <script type="text/javascript" src="../core/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../core/js/wb-utils.js?mod=20150428"></script>
+    <script type="text/javascript" src="../core/js/wb-application.js?mod=20161116"></script>
+
+    <asp:Literal ID="LitCustomAppJS" runat="server" Visible="false">
+        <script type="text/javascript" src="../custom/js/custom-application.js"></script>
+    </asp:Literal>
+
+    <asp:ContentPlaceHolder ID="head" runat="server" />
+
+    <script type="text/javascript">
+        // MASTER PAGE INITS
+        $(document).ready(function () {
+            // enter to submit global search
+            $('.wb-globalsearch input').satEnterSubmit($('.wb-globalsearch a'));
+        });
+    </script>
+</head>
+<body class="sidebar-wide">
+<form id="form1" runat="server">
+
+    <div class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+			<a class="navbar-brand" href="../core/admin.aspx"><img src="../core/images/wb-navbar-logo.png" alt="Saturno" /></a>
+			<a class="sidebar-toggle"><i class="icon-paragraph-justify2"></i></a>
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-icons">
+				<span class="sr-only">Toggle navbar</span>
+				<i class="icon-grid3"></i>
+			</button>
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar">
+				<span class="sr-only">Toggle navigation</span>
+				<i class="icon-paragraph-justify2"></i>
+			</button>
+        </div>
+
+        <wb:navbar id="ctlNavbar" runat="server" />
+
+	</div>
+	<!-- /navbar -->
+
+    <div class="page-container">
+
+        <wb:sidebar id="ctlSidebar" runat="server" />
+
+        <div class="page-content">
+
+			<!-- Page header -->
+			<div class="page-header">
+				<div class="page-title">
+                    <asp:ContentPlaceHolder ID="PageTitle" runat="server"></asp:ContentPlaceHolder>					
+				</div>
+
+                <wb:search ID="ctlSearch" runat="server" />
+
+			</div>
+            <wb:messages ID="ctlMessages" runat="server" />
+			<!-- /page header -->
+
+            <asp:ContentPlaceHolder ID="PageContent" runat="server" />
+
+	        <!-- Footer -->
+	        <div class="footer clearfix">
+		        <div class="pull-left">
+                    &copy; <%= DateTime.Now.Year%> Saturno Design /
+                    <asp:HyperLink ID="LinkLogout" runat="server" Text="Log Out" />
+                </div>
+	            <div class="pull-right icons-group">
+                    <!-- prefetch the loader graphic for ajax operations -->
+                    <img src="../core/images/interface/loader.gif" alt="" style="display:none!important;" />
+	            </div>
+	        </div>
+	        <!-- /footer -->
+        
+        </div>
+        <!-- /page-content -->
+
+    </div>
+    <!-- /page-container -->
+
+
+    <!-- Modal with remote path -->
+	<div id="modal_remote" class="modal fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title"><i class="icon-spinner spin"></i> WebBack</h4>
+				</div>
+
+				<div class="modal-body with-padding">
+					<p>Loading content&hellip;</p>
+				</div>
+
+				<div class="modal-footer">
+					<button class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+    <script type="text/javascript">
+        // force clear-out of remote modal content upon close
+        $(document).on('hidden.bs.modal', function (e) {
+            $(e.target).removeData('bs.modal');
+        });
+    </script>
+	<!-- /modal with remote path -->
+
+</form>
+</body>
+</html>

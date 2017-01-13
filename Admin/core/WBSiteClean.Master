@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" AutoEventWireup="True" CodeBehind="WBSiteClean.master.cs" Inherits="WebBack.core.WBSiteClean" %>
+<!DOCTYPE html>
+<html lang="en">
+<head id="Head1" runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>WebBack</title>
+    <link href="../core/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../core/css/londinium-theme.css" rel="stylesheet" type="text/css" />
+    <link href="../core/css/londinium.css" rel="stylesheet" type="text/css" />
+    <link href="../core/css/icons.css" rel="stylesheet" type="text/css" />
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&amp;subset=latin" rel="stylesheet" type="text/css" />
+    <link href="../core/css/wb-core.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="../core/js/respond.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+
+    <asp:PlaceHolder ID="PHMasterThemeScripts" Visible="false" runat="server">
+        <!--
+        ########### LIST OF ALL THE OPTIONAL SCRIPTS ORIGINALLY INCLUDED IN LONDINIUM THEME ####################
+        <script type="text/javascript" src="../core/js/plugins/forms/select2.min.js"></script>
+        <script type="text/javascript" src="../core/js/plugins/forms/inputmask.js"></script>
+        <script type="text/javascript" src="../core/js/plugins/forms/autosize.js"></script>
+        <script type="text/javascript" src="../core/js/plugins/forms/inputlimit.min.js"></script>
+        <script type="text/javascript" src="../core/js/plugins/forms/listbox.js"></script>
+        <script type="text/javascript" src="../core/js/plugins/forms/multiselect.js"></script>
+        <script type="text/javascript" src="../core/js/plugins/forms/tags.min.js"></script>
+        <script type="text/javascript" src="../core/js/plugins/forms/switch.min.js"></script>
+        <script type="text/javascript" src="../core/js/plugins/forms/uploader/plupload.full.min.js"></script>
+        <script type="text/javascript" src="../core/js/plugins/forms/uploader/plupload.queue.min.js"></script>
+
+        <script type="text/javascript" src="../core/js/plugins/interface/daterangepicker.js"></script>
+        <script type="text/javascript" src="../core/js/plugins/interface/jgrowl.min.js"></script>
+        <script type="text/javascript" src="../core/js/plugins/interface/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" src="../core/js/plugins/interface/colorpicker.js"></script>
+        <script type="text/javascript" src="../core/js/plugins/interface/fullcalendar.min.js"></script>
+        <script type="text/javascript" src="../core/js/plugins/interface/timepicker.min.js"></script>
+        -->
+    </asp:PlaceHolder>
+
+    <!-- script files referenced across all pages -->
+    <script type="text/javascript" src="../core/js/plugins/forms/uniform.min.js"></script>
+    <script type="text/javascript" src="../core/js/plugins/forms/validate.min.js"></script>
+    <script type="text/javascript" src="../core/js/plugins/interface/collapsible.min.js"></script>
+    <script type="text/javascript" src="../core/js/plugins/interface/moment.js"></script>
+    <script type="text/javascript" src="../core/js/plugins/interface/fancybox.min.js"></script>
+
+    <script type="text/javascript" src="../core/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../core/js/wb-utils.js"></script>
+    <script type="text/javascript" src="../core/js/wb-application.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server" />
+</head>
+<body class="full-width page-condensed">
+<form id="form1" runat="server">
+
+    <div class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+			<a class="navbar-brand" href="../core/admin.aspx"><img src="../core/images/wb-navbar-logo.png" alt="Saturno"></a>
+        </div>
+	</div>
+	<!-- /navbar -->
+
+    <asp:ContentPlaceHolder ID="PageContent" runat="server" />
+
+    <!-- Footer -->
+    <div class="footer clearfix">
+	    <div class="pull-left">&copy; <%= DateTime.Now.Year%> Saturno Design</div>
+	    <div class="pull-right icons-group">
+	    </div>
+    </div>
+    <!-- /footer -->
+
+</form>
+</body>
+</html>

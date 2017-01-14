@@ -109,16 +109,10 @@
     <None Include="gulpfile.js" />
     <Content Include="contact.aspx" />
     <Content Include="css\base.css" />
-    <Content Include="css\base.min.css">
-      <DependentUpon>base.css</DependentUpon>
-    </Content>
     <Content Include="css\base\base.css" />
     <Content Include="css\base\helpers.css" />
     <Content Include="css\base\typography.css" />
     <Content Include="css\components.css" />
-    <Content Include="css\components.min.css">
-      <DependentUpon>components.css</DependentUpon>
-    </Content>
     <Content Include="css\components\buttons.css" />
     <Content Include="css\components\components.css" />
     <Content Include="css\components\icons.css" />
@@ -126,9 +120,6 @@
     <Content Include="css\components\sliders.css" />
     <Content Include="css\fontawesome\font-awesome.css" />
     <Content Include="css\layout.css" />
-    <Content Include="css\layout.min.css">
-      <DependentUpon>layout.css</DependentUpon>
-    </Content>
     <Content Include="css\layout\container.css" />
     <Content Include="css\layout\content.css" />
     <Content Include="css\layout\footer.css" />
@@ -137,9 +128,6 @@
     <Content Include="css\layout\sidebar.css" />
     <Content Include="css\materialize\materialize.css" />
     <Content Include="css\pages.css" />
-    <Content Include="css\pages.min.css">
-      <DependentUpon>pages.css</DependentUpon>
-    </Content>
     <Content Include="css\pages\about.css" />
     <Content Include="css\pages\areas.css" />
     <Content Include="css\pages\bios.css" />
@@ -147,10 +135,8 @@
     <Content Include="css\pages\home.css" />
     <Content Include="css\pages\news_resources.css" />
     <Content Include="css\pages\pages.css" />
+    <Content Include="css\site.css" />
     <Content Include="css\utils.css" />
-    <Content Include="css\utils.min.css">
-      <DependentUpon>utils.css</DependentUpon>
-    </Content>
     <Content Include="css\utils\utils.css" />
     <Content Include="css\utils\variables.css" />
     <Content Include="disclaimer.aspx" />
@@ -254,11 +240,6 @@
     <Content Include="img\mobile-logo.png" />
     <Content Include="img\top-shadow.png" />
     <Content Include="css\layout\nav.css" />
-    <Content Include="css\site.css" />
-    <Content Include="css\site.min.css">
-      <DependentUpon>site.css</DependentUpon>
-    </Content>
-    <Content Include="css\styles.css" />
     <Content Include="css\fontawesome\font-awesome.min.css" />
     <Content Include="css\base\fonts.css" />
     <Content Include="css\materialize\materialize.min.css" />

@@ -36,8 +36,8 @@
                 <div class="row">
                     <div class="large-4 medium-5 columns logo">
                         <a href="/">
-                            <img src="/styles/images/logo.png" alt="" class="hide-for-small-only">
-                            <img src="/styles/images/mobile-logo.png" alt="" class="show-for-small-only">
+                            <img src="/img/logo.png" alt="" class="hide-for-small-only">
+                            <img src="/img/mobile-logo.png" alt="" class="show-for-small-only">
                         </a>
                     </div>
                     <div class="large-8 medium-7 columns navigation-col hide-for-small-only">
@@ -117,7 +117,7 @@
             <!-- Header ends -->
             <!-- Top Banner starts -->
             <div class="top-banner full-image pa-top-block clearfix animated fadeIn">
-                <span class="top-banner-bg attorney-banner-bg" style="background-image: url(/styles/images/practice-areas.jpg)"></span>
+                <span class="top-banner-bg attorney-banner-bg" style="background-image: url(/img/practice-areas.jpg)"></span>
                 <div class="large-5 medium-4 columns banner-picture"></div>
                 <div class="large-7 medium-8 columns banner-content sub-dark-green-slide">
                     <div class="banner-content-block">
@@ -169,6 +169,4 @@
             <!-- Footer ends -->
         </div>
     </div>
-</asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="ScriptContent" runat="server">
 </asp:Content>

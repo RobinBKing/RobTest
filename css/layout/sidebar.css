@@ -1,6 +1,14 @@
-﻿/***********/
-/* Sidebar */
-/***********/
+﻿/******************/
+/* Sidebar styles */
+/******************/
+/* - Page list      */
+/* - Attorneys                  */
+/* - Recent posts               */
+/* - Blog search                */
+/* - Blog RSS                   */
+/* - Blog Archive               */
+/* - Contact                    */
+/******************/
 .sidebar {
     margin: 0 0 20px;
     padding-left: 0;

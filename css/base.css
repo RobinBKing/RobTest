@@ -10,15 +10,26 @@
 /*********/
 /* Reset */
 /*********/
-/* * Set up a decent box model on the root element
- */html { box-sizing: border-box; }/*
+
+/*
+ * Set up a decent box model on the root element
+ */
+html { box-sizing: border-box; }
+
+/*
  * Make all elements from the DOM inherit from the parent box-sizing
- * Since `*` has a specificity of 0, it does not override the `html` value * making all elements inheriting from the root box-sizing value * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */*, *::before, *::after { box-sizing: inherit; }
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+
+*, *::before, *::after { box-sizing: inherit; }
+
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
     display: block;
 }
 
-audio, canvas, video {
+/*audio, canvas, video {
     display: inline-block;
 }
 
@@ -33,7 +44,7 @@ audio, canvas, video {
 
 script {
     display: none !important;
-}
+}*/
 
 html {
     font-family: sans-serif;
@@ -41,7 +52,7 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 
-body {
+/*body {
     margin: 0;
 }
 
@@ -235,14 +246,14 @@ img.aligncenter {
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
+}*/
 /*********/
 /* Fonts */
 /*********/
 /* Webfont: Lato-Regular */
 @font-face {
     font-family: 'Lato';
-    src: url('base/fonts/Lato/Lato-Regular.woff2') format('woff2'), url('base/fonts/Lato/Lato-Regular.woff') format('woff'), url('base/fonts/Lato/Lato-Regular.ttf') format('truetype');
+    src: url('fonts/Lato/Lato-Regular.woff2') format('woff2'), url('fonts/Lato/Lato-Regular.woff') format('woff'), url('fonts/Lato/Lato-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
@@ -250,7 +261,7 @@ img.aligncenter {
 /* Webfont: Lato-Italic */
 @font-face {
     font-family: 'Lato';
-    src: url('base/fonts/Lato/Lato-Italic.woff2') format('woff2'),  url('base/fonts/Lato/Lato-Italic.woff') format('woff'), url('base/fonts/Lato/Lato-Italic.ttf') format('truetype');
+    src: url('fonts/Lato/Lato-Italic.woff2') format('woff2'),  url('fonts/Lato/Lato-Italic.woff') format('woff'), url('fonts/Lato/Lato-Italic.ttf') format('truetype');
     font-weight: 400;
     font-style: italic;
 }
@@ -258,7 +269,7 @@ img.aligncenter {
 /* Webfont: Lato-Bold */
 @font-face {
     font-family: 'Lato';
-    src: url('base/fonts/Lato/Lato-Bold.woff2') format('woff2'), url('base/fonts/Lato/Lato-Bold.woff') format('woff'), url('base/fonts/Lato/Lato-Bold.ttf') format('truetype');
+    src: url('fonts/Lato/Lato-Bold.woff2') format('woff2'), url('fonts/Lato/Lato-Bold.woff') format('woff'), url('fonts/Lato/Lato-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
 }
@@ -266,7 +277,7 @@ img.aligncenter {
 /* Webfont: Lato-BoldItalic */
 @font-face {
     font-family: 'Lato';
-    src: url('base/fonts/Lato/Lato-BoldItalic.woff2') format('woff2'), url('base/fonts/Lato/Lato-BoldItalic.woff') format('woff'), url('base/fonts/Lato/Lato-BoldItalic.ttf') format('truetype');
+    src: url('fonts/Lato/Lato-BoldItalic.woff2') format('woff2'), url('fonts/Lato/Lato-BoldItalic.woff') format('woff'), url('fonts/Lato/Lato-BoldItalic.ttf') format('truetype');
     font-weight: 700;
     font-style: italic;
 }
@@ -274,7 +285,7 @@ img.aligncenter {
 /* Webfont: Lato-Light */
 @font-face {
     font-family: 'Lato';
-    src: url('base/fonts/Lato/Lato-Light.woff2') format('woff2'), url('base/fonts/Lato/Lato-Light.woff') format('woff'), url('base/fonts/Lato/Lato-Light.ttf') format('truetype');
+    src: url('fonts/Lato/Lato-Light.woff2') format('woff2'), url('fonts/Lato/Lato-Light.woff') format('woff'), url('fonts/Lato/Lato-Light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
 }
@@ -282,35 +293,36 @@ img.aligncenter {
 /* Webfont: Lato-LightItalic */
 @font-face {
     font-family: 'latolight_italic';
-    src: url('base/fonts/Lato/Lato-LightItalic.woff2') format('woff2'), url('base/fonts/Lato/Lato-LightItalic.woff') format('woff'),url('base/fonts/Lato/Lato-LightItalic.ttf') format('truetype');
+    src: url('fonts/Lato/Lato-LightItalic.woff2') format('woff2'), url('fonts/Lato/Lato-LightItalic.woff') format('woff'),url('fonts/Lato/Lato-LightItalic.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'Josefin';
-    src: url('base/fonts/Josefin/josefinsans-light.ttf') format('truetype');
+    src: url('fonts/Josefin/josefinsans-light.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Josefin';
-    src: url('base/fonts/Josefin/josefinsans-semibold.ttf') format('truetype');
+    src: url('fonts/Josefin/josefinsans-semibold.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Josefin';
-    src: url('base/fonts/Josefin/josefinsans-regular.ttf') format('truetype');
+    src: url('fonts/Josefin/josefinsans-regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
 /*********************/
 /* typography styles */
 /*********************/
-/* - headings        */
+/* - Headlines       */
 /* - Paragraph       */
+/* - Clearfix (moved to helpers) */
 /* - Lists           */
 /* - Links           */
 /* - Template        */
@@ -320,7 +332,17 @@ img.aligncenter {
 /* - Opacity         */
 /* - Animations      */
 /* - FontAwesome     */
+/* - responsive      */
 /*********************/
+body, html {
+    height: 100%;
+}
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
 body {
     display: block !important;
     color: #000000;
@@ -328,9 +350,9 @@ body {
     font-size: 16px;
 }
 
-    body form .logged-in {
+    /*body.logged-in {
         padding-top: 32px;
-    }
+    }*/
 
 /* Headlines */
 h1, h2, h3, h4, h5, h6 {
@@ -419,6 +441,33 @@ a:hover {
     color: #2d8536;
 }
 
+/* Buttons */
+.button {
+    padding: 15px 14px;
+    text-align: center;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: #1d85f5;
+    font-weight: 300;
+    border: 2px solid #fff;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+    .button:hover {
+        color: #ffffff;
+        background: #000000;
+    }
+
+    .button .fa {
+        margin: 0 0 0 3px;
+    }
+
+.content .button {
+    max-width: 200px;
+}
+
 /* Template */
 .row {
     max-width: 1280px;
@@ -442,7 +491,7 @@ iframe {
 }
 
 /* Sticky */
-body form .logged-in .sticky-container {
+body.logged-in .sticky-container {
     top: 32px;
 }
 
@@ -658,15 +707,31 @@ input:-moz-placeholder {
     color: #00544a;
 }
 
+/***************/
 /* FontAwesome */
-/*.content ul li:before,
+/***************/
+.content ul li:before,
 .sidebar .section.pages ul li:before,
 .top-bar .menu-icon span:before {
     font-family: "FontAwesome";
     font-weight: normal;
     font-style: normal;
     display: inline-block;
-}*/
+}
+
+/* responsive */
+@media screen and (max-width: 480px) {
+    body {
+        min-width: 320px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    body {
+        overflow: auto;
+        height: auto;
+    }
+}
 /************//* helpers. *//* - clearfix *//**************//* Clearfix */.clearfix {
     zoom: 1;
 }

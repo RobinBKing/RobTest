@@ -36,8 +36,8 @@
                 <div class="row">
                     <div class="large-4 medium-5 columns logo">
                         <a href="/">
-                            <img src="/styles/images/logo.png" alt="" class="hide-for-small-only">
-                            <img src="/styles/images/mobile-logo.png" alt="" class="show-for-small-only">
+                            <img src="/img/logo.png" alt="" class="hide-for-small-only">
+                            <img src="/img/mobile-logo.png" alt="" class="show-for-small-only">
                         </a>
                     </div>
                     <div class="large-8 medium-7 columns navigation-col hide-for-small-only">
@@ -173,9 +173,4 @@
             <!-- Footer ends -->
         </div>
     </div>
-</asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="ScriptContent" runat="server">
-        <script aria-hidden="true" type="application/x-lastpass" id="hiddenlpsubmitdiv" >
-        </script>
-        <script>try { (function () { for (var lastpass_iter = 0; lastpass_iter < document.forms.length; lastpass_iter++) { var lastpass_f = document.forms[lastpass_iter]; if (typeof (lastpass_f.lpsubmitorig2) == "undefined") { lastpass_f.lpsubmitorig2 = lastpass_f.submit; if (typeof (lastpass_f.lpsubmitorig2) == 'object') { continue; } lastpass_f.submit = function () { var form = this; var customEvent = document.createEvent("Event"); customEvent.initEvent("lpCustomEvent", true, true); var d = document.getElementById("hiddenlpsubmitdiv"); if (d) { for (var i = 0; i < document.forms.length; i++) { if (document.forms[i] == form) { if (typeof (d.innerText) != 'undefined') { d.innerText = i.toString(); } else { d.textContent = i.toString(); } } } d.dispatchEvent(customEvent); } form.lpsubmitorig2(); } } } })() } catch (e) { }</script>
 </asp:Content>

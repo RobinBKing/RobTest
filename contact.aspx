@@ -36,8 +36,8 @@
                 <div class="row">
                     <div class="large-4 medium-5 columns logo">
                         <a href="/">
-                            <img src="/styles/images/logo.png" alt="" class="hide-for-small-only">
-                            <img src="/styles/images/mobile-logo.png" alt="" class="show-for-small-only">
+                            <img src="/img/logo.png" alt="" class="hide-for-small-only">
+                            <img src="/img/mobile-logo.png" alt="" class="show-for-small-only">
                         </a>
                     </div>
                     <div class="large-8 medium-7 columns navigation-col hide-for-small-only">

@@ -36,8 +36,8 @@
                 <div class="row">
                     <div class="large-4 medium-5 columns logo">
                         <a href="/">
-                            <img src="/styles/images/logo.png" alt="" class="hide-for-small-only">
-                            <img src="/styles/images/mobile-logo.png" alt="" class="show-for-small-only">
+                            <img src="/img/logo.png" alt="" class="hide-for-small-only">
+                            <img src="/img/mobile-logo.png" alt="" class="show-for-small-only">
                         </a>
                     </div>
                     <div class="large-8 medium-7 columns navigation-col hide-for-small-only">
@@ -103,7 +103,7 @@
             <!-- Header ends -->
             <!-- Top Banner starts -->
             <div class="top-banner full-image attorney-top-block clearfix animated fadeIn">
-                <span class="top-banner-bg attorney-banner-bg" style="background-image:url(/styles/images/attorneys.jpg)"></span>
+                <span class="top-banner-bg attorney-banner-bg" style="background-image:url(/img/attorneys.jpg)"></span>
                 <div class="large-5 medium-4 columns banner-picture"></div>
                 <div class="large-7 medium-8 columns banner-content sub-dark-green-slide">
                     <div class="banner-content-block">
@@ -124,7 +124,7 @@
                                     <div class="large-4 medium-6 columns animated fadeIn">
                                         <div class="single-lawyer">
                                             <div class="image-box">
-                                                <a href="http://www.lyonsdougherty.com/attorneys/michael-j-lyons/" style="height: 372.203px;"><img src="/styles/images/LD-bio-landing-mlyons.jpg" width="417" alt=""><span>Michael J. Lyons</span></a>
+                                                <a href="http://www.lyonsdougherty.com/attorneys/michael-j-lyons/" style="height: 372.203px;"><img src="/img/LD-bio-landing-mlyons.jpg" width="417" alt=""><span>Michael J. Lyons</span></a>
                                             </div>
                                         </div>
                                     </div>
@@ -132,7 +132,7 @@
                                     <div class="large-4 medium-6 columns">
                                         <div class="single-lawyer">
                                             <div class="image-box">
-                                                <a href="http://www.lyonsdougherty.com/attorneys/joseph-j-dougherty/" style="height: 372.203px;"><img src="/styles/images/LD-bio-landing-jdougherty.jpg" width="417" alt=""><span>Joseph J. Dougherty</span></a>
+                                                <a href="http://www.lyonsdougherty.com/attorneys/joseph-j-dougherty/" style="height: 372.203px;"><img src="/img/LD-bio-landing-jdougherty.jpg" width="417" alt=""><span>Joseph J. Dougherty</span></a>
                                             </div>
                                         </div>
                                     </div>
@@ -140,7 +140,7 @@
                                     <div class="large-4 medium-6 columns">
                                         <div class="single-lawyer">
                                             <div class="image-box">
-                                                <a href="http://www.lyonsdougherty.com/attorneys/michael-v-naseef/" style="height: 372.203px;"><img src="/styles/images/LD-bio-landing-mnaseef.jpg" width="417" alt=""><span>Michael V. Naseef</span></a>
+                                                <a href="http://www.lyonsdougherty.com/attorneys/michael-v-naseef/" style="height: 372.203px;"><img src="/img/LD-bio-landing-mnaseef.jpg" width="417" alt=""><span>Michael V. Naseef</span></a>
                                             </div>
                                         </div>
                                     </div>
@@ -148,7 +148,7 @@
                                     <div class="large-4 medium-6 columns">
                                         <div class="single-lawyer">
                                             <div class="image-box">
-                                                <a href="http://www.lyonsdougherty.com/attorneys/michael-j-hawley/" style="height: 372.203px;"><img src="/styles/images/LD-bio-landing-mhawley.jpg" width="417" alt=""><span>Michael J. Hawley</span></a>
+                                                <a href="http://www.lyonsdougherty.com/attorneys/michael-j-hawley/" style="height: 372.203px;"><img src="/img/LD-bio-landing-mhawley.jpg" width="417" alt=""><span>Michael J. Hawley</span></a>
                                             </div>
                                         </div>
                                     </div>
@@ -156,7 +156,7 @@
                                     <div class="large-4 medium-6 columns">
                                         <div class="single-lawyer">
                                             <div class="image-box">
-                                                <a href="http://www.lyonsdougherty.com/attorneys/john-p-brazzo/" style="height: 372.203px;"><img src="/styles/images/LD-bio-landing-jbrazzo.jpg" width="417" alt=""><span>John P. Brazzo</span></a>
+                                                <a href="http://www.lyonsdougherty.com/attorneys/john-p-brazzo/" style="height: 372.203px;"><img src="/img/LD-bio-landing-jbrazzo.jpg" width="417" alt=""><span>John P. Brazzo</span></a>
                                             </div>
                                         </div>
                                     </div>
@@ -164,7 +164,7 @@
                                     <div class="large-4 medium-6 columns">
                                         <div class="single-lawyer">
                                             <div class="image-box">
-                                                <a href="http://www.lyonsdougherty.com/attorneys/daniel-j-maisano/" style="height: 372.203px;"><img src="/styles/images/daniel-j-maisano.jpg" width="417" alt=""><span>Daniel J. Maisano</span></a>
+                                                <a href="http://www.lyonsdougherty.com/attorneys/daniel-j-maisano/" style="height: 372.203px;"><img src="/img/daniel-j-maisano.jpg" width="417" alt=""><span>Daniel J. Maisano</span></a>
                                             </div>
                                         </div>
                                     </div>

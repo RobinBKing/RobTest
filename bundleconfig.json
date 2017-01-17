@@ -99,8 +99,8 @@
     "outputFileName": "js/site.js",
     "inputFiles": [
       "js/main.js",
-      "js/jquery-3.1.1.js",
-      "js/modernizr-3.3.1.js",
+      //"js/jquery-3.1.1.js",
+      //"js/modernizr-3.3.1.js",
       "js/materialize.js",
       "js/sitewide.js"
     ],

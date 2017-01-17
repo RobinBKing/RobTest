@@ -118,7 +118,6 @@
     <Content Include="css\components\icons.css" />
     <Content Include="css\components\scrollbars.css" />
     <Content Include="css\components\sliders.css" />
-    <Content Include="css\fontawesome\font-awesome.css" />
     <Content Include="css\layout.css" />
     <Content Include="css\layout\container.css" />
     <Content Include="css\layout\content.css" />
@@ -143,8 +142,6 @@
     <Content Include="favicon.ico" />
     <Content Include="news_resources.aspx" />
     <Content Include="pay-online.aspx" />
-    <Content Include="js\jquery-3.1.1.js" />
-    <Content Include="js\jquery-migrate-3.0.0.js" />
     <Content Include="js\materialize.js" />
     <Content Include="js\materialize.min.js" />
     <Content Include="css\fonts\Lato\Lato-Black.eot" />
@@ -220,9 +217,6 @@
     <Content Include="css\fonts\Lato\Lato-ThinItalic.woff" />
     <Content Include="css\fonts\Lato\Lato-ThinItalic.woff2" />
     <Content Include="index.aspx" />
-    <Content Include="js\jquery-3.1.1.min.js" />
-    <Content Include="js\jquery-migrate-3.0.0.min.js" />
-    <Content Include="js\modernizr-3.3.1.js" />
     <Content Include="js\site.js" />
     <Content Include="js\site.min.js">
       <DependentUpon>site.js</DependentUpon>
@@ -240,14 +234,12 @@
     <Content Include="img\mobile-logo.png" />
     <Content Include="img\top-shadow.png" />
     <Content Include="css\layout\nav.css" />
-    <Content Include="css\fontawesome\font-awesome.min.css" />
     <Content Include="css\base\fonts.css" />
     <Content Include="css\materialize\materialize.min.css" />
     <Content Include="css\base\reset.css" />
     <Content Include="css\layout\responsive.css" />
     <Content Include="css\main.css" />
     <Content Include="css\site_print.css" />
-    <Content Include="css\fonts\fontawesome\fontawesome-webfont.svg" />
     <Content Include="js\sitewide.js" />
     <Content Include="js\main.js" />
     <Content Include="sitemap.aspx" />
@@ -367,11 +359,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="css\fonts\fontawesome\fontawesome-webfont.eot" />
-    <Content Include="css\fonts\fontawesome\fontawesome-webfont.ttf" />
-    <Content Include="css\fonts\fontawesome\fontawesome-webfont.woff" />
-    <Content Include="css\fonts\fontawesome\fontawesome-webfont.woff2" />
-    <Content Include="css\fonts\fontawesome\FontAwesome.otf" />
     <Content Include="css\fonts\roboto\Roboto-Bold.eot" />
     <Content Include="css\fonts\roboto\Roboto-Bold.ttf" />
     <Content Include="css\fonts\roboto\Roboto-Bold.woff" />

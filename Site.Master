@@ -15,6 +15,9 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">    
     <link rel="stylesheet" type="text/css" href="/css/site.css" />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://use.fontawesome.com/6ae98ae3b7.js"></script>
     <script src="/js/site.js"></script>
     <script async="" src="https://www.google-analytics.com/analytics.js"></script>
     <script>
@@ -34,11 +37,19 @@
 </head>
 <body>
     <form id="form" runat="server" >
+            <ul id="nav-mobile" class="side-nav fixed" >
+                <li><a href="/">Home</a></li>
+                <li><a href="/about.aspx">About Us</a></li>
+                <li><a href="/bios.aspx">Attorneys</a></li>
+                <li><a href="/areas.aspx">Practice Areas</a></li>
+                <li><a href="/news_resources.aspx">News &amp; Resources</a></li>
+                <li><a href="/contact.aspx">Contact</a></li>
+            </ul>
         <header class="header animated fadeInDown">
-            <nav class="mobile-header">
-                <div class="row">
+            <div class="mobile-header">
+                <div class="row hide-on-med-and-up">
                     <div class="mobile-bar clearfix">
-                        <a href="tel:+1-012-345-6789" class="phone-box"><i class="fa fa-phone-square"></i>(012) 345-6789</a>
+                        <a href="tel:+1-012-345-6789" class="phone-box"><i class="fa fa-phone-square"></i> (012) 345-6789</a>
                         <a href="#" class="menu-icon mobile-menu">Menu <i class="fa fa-bars"></i></a>
 <%--                <a href="tel:+1-012-345-6789" class="phone-box">
                         <i class="material-icons">phone</i>(012) 345-6789
@@ -49,41 +60,32 @@
 
                     </div>
                 </div>
-            </nav>
-            <div class="container">
             </div>
-            <ul id="nav-mobile" class="side-nav fixed" >
-                <li><a href="/">Home</a></li>
-                <li><a href="/about.aspx">About Us</a></li>
-                <li><a href="/bios.aspx">Attorneys</a></li>
-                <li><a href="/areas.aspx">Practice Areas</a></li>
-                <li><a href="/news_resources.aspx">News &amp; Resources</a></li>
-                <li><a href="/contact.aspx">Contact</a></li>
-            </ul>
+            <div class="row">
+                <div class="col l4 m5 logo">
+                    <a href="/">
+                        <img src="/img/logo.png" alt="" class="hide-on-small-only">
+                        <img src="/img/mobile-logo.png" alt="" class="hide-on-med-and-up"></a>
+        </div>
+            </div>
         </header>
         <main>
             <asp:ContentPlaceHolder runat="server" ID="MainContent" />
         </main>
-        <footer class="site-footer">
-            <div class="container">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col l12 m12 s12">
-                            <p>
-                                © 2017 Rob King. 
-                                <a href="/disclaimer.aspx">Disclaimer/Terms of Use</a>
-                                 | 
-                                <a href="/sitemap.aspx">Sitemap</a>
-                                 | 
-                                <a href="http://www.saturnodesign.com/" target="_blank">Saturno Design</a>
-                                 | 421 SW Hall Street, Portland, OR 97201 | Phone 
-                                <a href="tel:+1-503-478-1830">503-478-1830</a>
-                            </p>
+        <footer class="footer">
+            <div class="footer-wrap">
+                <div class="row">
+                    <div class="col l12 m12 s12">
+                        <div class="copyright">
+                            <p>© 2017 Rob King. <a href="/disclaimer.aspx">Disclaimer/Terms of Use</a> | <a href="/sitemap.aspx">Sitemap</a> | <a href="http://www.saturnodesign.com/" target="_blank">Saturno Design</a> | 421 SW Hall Street, Portland, OR 97201 | Phone <a href="tel:+1-503-478-1830">503-478-1830</a></p>
                         </div>
                     </div>
                 </div>
             </div>
         </footer>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script src="https://use.fontawesome.com/6ae98ae3b7.js"></script>
         <script src="/js/site.js"></script>
     </form>
 </body>

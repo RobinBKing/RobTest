@@ -5,27 +5,39 @@
 /* - Social         */
 /* - Copyright text */
 /********************/
-.site-footer {
+.footer {
     color: #000000;
     margin: 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    opacity: 0;
     z-index: 99;
 }
 
-    .site-footer .content {
-        position: relative;
-        padding: 14px 0 0 0;
-        width: 100%;
-        bottom: 0;
-        background: url(img/bottom-shadow.png) no-repeat center bottom;
-        background-size: cover;
-    }
 
-.single-col-main .site-footer .content > .row {
-    position: initial;
+.footer-wrap {
+    position: relative;
+    padding: 14px 0 0 0;
+    width: 100%;
+    bottom: 0;
+    background: url(images/bottom-shadow.png) no-repeat center bottom;
+    background-size: cover;
 }
 
+    .footer-wrap .copyright {
+        padding-top: 53px;
+        padding-bottom: 14px;
+    }
+
+    .footer-wrap > .row {
+        position: initial;
+        margin: 0;
+        padding: 0;
+    }
+
 /* Menu */
-/*.site-footer .menu {
+.footer .menu {
     margin: 0 0 10px;
 }
 
@@ -55,10 +67,10 @@
 
             .footer .menu ul li ul {
                 display: none;
-            }*/
+            }
 
 /* Social */
-/*.footer .social ul {
+.footer .social ul {
     list-style: none;
     float: right;
     padding-top: 3px;
@@ -90,17 +102,15 @@
 
         .footer .social li a .hide {
             display: none;
-        }*/
+        }
 
 /* Copyright text */
-.site-footer .content .copyright {
-    padding-top: 53px;
-    padding-bottom: 14px;
+.footer .copyright {
     position: relative;
     z-index: 9;
 }
 
-    .site-footer .content .copyright p {
+    .footer .copyright p {
         font-size: 14px;
         font-weight: 300;
         color: #cfcfcf;
@@ -108,14 +118,32 @@
         text-align: center;
     }
 
-
-        .site-footer .content .copyright p a {
+        .footer .copyright p a {
             text-decoration: none;
             font-size: 14px;
             font-weight: 300;
             color: #cfcfcf;
         }
 
-            .site-footer .content .copyright p a:hover {
+            .footer .copyright p a:hover {
                 color: #7abaf3;
             }
+
+@media screen and (max-width: 640px) {
+    .footer, .footer-wrap, .footer-wrap > .row {
+        position: static !important;
+    }
+
+    .footer-wrap {
+        background: #3a3a3c;
+        height: auto;
+    }
+
+        .footer-wrap .copyright {
+            padding: 20px 0 33px 0;
+        }
+
+    .footer .copyright p, .footer .copyright p a {
+        color: #fff;
+    }
+}

@@ -22,21 +22,31 @@
 .header {
     padding: 17px 0;
     width: 100%;
-    background: url(images/top-shadow.png) no-repeat center top;
+    background: url(../../img/top-shadow.png) no-repeat center top;
     background-size: cover;
     height: 200px;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    z-index: 999;
 }
+
+    .header .row {
+        margin: 0;
+        padding: 0;
+    }
 
 .single-col-main .header {
     height: 230px;
 }
 
-.full-width-page .header {
+/*.full-width-page .header {
+.header {
     position: absolute;
     width: 100%;
     top: 0;
     z-index: 999;
-}
+}*/
 
 /* Logo */
 .header .logo {
@@ -198,11 +208,7 @@
     .header .top-bar ul > li {
         font-family: Josefin;
     }
-    /*.header .top-bar ul li.is-dropdown-submenu-parent ul {height: auto; margin: 0; padding: 0 10px 5px; background-color: #ffffff; border-top: none;}*/
-    /*.header .top-bar ul li.opens-right > .is-dropdown-submenu {border-color: #000000;}*/
-    /*.header .top-bar ul li.is-dropdown-submenu-parent > a {padding-right: .7rem;}*/
-    /*.header .top-bar ul li.is-dropdown-submenu-parent > a:after {border: none;}*/
-    /*.header .top-bar ul li.is-dropdown-submenu-parent .is-dropdown-submenu {max-width: 170px;}*/
+
     .header .top-bar ul li ul li {
         padding: 0;
         margin: 0;
@@ -2013,3 +2019,34 @@ _:-ms-lang(x), .downanimate {
         z-index: 10;
         width: 100%;
     }
+
+/* responsive */
+
+@media screen and (max-width: 640px) {
+    .header {
+        height: auto;
+        position: fixed !important;
+        background: #fff;
+        padding-top: 0px;
+        padding-bottom: 27px;
+    }
+
+    .mobile-header {
+        margin-bottom: 30px;
+    }
+
+    .header .logo {
+        margin-bottom: 0;
+        width: 100%;
+    }
+
+        .header .logo img {
+            margin: 0 auto;
+        }
+}
+
+@media screen and (max-width: 1200px) {
+    .header .logo {
+        padding-left: 1em;
+    }
+}

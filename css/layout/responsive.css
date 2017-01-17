@@ -648,12 +648,12 @@
 }
 
 @media screen and (max-width: 640px) {
-    body.full-width-wrap, body.full-width-sub-wrap {
+    /*body.full-width-wrap, body.full-width-sub-wrap {
         overflow: auto;
         height: auto;
-    }
+    }*/
 
-    .header, .sub-full-wrap .header {
+    /*.header, .sub-full-wrap .header {
         background: none;
         height: auto;
         padding-top: 80px;
@@ -661,15 +661,15 @@
         background: #fff;
         padding-top: 0px;
         padding-bottom: 27px;
-    }
+    }*/
 
-    .mobile-header {
+    /*.mobile-header {
         margin-bottom: 30px;
-    }
+    }*/
 
-    .header .logo {
+    /*.header .logo {
         margin-bottom: 0;
-    }
+    }*/
 
     .list-trigger {
         display: block;
@@ -703,13 +703,13 @@
         padding-top: 199px;
     }
 
-    .header .logo {
+    /*.header .logo {
         width: 100%;
-    }
+    }*/
 
-        .header .logo img {
+        /*.header .logo img {
             margin: 0 auto;
-        }
+        }*/
 
     .slider-outer {
         position: static;

@@ -1,3 +1,7 @@
 ﻿/**********************/
 /*    nav styles      */
 /**********************/
+.phone-box a i {
+    width: 56px;
+    text-align: center;
+}

@@ -1,8 +1,14 @@
 ﻿/********************/
 /* base CSS Scripts */
 /********************/
-/* - reset          */
+/* - base           */
 /* - fonts          */
 /* - typography     */
 /* - helpers        */
 /********************/
+/*.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}*/

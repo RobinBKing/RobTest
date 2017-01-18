@@ -117,6 +117,7 @@
     <Content Include="css\components\components.css" />
     <Content Include="css\components\icons.css" />
     <Content Include="css\components\scrollbars.css" />
+    <Content Include="css\components\SelectBox.css" />
     <Content Include="css\components\sliders.css" />
     <Content Include="css\layout.css" />
     <Content Include="css\layout\container.css" />
@@ -135,6 +136,9 @@
     <Content Include="css\pages\news_resources.css" />
     <Content Include="css\pages\pages.css" />
     <Content Include="css\site.css" />
+    <Content Include="css\site.min.css">
+      <DependentUpon>site.css</DependentUpon>
+    </Content>
     <Content Include="css\utils.css" />
     <Content Include="css\utils\utils.css" />
     <Content Include="css\utils\variables.css" />

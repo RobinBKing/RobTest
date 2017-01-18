@@ -31,7 +31,7 @@
     "outputFileName": "css/layout.css",
     "inputFiles": [
       "css/layout/layout.css",
-      //"css/layout/container.css",
+      "css/layout/container.css",
       //"css/layout/nav.css",
       "css/layout/header.css",
       "css/layout/content.css",
@@ -82,7 +82,6 @@
     "inputFiles": [
       "css/main.css",
       "css/materialize/materialize.css",
-      "css/font-awesome.min.css",
       "css/utils.css",
       "css/base.css",
       "css/components.css",
@@ -99,8 +98,6 @@
     "outputFileName": "js/site.js",
     "inputFiles": [
       "js/main.js",
-      //"js/jquery-3.1.1.js",
-      //"js/modernizr-3.3.1.js",
       "js/materialize.js",
       "js/sitewide.js"
     ],

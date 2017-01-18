@@ -7941,6 +7941,16 @@ input:-moz-placeholder {
 /* - container     *//* - nav           *//* - header        *//* - content       *//* - footer        */
 /* - responsive    */
 /*******************/
+/*******************************/
+/*     container styles        */
+/*******************************/
+@media screen and (max-width: 640px) {
+    .animate-initial {
+        animation: initial !important;
+    }
+}
+
+
 /********************************/
 /*       Header Styles          */
 /********************************/
@@ -7949,15 +7959,17 @@ input:-moz-placeholder {
 /* - Portfolio                  */
 /* - Search                     */
 /* - Menu                       */
+/***   moved to Sliders      ****/
 /* - Slider                     */
 /* - Bx Slider                  */
-/* - Custom Scrollbar           */
-/* - Select Box styles          */
-/* - Full Width Page content (moved to typography   */
+/* - Custom Scrollbar (moved to scrollbars) */
+/* - Select Box styles (moved to Selectbox) */
+/***   moved to container    ****/
+/* - Full Width Page content    */
 /* - Homepage slider            */
 /* - Slide text colors          */
 /* - Slide Button colors        */
-/* Top Banner                   */
+/* - Top Banner                 */
 /* Full Width Sub Page content  */
 /* One column Page styles       */
 /* Banner
@@ -8258,6 +8270,64 @@ input:-moz-placeholder {
     right: 74.96%;
 }
 
+
+/* responsive */
+@media screen and (max-width: 640px) {
+    .header {
+        height: auto;
+        position: fixed !important;
+        background: #fff;
+        padding-top: 0px;
+        padding-bottom: 27px;
+    }
+
+    .mobile-header {
+        margin-bottom: 30px;
+    }
+
+    .header .logo {
+        margin-bottom: 0;
+        width: 100%;
+    }
+
+        .header .logo img {
+            margin: 0 auto;
+        }
+}
+
+@media screen and (max-width: 1200px) {
+    .header .logo {
+        padding-left: 1em;
+    }
+}
+
+/*****************************/
+/*      Content Styles       */
+/*****************************/
+/* - Full Width Page content    */
+/* Homepage slider              */
+/* - Slide text colors          */
+/* - Slide Button colors        */
+/* Top Banner                   */
+/* Full Width Sub Page content  */
+/* One column Page styles       */
+/* Banner                       */
+/* Content                      */
+/* - Accordion                  */
+/* - Attorney landing           */
+/* - Attorney profile           */
+/* - Blog                       */
+/* - Practice Areas             */
+/* - Practice Details           */
+/* - Contact                    */
+/* - Accordion                  */
+/* - Attorney landing           */
+/* - Attorney profile           */
+/* - Blog                       */
+/* - Practice Areas             */
+/* - Practice Details           */
+/* - Contact                    */
+/********************************/
 /**********/
 /* Slider */
 /**********/
@@ -8312,7 +8382,7 @@ input:-moz-placeholder {
 
 
 /* Bx Slider */
-.bx-wrapper {
+/*.bx-wrapper {
     position: relative;
     margin: 0 auto 60px;
     padding: 0;
@@ -8383,10 +8453,10 @@ input:-moz-placeholder {
             .bx-wrapper .bx-pager.bx-default-pager a:hover,
             .bx-wrapper .bx-pager.bx-default-pager a.active {
                 background: #666;
-            }
+            }*/
 
 /* Custom Scrollbar */
-.mCustomScrollbar {
+/*.mCustomScrollbar {
     -ms-touch-action: pinch-zoom;
     touch-action: pinch-zoom;
 }
@@ -8562,12 +8632,12 @@ input:-moz-placeholder {
         opacity: .9;
         filter: "alpha(opacity=90)";
         -ms-filter: "alpha(opacity=90)";
-    }
+    }*/
 
 /***********/
 /* Select Box styles */
 /***********/
-.selectric .label, .selectric-disabled {
+/*.selectric .label, .selectric-disabled {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -8743,8 +8813,7 @@ input:-moz-placeholder {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-}
-
+}*/
 /* Homepage slider */
 .slide-wrap, .caption-area {
     height: 100%;
@@ -8993,31 +9062,31 @@ input:-moz-placeholder {
         }
 
         .cb-slideshow li:nth-child(1) span {
-            background-image: url('layout/images/home-slide1.jpg');
+            background-image: url('../img/home-slide1.jpg');
         }
 
         .cb-slideshow li:nth-child(2) span {
-            background-image: url('layout/images/home-slide2.jpg');
+            background-image: url('../img/home-slide2.jpg');
         }
 
         .cb-slideshow li:nth-child(3) span {
-            background-image: url('layout/images/home-slide3.jpg');
+            background-image: url('../img/home-slide3.jpg');
         }
 
         .cb-slideshow li:nth-child(4) span {
-            background-image: url('layout/images/home-slide4.jpg');
+            background-image: url('../img/home-slide4.jpg');
         }
 
         .cb-slideshow li:nth-child(5) span {
-            background-image: url('layout/images/home-slide5.jpg');
+            background-image: url('../img/home-slide5.jpg');
         }
 
         .cb-slideshow li:nth-child(6) span {
-            background-image: url('layout/images/home-slide6.jpg');
+            background-image: url('../img/home-slide6.jpg');
         }
 
         .cb-slideshow li:nth-child(7) span {
-            background-image: url('layout/images/home-slide7.jpg');
+            background-image: url('../img/home-slide7.jpg');
         }
 
 @-webkit-keyframes imageAnimation {
@@ -9412,8 +9481,8 @@ _:-ms-lang(x), .downanimate {
         animation-name: initial !important;
     }
 }
-
-.home-slider .text h1 {
+/* moved to home.css */
+/*.home-slider .text h1 {
     -webkit-animation-duration: 1.2s;
     -moz-animation-duration: 1.2s;
     -o-animation-duration: 1.2s;
@@ -9425,7 +9494,7 @@ _:-ms-lang(x), .downanimate {
     -moz-animation-duration: 1.2s;
     -o-animation-duration: 1.2s;
     animation-duration: 1.2s;
-}
+}*/
 
 .caption-animated {
     -webkit-animation-duration: .8s;
@@ -9450,21 +9519,17 @@ _:-ms-lang(x), .downanimate {
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 }
-
-.slider-outer {
+.slider-out {
     position: relative;
     width: 100%;
     height: 100%;
 }
 
-    .slider-outer .bx-wrapper {
-        height: 100%;
-    }
-
-.home-slider {
+/* moved to home.css*/
+/*.home-slider {
     width: 100%;
     height: 100%;
-}
+}*/
 
 /**********/
 /* Top Banner */
@@ -9826,11 +9891,11 @@ _:-ms-lang(x), .downanimate {
 }
 
 .about-bg {
-    background-image: url('layout/images/about-bg.jpg');
+    background-image: url('../img/about-bg.jpg');
 }
 
 .bio-bg {
-    background-image: url('layout/images/bio-bg.png');
+    background-image: url('../img/bio-bg.png');
 }
 
 .area-detail {
@@ -9962,55 +10027,16 @@ _:-ms-lang(x), .downanimate {
         z-index: 10;
         width: 100%;
     }
+/***********/
+/* Content */
+/***********/
 
-/* responsive */
-
-@media screen and (max-width: 640px) {
-    .header {
-        height: auto;
-        position: fixed !important;
-        background: #fff;
-        padding-top: 0px;
-        padding-bottom: 27px;
-    }
-
-    .mobile-header {
-        margin-bottom: 30px;
-    }
-
-    .header .logo {
-        margin-bottom: 0;
-        width: 100%;
-    }
-
-        .header .logo img {
-            margin: 0 auto;
-        }
-}
-
-@media screen and (max-width: 1200px) {
-    .header .logo {
-        padding-left: 1em;
-    }
-}
-
-/*****************************/
-/*      Content Styles       */
-/*****************************/
-/* - Accordion               */
-/* - Attorney landing        */
-/* - Attorney profile        */
-/* - Blog                    */
-/* - Practice Areas          */
-/* - Practice Details        */
-/* - Contact                 */
-/*****************************/
-.main {
+/*.main {
     padding-top: 55px;
     padding-bottom: 20px;
     position: relative;
     z-index: 9;
-}
+}*/
 
 .main-page {
     padding-bottom: 50px;
@@ -10431,7 +10457,7 @@ _:-ms-lang(x), .downanimate {
 
 /* Practice Details */
 .estate-bg {
-    background-image: url('layout/images/home-slide6.jpg');
+    background-image: url('../img/home-slide6.jpg');
 }
 
 .estate-detail {
@@ -10560,7 +10586,7 @@ _:-ms-lang(x), .downanimate {
 
 /* Contact */
 .contact-bg {
-    background-image: url('layout/images/home-slide7.jpg');
+    background-image: url('../img/home-slide7.jpg');
 }
 
 .quote-before {
@@ -10577,7 +10603,7 @@ _:-ms-lang(x), .downanimate {
     width: 24px;
     height: 17px;
     position: absolute;
-    background: url('layout/images/quote-after.png') no-repeat center bottom;
+    background: url('../img/quote-after.png') no-repeat center bottom;
     right: -24px;
     bottom: 0;
 }
@@ -11119,3 +11145,135 @@ blockquote p {
 /********************/
 
 /*  home styles  */
+.home-slider .text h1 {
+    -webkit-animation-duration: 1.2s;
+    -moz-animation-duration: 1.2s;
+    -o-animation-duration: 1.2s;
+    animation-duration: 1.2s;
+}
+
+.home-slider .text .text-main {
+    -webkit-animation-duration: 1.2s;
+    -moz-animation-duration: 1.2s;
+    -o-animation-duration: 1.2s;
+    animation-duration: 1.2s;
+}
+
+.home-slider {
+    width: 100%;
+    height: 100%;
+}
+
+.carousal {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+    left: 0;
+    margin: 0 auto;
+    padding: 0;    
+    max-width: 100%;
+    -webkit-transform: translatez(0);
+    -moz-transform: translatez(0);
+    -ms-transform: translatez(0);
+    -o-transform: translatez(0);
+    transform: translatez(0);
+}
+
+/* Responsive */
+@media screen and (max-width: 640px) {
+    .slider-out, .home-slider, .slider-out .carousal {
+        height: auto !important;
+    }
+
+    .slider-out {
+        position: static;
+        padding-top: 198px;
+    }
+
+    .home-slider .cb-slideshow li span {
+        height: 300px;
+        animation: initial !important;
+        -webkit-animation: initial !important;
+        position: static;
+        display: block;
+        opacity: 1;
+    }
+
+    .picture-area, .caption-area, .sub-content .content-area {
+        width: 100%;
+    }
+
+    .picture-area {
+        display: none;
+    }
+
+    .caption-area:before {
+        display: none;
+    }
+
+    .slide-wrap, .caption-area {
+        height: auto;
+    }
+
+    .caption-area {
+        float: none;
+        width: 100%;
+        height: auto !important;
+    }
+
+    .slide-blue .caption-area {
+        background-color: rgba(63, 134, 200, 1);
+    }
+
+    .slide-green .caption-area {
+        background-color: rgba(91, 122, 21, 1);
+    }
+
+    .slide-red .caption-area {
+        background-color: rgba(192, 22, 27, 1);
+    }
+
+    .slide-purple .caption-area {
+        background-color: rgba(109, 62, 124, 1);
+    }
+
+    .slide-light-purple .caption-area {
+        background-color: rgba(144, 82, 121, 1);
+    }
+
+    .slide-dark-green .caption-area {
+        background-color: rgba(32, 84, 32, 1);
+    }
+
+    .slide-bottle-green .caption-area {
+        background-color: rgba(51, 155, 142, 1);
+    }
+
+    .caption-area {
+        padding: 30px 0;
+    }
+
+    .text-main p br {
+        display: none;
+    }
+
+    .text h1, .text h1 small {
+        font-size: 26px;
+    }
+
+    .button-wrap {
+        padding-top: 25px;
+    }
+
+    .caption-area > div {
+        position: static;
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        top: 0;
+        padding: 0 25px;
+    }
+}

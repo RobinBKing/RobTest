@@ -4,6 +4,16 @@
 /* - container     *//* - nav           *//* - header        *//* - content       *//* - footer        */
 /* - responsive    */
 /*******************/
+/*******************************/
+/*     container styles        */
+/*******************************/
+@media screen and (max-width: 640px) {
+    .animate-initial {
+        animation: initial !important;
+    }
+}
+
+
 /********************************/
 /*       Header Styles          */
 /********************************/
@@ -12,15 +22,17 @@
 /* - Portfolio                  */
 /* - Search                     */
 /* - Menu                       */
+/***   moved to Sliders      ****/
 /* - Slider                     */
 /* - Bx Slider                  */
-/* - Custom Scrollbar           */
-/* - Select Box styles          */
-/* - Full Width Page content (moved to typography   */
+/* - Custom Scrollbar (moved to scrollbars) */
+/* - Select Box styles (moved to Selectbox) */
+/***   moved to container    ****/
+/* - Full Width Page content    */
 /* - Homepage slider            */
 /* - Slide text colors          */
 /* - Slide Button colors        */
-/* Top Banner                   */
+/* - Top Banner                 */
 /* Full Width Sub Page content  */
 /* One column Page styles       */
 /* Banner
@@ -321,6 +333,64 @@
     right: 74.96%;
 }
 
+
+/* responsive */
+@media screen and (max-width: 640px) {
+    .header {
+        height: auto;
+        position: fixed !important;
+        background: #fff;
+        padding-top: 0px;
+        padding-bottom: 27px;
+    }
+
+    .mobile-header {
+        margin-bottom: 30px;
+    }
+
+    .header .logo {
+        margin-bottom: 0;
+        width: 100%;
+    }
+
+        .header .logo img {
+            margin: 0 auto;
+        }
+}
+
+@media screen and (max-width: 1200px) {
+    .header .logo {
+        padding-left: 1em;
+    }
+}
+
+/*****************************/
+/*      Content Styles       */
+/*****************************/
+/* - Full Width Page content    */
+/* Homepage slider              */
+/* - Slide text colors          */
+/* - Slide Button colors        */
+/* Top Banner                   */
+/* Full Width Sub Page content  */
+/* One column Page styles       */
+/* Banner                       */
+/* Content                      */
+/* - Accordion                  */
+/* - Attorney landing           */
+/* - Attorney profile           */
+/* - Blog                       */
+/* - Practice Areas             */
+/* - Practice Details           */
+/* - Contact                    */
+/* - Accordion                  */
+/* - Attorney landing           */
+/* - Attorney profile           */
+/* - Blog                       */
+/* - Practice Areas             */
+/* - Practice Details           */
+/* - Contact                    */
+/********************************/
 /**********/
 /* Slider */
 /**********/
@@ -375,7 +445,7 @@
 
 
 /* Bx Slider */
-.bx-wrapper {
+/*.bx-wrapper {
     position: relative;
     margin: 0 auto 60px;
     padding: 0;
@@ -446,10 +516,10 @@
             .bx-wrapper .bx-pager.bx-default-pager a:hover,
             .bx-wrapper .bx-pager.bx-default-pager a.active {
                 background: #666;
-            }
+            }*/
 
 /* Custom Scrollbar */
-.mCustomScrollbar {
+/*.mCustomScrollbar {
     -ms-touch-action: pinch-zoom;
     touch-action: pinch-zoom;
 }
@@ -625,12 +695,12 @@
         opacity: .9;
         filter: "alpha(opacity=90)";
         -ms-filter: "alpha(opacity=90)";
-    }
+    }*/
 
 /***********/
 /* Select Box styles */
 /***********/
-.selectric .label, .selectric-disabled {
+/*.selectric .label, .selectric-disabled {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -806,8 +876,7 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-}
-
+}*/
 /* Homepage slider */
 .slide-wrap, .caption-area {
     height: 100%;
@@ -1056,31 +1125,31 @@
         }
 
         .cb-slideshow li:nth-child(1) span {
-            background-image: url('layout/images/home-slide1.jpg');
+            background-image: url('../img/home-slide1.jpg');
         }
 
         .cb-slideshow li:nth-child(2) span {
-            background-image: url('layout/images/home-slide2.jpg');
+            background-image: url('../img/home-slide2.jpg');
         }
 
         .cb-slideshow li:nth-child(3) span {
-            background-image: url('layout/images/home-slide3.jpg');
+            background-image: url('../img/home-slide3.jpg');
         }
 
         .cb-slideshow li:nth-child(4) span {
-            background-image: url('layout/images/home-slide4.jpg');
+            background-image: url('../img/home-slide4.jpg');
         }
 
         .cb-slideshow li:nth-child(5) span {
-            background-image: url('layout/images/home-slide5.jpg');
+            background-image: url('../img/home-slide5.jpg');
         }
 
         .cb-slideshow li:nth-child(6) span {
-            background-image: url('layout/images/home-slide6.jpg');
+            background-image: url('../img/home-slide6.jpg');
         }
 
         .cb-slideshow li:nth-child(7) span {
-            background-image: url('layout/images/home-slide7.jpg');
+            background-image: url('../img/home-slide7.jpg');
         }
 
 @-webkit-keyframes imageAnimation {
@@ -1475,8 +1544,8 @@ _:-ms-lang(x), .downanimate {
         animation-name: initial !important;
     }
 }
-
-.home-slider .text h1 {
+/* moved to home.css */
+/*.home-slider .text h1 {
     -webkit-animation-duration: 1.2s;
     -moz-animation-duration: 1.2s;
     -o-animation-duration: 1.2s;
@@ -1488,7 +1557,7 @@ _:-ms-lang(x), .downanimate {
     -moz-animation-duration: 1.2s;
     -o-animation-duration: 1.2s;
     animation-duration: 1.2s;
-}
+}*/
 
 .caption-animated {
     -webkit-animation-duration: .8s;
@@ -1513,21 +1582,17 @@ _:-ms-lang(x), .downanimate {
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 }
-
-.slider-outer {
+.slider-out {
     position: relative;
     width: 100%;
     height: 100%;
 }
 
-    .slider-outer .bx-wrapper {
-        height: 100%;
-    }
-
-.home-slider {
+/* moved to home.css*/
+/*.home-slider {
     width: 100%;
     height: 100%;
-}
+}*/
 
 /**********/
 /* Top Banner */
@@ -1889,11 +1954,11 @@ _:-ms-lang(x), .downanimate {
 }
 
 .about-bg {
-    background-image: url('layout/images/about-bg.jpg');
+    background-image: url('../img/about-bg.jpg');
 }
 
 .bio-bg {
-    background-image: url('layout/images/bio-bg.png');
+    background-image: url('../img/bio-bg.png');
 }
 
 .area-detail {
@@ -2025,55 +2090,16 @@ _:-ms-lang(x), .downanimate {
         z-index: 10;
         width: 100%;
     }
+/***********/
+/* Content */
+/***********/
 
-/* responsive */
-
-@media screen and (max-width: 640px) {
-    .header {
-        height: auto;
-        position: fixed !important;
-        background: #fff;
-        padding-top: 0px;
-        padding-bottom: 27px;
-    }
-
-    .mobile-header {
-        margin-bottom: 30px;
-    }
-
-    .header .logo {
-        margin-bottom: 0;
-        width: 100%;
-    }
-
-        .header .logo img {
-            margin: 0 auto;
-        }
-}
-
-@media screen and (max-width: 1200px) {
-    .header .logo {
-        padding-left: 1em;
-    }
-}
-
-/*****************************/
-/*      Content Styles       */
-/*****************************/
-/* - Accordion               */
-/* - Attorney landing        */
-/* - Attorney profile        */
-/* - Blog                    */
-/* - Practice Areas          */
-/* - Practice Details        */
-/* - Contact                 */
-/*****************************/
-.main {
+/*.main {
     padding-top: 55px;
     padding-bottom: 20px;
     position: relative;
     z-index: 9;
-}
+}*/
 
 .main-page {
     padding-bottom: 50px;
@@ -2494,7 +2520,7 @@ _:-ms-lang(x), .downanimate {
 
 /* Practice Details */
 .estate-bg {
-    background-image: url('layout/images/home-slide6.jpg');
+    background-image: url('../img/home-slide6.jpg');
 }
 
 .estate-detail {
@@ -2623,7 +2649,7 @@ _:-ms-lang(x), .downanimate {
 
 /* Contact */
 .contact-bg {
-    background-image: url('layout/images/home-slide7.jpg');
+    background-image: url('../img/home-slide7.jpg');
 }
 
 .quote-before {
@@ -2640,7 +2666,7 @@ _:-ms-lang(x), .downanimate {
     width: 24px;
     height: 17px;
     position: absolute;
-    background: url('layout/images/quote-after.png') no-repeat center bottom;
+    background: url('../img/quote-after.png') no-repeat center bottom;
     right: -24px;
     bottom: 0;
 }

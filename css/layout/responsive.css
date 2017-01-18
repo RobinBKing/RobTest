@@ -638,7 +638,7 @@
 }
 
 @media screen and (min-width: 641px) {
-    .slider-outer .bx-wrapper .bx-viewport {
+    .slider-out .bx-wrapper .bx-viewport {
         height: 100% !important;
     }
 
@@ -679,16 +679,17 @@
         display: none;
     }
 
-    .show-for-small-only {
+    /*replaced by materialize*/
+    /*.show-for-small-only {
         display: block !important;
-    }
+    }*/
 
-    .animate-initial {
+    /*.animate-initial {
         animation: initial !important;
-    }
-    /*.home-slider .cb-slideshow li,.home-slider .cb-slideshow li span,.home-slider .caption-area,.home-slider .text h1,.home-slider .text .text-main{opacity: 1 !important;}*/
+    }*/
     .sidebar .cat-links {
-        display: none;
+ 
+               display: none;
     }
 
     select {
@@ -711,12 +712,12 @@
             margin: 0 auto;
         }*/
 
-    .slider-outer {
+    /*.slider-out {
         position: static;
         padding-top: 198px;
-    }
+    }*/
 
-    .picture-area, .caption-area, .sub-content .content-area {
+    /*.picture-area, .caption-area, .sub-content .content-area {
         width: 100%;
     }
 
@@ -790,28 +791,28 @@
         transform: translateY(0);
         top: 0;
         padding: 0 25px;
-    }
+    }*/
 
-    .footer, .footer-wrap, .footer-wrap > .row {
+    /*.footer, .footer-wrap, .footer-wrap > .row {
         position: static !important;
-    }
+    }*/
 
     .tab-2-col .content-detail {
         padding: 0 30px;
     }
 
-    .footer-wrap {
+    /*.footer-wrap {
         background: #3a3a3c;
         height: auto;
-    }
+    }*/
 
-    .footer .copyright p, .footer .copyright p a {
+    /*.footer .copyright p, .footer .copyright p a {
         color: #fff;
-    }
+    }*/
 
-    .homepage .footer-wrap .copyright {
+    /*.homepage .footer-wrap .copyright {
         padding: 20px 0 33px 0;
-    }
+    }*/
 
     .home-slider .cb-slideshow li span {
         height: 300px;
@@ -826,9 +827,9 @@
         height: auto;
     }
 
-    .slider-outer, .home-slider, .slider-outer .bx-wrapper {
+    /*.slider-out, .home-slider, .slider-out .bx-wrapper {
         height: auto !important;
-    }
+    }*/
 
     .single-col-main .header {
         position: static;

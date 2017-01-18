@@ -7788,4 +7788,5 @@ Picker.extend( 'pickadate', DatePicker )
 /* Custom */
 /**********/
 $(document).ready(function () {
+    $('.carousel.carousel-slider').carousel({ full_width: true });
 });

@@ -11,6 +11,7 @@
 
     <link rel="icon" type="image/ico" href="/favicon.ico">
     <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -19,7 +20,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <%--    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>--%>
     <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script src="https://use.fontawesome.com/6ae98ae3b7.js"></script>
+    <script src="https://use.fontawesome.com/e5cb830c0a.js"></script>
     <script src="/js/site.js"></script>
     <script async="" src="https://www.google-analytics.com/analytics.js"></script>
 
@@ -28,29 +29,53 @@
 <body>
     <form id="form" runat="server">
         <header class="header animated fadeInDown">
-            <nav class="nav" role="navigation">
+            <div class="mobile-header hide-on-med-and-up">
+                <%--mobile--%>
+                <div class="mobile-nav-bar ">
+                    <%--                        <a href="tel:+1-012-345-6789" class="phone-box"><i class="material-icons">phone</i>(012) 345-6789</a>--%>
+                    <a href="tel:+1-012-345-6789" class="phone-box"><i class="fa fa-phone-square"></i>(012) 345-6789</a>
+                    <%--                        <a href="#" data-activates="nav-mobile" class="menu-icon button-collapse">Menu <i class="material-icons">menu</i></a>--%>
+                    <a href="#" data-activates="nav-mobile" class="menu-icon button-collapse">Menu <i class="fa fa-bars"></i></a>
+                </div>
+                <%--side menu--%>
+                <div id="nav-mobile" class="side-nav">
+                    <a href="/" class="side-nav-title">Menu</a>
+                    <ul>
+                        <li><a href="/index.aspx">Home</a></li>
+                        <li><a href="/about.aspx">About Us</a></li>
+                        <li><a href="/bios.aspx">Attorneys</a></li>
+                        <li><a href="/areas.aspx">Practice Areas</a></li>
+                        <li><a href="/news_resources.aspx">News &amp; Resources</a></li>
+                        <li><a href="/contact.aspx">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section">
+                <div class="center mobile-brand-logo">
+                    <a href="/" class="hide-on-med-and-up">
+                        <img src="/img/mobile-logo.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <nav class="nav hide-on-small-only" role="navigation">
                 <div class="nav-wrapper">
-                    <img src="/img/logo.png" alt="" class="brand-logo hide-on-small-only">
-                    <%--mobile--%>
-                    <div class="mobile-nav-bar hide-on-med-and-up">
-<%--                        <a href="tel:+1-012-345-6789" class="phone-box"><i class="material-icons">phone</i>(012) 345-6789</a>--%>
-                        <a href="tel:+1-012-345-6789" class="phone-box"><i class="fa fa-phone-square"></i> (012) 345-6789</a>
-<%--                        <a href="#" data-activates="nav-mobile" class="menu-icon button-collapse">Menu <i class="material-icons">menu</i></a>--%>
-                        <a href="#" data-activates="nav-mobile" class="menu-icon button-collapse">Menu <i class="fa fa-bars"></i></a>
+                    <%--main menu--%>
+                    <div class="row">
+                        <div class="col l4 m5">
+                            <a href="#" class="brand-logo left"><img src="/img/logo.png" alt=""></a>
+                        </div>
+                        <div class="col l8 m7">
+                            <ul id="nav-main" class="right">
+                                <li><a href="/about.aspx">About Us</a></li>
+                                <li><a href="/bios.aspx" class="dropdown-button hoverable" data-beloworigin="true" data-activates="bios-dropdown">Attorneys</a></li>
+                                <li><a href="/areas.aspx" class="dropdown-button hoverable" data-activates="areas-dropdown">Practice Areas</a></li>
+                                <li><a href="/new_resources.aspx">News &amp; Resources</a></li>
+                                <li><a href="/contact.aspx">Contact</a></li>
+                                <li><a href="/pay-online.aspx">Pay Online</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <%--side menu--%>
-                    <div id="nav-mobile" class="side-nav">
-                        <a href="/" class="side-nav-title">Menu</a>
-                        <ul>
-                            <li><a href="/index.aspx">Home</a></li>
-                            <li><a href="/about.aspx">About Us</a></li>
-                            <li><a href="/bios.aspx">Attorneys</a></li>
-                            <li><a href="/areas.aspx">Practice Areas</a></li>
-                            <li><a href="/news_resources.aspx">News &amp; Resources</a></li>
-                            <li><a href="/contact.aspx">Contact</a></li>
-                        </ul>
-                    </div>
-                    <%--sub menus--%>
+                    <%--main sub menus--%>
                     <ul id="bios-dropdown" class="dropdown-content">
                         <li>
                             <a href="http://www.lyonsdougherty.com/attorneys/michael-j-lyons/">Michael J. Lyons</a>
@@ -103,25 +128,8 @@
                             </div>
                         </li>
                     </ul>
-                    <%--main menu--%>
-                   <ul class="right hide-on-small-and-down">
-                        <li><a href="/about.aspx">About Us</a></li>
-                        <li><a href="/bios.aspx" class="dropdown-button hoverable" data-beloworigin="true" data-activates="bios-dropdown">Attorneys</a></li>
-                        <li><a href="/areas.aspx" class="dropdown-button hoverable" data-activates="areas-dropdown">Practice Areas</a></li>
-                        <li><a href="/new_resources.aspx">News &amp; Resources</a></li>
-                        <li><a href="/contact.aspx">Contact</a></li>
-                        <li><a href="/pay-online.aspx">Pay Online</a></li>
-                    </ul>
                 </div>
             </nav>
-            <div class="section no-pad-bot" id="index-banner">
-                <div class="container">
-                <div class="row center">
-                    <a href="/">
-                        <img src="/img/mobile-logo.png" alt="" class="brand-logo hide-on-med-and-up">
-                    </a>
-                </div>
-            </div>
         </header>
         <main>
             <asp:ContentPlaceHolder runat="server" ID="MainContent" />

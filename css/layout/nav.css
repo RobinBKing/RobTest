@@ -2,74 +2,46 @@
 /*    nav styles      */
 /**********************/
 nav {
-    background-color: #9bcbc2;
-    margin-bottom: 30px;
-    height: 60px;
-    min-width: 360px;
+    background-color: transparent;
+
+    padding-top: 17px;
+
 }
 
-.mobile-nav-bar a.phone-box {
-    float: left;
-    padding: 17px 20px;
-    color: #005248;
-
+nav, nav ul {
+    background: none;
     font-size: 16px;
-    line-height: 24px;
-    height: 24px;
-    text-decoration: none;
-    background: transparent;
-    cursor: pointer;
+    height: auto;
+    line-height: normal;
+    padding: 0;
 }
 
-.mobile-nav-bar a.phone-box .fa {
-    color: #005248;
-    font-size: 20px;
-    line-height: 20px;
-    height: 20px;
-    text-align: center;
-    margin: 2px 3px 0 0;
+nav ul li {
+    font-family: Josefin;
+    display: inline-block;
+    background: none;
     position: relative;
-    top: 1px;
 }
 
-.mobile-nav-bar a.menu-icon {
-    color: #ffffff;
-    background: #005248;
-    display: block;
-    text-align: right;
-    float: right;
-    padding: 0 20px 0 30px;
-    height: 60px;
-    width: auto;
-    text-transform: uppercase;
-    font-size: 19px;
-    line-height: 60px;
-    position: relative;
-    vertical-align: middle;
-    cursor: pointer;
-    margin: 0;
+nav .brand-logo {
+    width: 25%;
+    height: auto;
 }
 
-.mobile-nav-bar a.menu-icon .fa {
-    margin: 0 0 0 15px;
-}
+    nav .brand-logo img {
+        max-width: 100%;
+    }
 
 .side-nav {
     background: #005248;
 }
 
-.side-nav .side-nav-title {
-    text-align: center;
-}
-
-.side-nav .side-nav-title, .side-nav ul li a {
-    color: #ffffff;
-    font-size: 16px;
-}
-
-@media screen and (min-width: 601px) {
-    nav {
-        background-color: transparent;
+    .side-nav .side-nav-title {
+        text-align: center;
     }
-}
+
+    .side-nav .side-nav-title, .side-nav ul li a {
+        color: #ffffff;
+        font-size: 16px;
+    }
 

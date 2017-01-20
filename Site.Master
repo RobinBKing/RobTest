@@ -28,96 +28,96 @@
 <body>
     <form id="form" runat="server">
         <header class="header animated fadeInDown">
-            <nav class="brand-color" role="navigation">
-                <div class="nav-wrapper container">
-                    <div class="phone-box row left">
-                        <a href="tel:+1-012-345-6789" class="white-text hide-on-med-and-up">
-                            <i class="material-icons brand-secondary-color">phone</i>(012) 345-6789
-                        </a>
+            <nav class="nav" role="navigation">
+                <div class="nav-wrapper">
+                    <img src="/img/logo.png" alt="" class="brand-logo hide-on-small-only">
+                    <%--mobile--%>
+                    <div class="mobile-nav-bar hide-on-med-and-up">
+<%--                        <a href="tel:+1-012-345-6789" class="phone-box"><i class="material-icons">phone</i>(012) 345-6789</a>--%>
+                        <a href="tel:+1-012-345-6789" class="phone-box"><i class="fa fa-phone-square"></i> (012) 345-6789</a>
+<%--                        <a href="#" data-activates="nav-mobile" class="menu-icon button-collapse">Menu <i class="material-icons">menu</i></a>--%>
+                        <a href="#" data-activates="nav-mobile" class="menu-icon button-collapse">Menu <i class="fa fa-bars"></i></a>
                     </div>
-                    <ul class="rignt hide-on-med-and-down">
+                    <%--side menu--%>
+                    <div id="nav-mobile" class="side-nav">
+                        <a href="/" class="side-nav-title">Menu</a>
+                        <ul>
+                            <li><a href="/index.aspx">Home</a></li>
+                            <li><a href="/about.aspx">About Us</a></li>
+                            <li><a href="/bios.aspx">Attorneys</a></li>
+                            <li><a href="/areas.aspx">Practice Areas</a></li>
+                            <li><a href="/news_resources.aspx">News &amp; Resources</a></li>
+                            <li><a href="/contact.aspx">Contact</a></li>
+                        </ul>
+                    </div>
+                    <%--sub menus--%>
+                    <ul id="bios-dropdown" class="dropdown-content">
                         <li>
-                            <a href="/about.aspx" tabindex="0">About Us</a>
+                            <a href="http://www.lyonsdougherty.com/attorneys/michael-j-lyons/">Michael J. Lyons</a>
                         </li>
                         <li>
-                            <a href="/bios.aspx">Attorneys</a>
-                            <ul>
-                                <li>
-                                    <a href="http://www.lyonsdougherty.com/attorneys/michael-j-lyons/">Michael J. Lyons</a>
-                                </li>
-                                <li>
-                                    <a href="http://www.lyonsdougherty.com/attorneys/joseph-j-dougherty/">Joseph J. Dougherty</a>
-                                </li>
-                                <li>
-                                    <a href="http://www.lyonsdougherty.com/attorneys/michael-v-naseef/">Michael V. Naseef</a>
-                                </li>
-                                <li>
-                                    <a href="http://www.lyonsdougherty.com/attorneys/michael-j-hawley/">Michael J. Hawley</a>
-                                </li>
-                                <li>
-                                    <a href="http://www.lyonsdougherty.com/attorneys/john-p-brazzo/">John P. Brazzo</a>
-                                </li>
-                                <li>
-                                    <a href="http://www.lyonsdougherty.com/attorneys/daniel-j-maisano/">Daniel J. Maisano</a>
-                                </li>
-                            </ul>
+                            <a href="http://www.lyonsdougherty.com/attorneys/joseph-j-dougherty/">Joseph J. Dougherty</a>
                         </li>
                         <li>
-                            <a href="/areas.aspx">Practice Areas</a>
-                            <ul>
-                                <li>
-                                    <div>
-                                        <div class="col s6">
-                                            <ul>
-                                                <li><a href="/practices/business-planning-and-organizations/">Business Planning and Organizations</a></li>
-                                                <li><a href="/practices/business-transactions/">Business Transactions</a></li>
-                                                <li><a href="/practices/commercial-litigation/">Commercial Litigation</a></li>
-                                                <li><a href="/practices/community-association-law/">Community Association Law</a></li>
-                                                <li><a href="/practices/construction-defect-litigation/">Construction Defect Litigation</a></li>
-                                                <li><a href="/practices/criminal-defense/">Criminal Defense</a></li>
-                                                <li><a href="/practices/estate-planning/">Estate Planning</a></li>
-                                                <li><a href="/practices/litigation/">Litigation</a></li>
+                            <a href="http://www.lyonsdougherty.com/attorneys/michael-v-naseef/">Michael V. Naseef</a>
+                        </li>
+                        <li>
+                            <a href="http://www.lyonsdougherty.com/attorneys/michael-j-hawley/">Michael J. Hawley</a>
+                        </li>
+                        <li>
+                            <a href="http://www.lyonsdougherty.com/attorneys/john-p-brazzo/">John P. Brazzo</a>
+                        </li>
+                        <li>
+                            <a href="http://www.lyonsdougherty.com/attorneys/daniel-j-maisano/">Daniel J. Maisano</a>
+                        </li>
+                    </ul>
+                    <ul id="areas-dropdown" class="dropdown-content">
+                        <li>
+                            <div>
+                                <div class="col s6">
+                                    <ul>
+                                        <li><a href="/practices/business-planning-and-organizations/">Business Planning and Organizations</a></li>
+                                        <li><a href="/practices/business-transactions/">Business Transactions</a></li>
+                                        <li><a href="/practices/commercial-litigation/">Commercial Litigation</a></li>
+                                        <li><a href="/practices/community-association-law/">Community Association Law</a></li>
+                                        <li><a href="/practices/construction-defect-litigation/">Construction Defect Litigation</a></li>
+                                        <li><a href="/practices/criminal-defense/">Criminal Defense</a></li>
+                                        <li><a href="/practices/estate-planning/">Estate Planning</a></li>
+                                        <li><a href="/practices/litigation/">Litigation</a></li>
 
-                                            </ul>
-                                        </div>
-                                        <div class="columns small-6">
+                                    </ul>
+                                </div>
+                                <div class="columns small-6">
 
-                                            <ul id="menu-practice-right-menu" class="">
-                                                <li>Probate and Estate Administration</a></li>
-                                                <li><a href="/practices/real-estate-closings/">Real Estate Closings</a></li>
-                                                <li><a href="/practices/real-estate-transactions/">Real Estate Transactions</a></li>
-                                                <li><a href="/practices/real-estate-tax-assessment/">Real Estate Tax Assessment</a></li>
-                                                <li><a href="/practices/real-property-litigation/">Real Property Litigation</a></li>
-                                                <li><a href="/practices/land-development/">Land Development</a></li>
-                                                <li><a href="/practices/taxation/">Taxation</a></li>
-                                                <li><a href="/practices/zoning-and-land-use-planning/">Zoning and Land Use Planning</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
+                                    <ul id="menu-practice-right-menu" class="">
+                                        <li>Probate and Estate Administration</a></li>
+                                        <li><a href="/practices/real-estate-closings/">Real Estate Closings</a></li>
+                                        <li><a href="/practices/real-estate-transactions/">Real Estate Transactions</a></li>
+                                        <li><a href="/practices/real-estate-tax-assessment/">Real Estate Tax Assessment</a></li>
+                                        <li><a href="/practices/real-property-litigation/">Real Property Litigation</a></li>
+                                        <li><a href="/practices/land-development/">Land Development</a></li>
+                                        <li><a href="/practices/taxation/">Taxation</a></li>
+                                        <li><a href="/practices/zoning-and-land-use-planning/">Zoning and Land Use Planning</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </li>
+                    </ul>
+                    <%--main menu--%>
+                   <ul class="right hide-on-small-and-down">
+                        <li><a href="/about.aspx">About Us</a></li>
+                        <li><a href="/bios.aspx" class="dropdown-button hoverable" data-beloworigin="true" data-activates="bios-dropdown">Attorneys</a></li>
+                        <li><a href="/areas.aspx" class="dropdown-button hoverable" data-activates="areas-dropdown">Practice Areas</a></li>
                         <li><a href="/new_resources.aspx">News &amp; Resources</a></li>
                         <li><a href="/contact.aspx">Contact</a></li>
                         <li><a href="/pay-online.aspx">Pay Online</a></li>
                     </ul>
-
-                    <ul id="nav-mobile" class="side-nav">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/about.aspx">About Us</a></li>
-                        <li><a href="/bios.aspx">Attorneys</a></li>
-                        <li><a href="/areas.aspx">Practice Areas</a></li>
-                        <li><a href="/news_resources.aspx">News &amp; Resources</a></li>
-                        <li><a href="/contact.aspx">Contact</a></li>
-                    </ul>
-                    <a href="#" data-activates="nav-mobile" class="button-collapse brand-secondary-color"><i class="material-icons">menu</i></a>
                 </div>
             </nav>
             <div class="section no-pad-bot" id="index-banner">
                 <div class="container">
                 <div class="row center">
                     <a href="/">
-<%--                        <img src="/img/logo.png" alt="" class="brand-logo hide-on-small-only">--%>
                         <img src="/img/mobile-logo.png" alt="" class="brand-logo hide-on-med-and-up">
                     </a>
                 </div>

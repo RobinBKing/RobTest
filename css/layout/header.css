@@ -4,6 +4,7 @@
 header {
     background-color: #ffffff;
     background-size: auto;
+    padding-bottom: 27px;
 }
 
     header .mobile-header {
@@ -72,5 +73,6 @@ header {
     header {
         background: url(../../img/top-shadow.png) no-repeat center top;
         background-size: cover;
+        padding: 17px 0;
     }
 }

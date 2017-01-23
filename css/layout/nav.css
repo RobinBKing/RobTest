@@ -2,13 +2,6 @@
 /*    nav styles      */
 /**********************/
 nav {
-    background-color: transparent;
-
-    padding-top: 17px;
-
-}
-
-nav, nav ul {
     background: none;
     font-size: 16px;
     height: auto;
@@ -16,21 +9,56 @@ nav, nav ul {
     padding: 0;
 }
 
-nav ul li {
-    font-family: Josefin;
-    display: inline-block;
-    background: none;
-    position: relative;
-}
+    nav .brand-logo.col.l4.m5 {
+        width: 27%;
+        height: auto;
+        padding: 10px 15px 15px 16px;
+    }
 
-nav .brand-logo {
-    width: 25%;
-    height: auto;
-}
-
-    nav .brand-logo img {
+    nav .brand-logo a img {
         max-width: 100%;
     }
+
+    nav .nav-column.col.l8.m7 {
+        background: none;
+        width: 100%;
+        height: auto;
+        padding: 17px 0.5em 0 .9375rem;
+        font-family: 'Lato', sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+        nav .nav-column ul {
+            background: none;
+            font-size: 16px;
+            height: auto;
+            line-height: normal;
+            padding: 0;
+        }
+
+            nav .nav-column ul li {
+                list-style-position: outside;
+                font-family: Josefin;
+                display: inline-block;
+                background: none;
+                position: relative;
+                padding: 0;
+                float: left;
+            }
+
+                nav .nav-column ul li a {
+                    background: transparent;
+                    padding: 10px 3px 9px 4px;
+                    font-size: 10px;
+                    text-transform: uppercase;
+                    color: #ffffff;
+                    display: inline-block;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+
+
 
 .side-nav {
     background: #005248;
@@ -44,4 +72,3 @@ nav .brand-logo {
         color: #ffffff;
         font-size: 16px;
     }
-

@@ -50,8 +50,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="section">
-                <div class="center mobile-brand-logo">
+            <div class="section hide-on-med-and-up">
+                <div class="center mobile-brand-logo hide-on-med-and-up">
                     <a href="/" class="hide-on-med-and-up">
                         <img src="/img/mobile-logo.png" alt="">
                     </a>
@@ -61,11 +61,12 @@
                 <div class="nav-wrapper">
                     <%--main menu--%>
                     <div class="row">
-                        <div class="col l4 m5">
-                            <a href="#" class="brand-logo left"><img src="/img/logo.png" alt=""></a>
+                        <div class="brand-logo col l4 m5 left">
+                            <a href="#" class="">
+                                <img src="/img/logo.png" alt=""></a>
                         </div>
-                        <div class="col l8 m7">
-                            <ul id="nav-main" class="right">
+                        <div class="nav-column col l8 m7 right">
+                            <ul class="right">
                                 <li><a href="/about.aspx">About Us</a></li>
                                 <li><a href="/bios.aspx" class="dropdown-button hoverable" data-beloworigin="true" data-activates="bios-dropdown">Attorneys</a></li>
                                 <li><a href="/areas.aspx" class="dropdown-button hoverable" data-activates="areas-dropdown">Practice Areas</a></li>
@@ -134,7 +135,16 @@
         <main>
             <asp:ContentPlaceHolder runat="server" ID="MainContent" />
         </main>
-        <footer class="footer animated fadeIn">
+        <footer class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col l12 m12 s12">
+                        <div class="footer-copyright">
+                            <p>© 2017 Rob King. <a href="/disclaimer.aspx">Disclaimer/Terms of Use</a> | <a href="/sitemap.aspx">Sitemap</a> | <a href="http://www.saturnodesign.com/" target="_blank">Saturno Design</a> | 421 SW Hall Street, Portland, OR 97201 | Phone <a href="tel:+1-503-478-1830">503-478-1830</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </footer>
     </form>
     <!--  Scripts-->

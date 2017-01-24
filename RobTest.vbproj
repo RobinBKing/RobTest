@@ -112,10 +112,10 @@
     <Content Include="css\base\helpers.css" />
     <Content Include="css\base\index.css" />
     <Content Include="css\base\typography.css" />
-    <Content Include="css\components\buttons.css" />
-    <Content Include="css\components\components.css" />
-    <Content Include="css\components\icons.css" />
-    <Content Include="css\components\index.css" />
+    <Content Include="css\base\components\buttons.css" />
+    <Content Include="css\base\components\components.css" />
+    <Content Include="css\base\components\icons.css" />
+    <Content Include="css\base\components\index.css" />
     <Content Include="css\layout\container.css" />
     <Content Include="css\layout\content.css" />
     <Content Include="css\layout\footer.css" />
@@ -132,6 +132,7 @@
     <Content Include="css\pages\index.css" />
     <Content Include="css\pages\news_resources.css" />
     <Content Include="css\pages\pages.css" />
+    <Content Include="css\prism.css" />
     <Content Include="css\style.css" />
     <Content Include="css\style.min.css">
       <DependentUpon>style.css</DependentUpon>
@@ -142,8 +143,14 @@
     <Content Include="disclaimer.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\latofonts.css" />
+    <Content Include="js\init.js" />
+    <Content Include="js\jade\lunr.min.js" />
+    <Content Include="js\jade\search.js" />
     <Content Include="js\materialize.js" />
     <Content Include="js\materialize.min.js" />
+    <Content Include="js\prism.js" />
+    <Content Include="js\jquery.timeago.min.js" />
+    <Content Include="js\init-smal.js" />
     <Content Include="news_resources.aspx" />
     <Content Include="pay-online.aspx" />
     <Content Include="fonts\Lato\Lato-Black.eot" />

@@ -11,9 +11,10 @@
 
     <link rel="icon" type="image/ico" href="/favicon.ico">
     <!-- CSS  -->
+    <link href="css/prism.css" type="text/css" rel="stylesheet"/>
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>    
@@ -148,10 +149,13 @@
         </footer>
     </form>
     <!--  Scripts-->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-    <script src="https://use.fontawesome.com/6ae98ae3b7.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="js/jquery.timeago.min.js"></script>
+    <script src="js/prism.js"></script>
+    <script src="js/jade/lunr.min.js"></script>
+    <script src="js/jade/search.js"></script>
     <script src="js/materialize.js"></script>
+    <script src="https://use.fontawesome.com/6ae98ae3b7.js"></script>
     <script src="/js/site.js"></script>
 </body>
 </html>

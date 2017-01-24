@@ -1,7 +1,4 @@
-/**********/
-/* Custom */
-/**********/
-(function ($) {
+﻿(function ($) {
     $(function () {
         var window_width = $(window).width();
         // convert rgb to hex value string
@@ -148,7 +145,7 @@
         $('.modal').modal();
         $('.scrollspy').scrollSpy();
         $('.button-collapse').sideNav({
-            'edge': 'right'
+            'edge': 'left'
         });
         $('.datepicker').pickadate({
             selectYears: 20

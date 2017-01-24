@@ -1,6 +1,3 @@
-/**********/
-/* Custom */
-/**********/
 (function ($) {
     $(function () {
         var window_width = $(window).width();

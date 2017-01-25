@@ -32,7 +32,6 @@ W:\RobTest\bin\SatLib.Base.pdb
 W:\RobTest\bin\SatLib.Base.xml
 W:\RobTest\bin\SatLib.WBCM2.pdb
 W:\RobTest\bin\SatLib.WBCM2.xml
-W:\RobTest\obj\Debug\RobTest.vbprojResolveAssemblyReference.cache
 W:\RobTest\obj\Debug\RobTest.Resources.resources
 W:\RobTest\obj\Debug\RobTest.vbproj.GenerateResource.Cache
 W:\RobTest\obj\Debug\RobTest.dll
@@ -55,3 +54,4 @@ C:\Visual Studio 2015\Projects\RobTest\obj\Debug\RobTest.vbproj.GenerateResource
 C:\Visual Studio 2015\Projects\RobTest\obj\Debug\RobTest.dll
 C:\Visual Studio 2015\Projects\RobTest\obj\Debug\RobTest.xml
 C:\Visual Studio 2015\Projects\RobTest\obj\Debug\RobTest.pdb
+W:\RobTest\obj\Debug\RobTest.vbprojResolveAssemblyReference.cache

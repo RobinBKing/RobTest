@@ -1,149 +1,73 @@
 ﻿/********************/
 /*   Footer Styles  */
 /********************/
-/* - Menu           */
-/* - Social         */
-/* - Copyright text */
-/********************/
-.footer {
-    color: #000000;
-    margin: 0;
-    position: absolute;
+footer.page-footer {
     width: 100%;
     bottom: 0;
-    opacity: 0;
+    background-color: #3a3a3c;
+    margin: 0;
+    padding: 0;
+    text-size-adjust: 100%;
     z-index: 99;
 }
 
-
-.footer-wrap {
-    position: relative;
-    padding: 14px 0 0 0;
+.page-footer .container {
+    height: auto;
+    padding-top: 14px;
     width: 100%;
     bottom: 0;
-    background: url(images/bottom-shadow.png) no-repeat center bottom;
-    background-size: cover;
 }
 
-    .footer-wrap .copyright {
+    .page-footer .container .row {
+        margin: 0;
+        padding 0;
+        max-width: 1280px;
+    }
+
+        .page-footer .container .row .footer-copyright {
+            padding: 20px 0 33px 0;
+            line-height: 24px;
+            height: auto;
+            position: relative;
+        }
+
+            .page-footer .container .row .footer-copyright p, .page-footer .container .row .footer-copyright p a {
+                color: #fff;
+            }
+
+            .page-footer .container .row .footer-copyright p {
+                font-size: 14px;
+                font-weight: 300;
+                margin: 0;
+                text-align: center;
+                font-family: 'Lato', sans-serif;
+                line-height: 1.6;
+                text-rendering: optimizeLegibility;
+            }
+
+@media screen and (min-width: 601px) {
+    footer.page-footer {
+        background: url(../../img/top-shadow.png) no-repeat center top;
+        background-size: cover;
+    }
+
+    .page-footer .container .row .col {
+        margin: 0;
+        padding: 0 15px;
+    }
+
+    .page-footer .container .row .footer-copyright {
+        background-color: transparent;
+        margin: 0;
         padding-top: 53px;
         padding-bottom: 14px;
     }
 
-    .footer-wrap > .row {
-        position: initial;
-        margin: 0;
-        padding: 0;
-    }
-
-/* Menu */
-.footer .menu {
-    margin: 0 0 10px;
-}
-
-    .footer .menu ul {
-        margin: 0;
-        padding: 0;
-    }
-
-        .footer .menu ul li {
-            display: inline-block;
-            margin: 0;
-        }
-
-            .footer .menu ul li a {
-                color: #000000;
-                text-decoration: none;
-                padding: 0 .5rem;
-            }
-
-            .footer .menu ul li:first-child a {
-                padding-left: 0;
-            }
-
-            .footer .menu ul li a:hover {
-                color: #1d85f5;
-            }
-
-            .footer .menu ul li ul {
-                display: none;
-            }
-
-/* Social */
-.footer .social ul {
-    list-style: none;
-    float: right;
-    padding-top: 3px;
-    margin: 0;
-}
-
-.footer .social li {
-    margin: 0 0 0 15px;
-    float: left;
-}
-
-    .footer .social li a {
-        display: block;
-        text-align: center;
-        color: #627082;
-    }
-
-        .footer .social li a.facebook {
-            text-align: right;
-        }
-
-        .footer .social li a:hover {
-            color: #1d85f5;
-        }
-
-        .footer .social li a i {
-            font-size: 15px;
-        }
-
-        .footer .social li a .hide {
-            display: none;
-        }
-
-/* Copyright text */
-.footer .copyright {
-    position: relative;
-    z-index: 9;
-}
-
-    .footer .copyright p {
-        font-size: 14px;
-        font-weight: 300;
-        color: #cfcfcf;
-        margin: 0;
-        text-align: center;
-    }
-
-        .footer .copyright p a {
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 300;
+        .page-footer .container .row .footer-copyright p, .page-footer .container .row .footer-copyright p a {
             color: #cfcfcf;
         }
 
-            .footer .copyright p a:hover {
-                color: #7abaf3;
-            }
-
-@media screen and (max-width: 640px) {
-    .footer, .footer-wrap, .footer-wrap > .row {
-        position: static !important;
-    }
-
-    .footer-wrap {
-        background: #3a3a3c;
-        height: auto;
-    }
-
-        .footer-wrap .copyright {
-            padding: 20px 0 33px 0;
+        .page-footer .container .row .footer-copyright p {
+            padding: 0;
         }
-
-    .footer .copyright p, .footer .copyright p a {
-        color: #fff;
-    }
 }

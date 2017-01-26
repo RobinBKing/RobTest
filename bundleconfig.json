@@ -1,10 +1,9 @@
 ﻿[
   {
-    "outputFileName": "css/utils.css",
+    "outputFileName": "css/utils/index.css",
     "inputFiles": [
       "css/utils/utils.css",
-      "css/utils/variables.css",
-      "css/utils/animate.css"
+      "css/utils/variables.css"
     ],
     "minify": {
       "enabled": false,
@@ -13,11 +12,11 @@
     "sourceMap": true
   },
   {
-    "outputFileName": "css/base.css",
+    "outputFileName": "css/base/index.css",
     "inputFiles": [
       "css/base/base.css",
-      "css/base/reset.css",
       "css/base/fonts.css",
+      "fonts/latofonts.css",
       "css/base/typography.css",
       "css/base/helpers.css"
     ],
@@ -28,16 +27,14 @@
     "sourceMap": true
   },
   {
-    "outputFileName": "css/layout.css",
+    "outputFileName": "css/layout/index.css",
     "inputFiles": [
       "css/layout/layout.css",
       "css/layout/container.css",
-      //"css/layout/nav.css",
+      "css/layout/nav.css",
       "css/layout/header.css",
       "css/layout/content.css",
-      "css/layout/sidebar.css",
       "css/layout/footer.css"
-      //"css/layout/responsive.css"
     ],
     "minify": {
       "enabled": false,
@@ -46,12 +43,10 @@
     "sourceMap": true
   },
   {
-    "outputFileName": "css/components.css",
+    "outputFileName": "css/components/index.css",
     "inputFiles": [
       "css/components/components.css",
       "css/components/buttons.css",
-      //"css/components/scrollbars.css",
-      //"css/components/sliders.css",
       "css/components/icons.css"
     ],
     "minify": {
@@ -61,7 +56,7 @@
     "sourceMap": true
   },
   {
-    "outputFileName": "css/pages.css",
+    "outputFileName": "css/pages/index.css",
     "inputFiles": [
       "css/pages/pages.css",
       "css/pages/home.css"
@@ -78,15 +73,14 @@
     "sourceMap": true
   },
   {
-    "outputFileName": "css/site.css",
+    "outputFileName": "css/style.css",
     "inputFiles": [
       "css/main.css",
-      "css/materialize/materialize.css",
-      "css/utils.css",
-      "css/base.css",
-      "css/components.css",
-      "css/layout.css",
-      "css/pages.css"
+      "css/utils/index.css",
+      "css/base/index.css",
+      "css/layout/index.css",
+      "css/components/index.css",
+      "css/pages/index.css"
     ],
     "minify": {
       "enabled": true,
@@ -97,8 +91,6 @@
   {
     "outputFileName": "js/site.js",
     "inputFiles": [
-      "js/main.js",
-      "js/materialize.js",
       "js/sitewide.js"
     ],
     "minify": {

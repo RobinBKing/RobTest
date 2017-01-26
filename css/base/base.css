@@ -1,8 +1,24 @@
 ﻿/********************/
 /* base CSS Scripts */
 /********************/
-/* - reset          */
+/* - base           */
 /* - fonts          */
 /* - typography     */
 /* - helpers        */
 /********************/
+/*.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}*/
+body, body form {
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+body form main {
+    flex: 1 0 auto;
+}

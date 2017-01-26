@@ -1,0 +1,243 @@
+/*******************/
+/*   CSS Scripts   */
+/*******************/
+/* - container     *//* - nav           *//* - header        *//* - content       *//* - footer        */
+/*******************/
+/*******************************/
+/*     container styles        */
+/*******************************/
+
+
+
+/**********************/
+/*    nav styles      */
+/**********************/
+nav {
+    background: none;
+    font-size: 16px;
+    height: auto;
+    line-height: normal;
+    padding: 0;
+}
+
+    nav .brand-logo.col.l4.m5 {
+        width: 27%;
+        height: auto;
+        padding: 10px 15px 15px 16px;
+    }
+
+    nav .brand-logo a img {
+        max-width: 100%;
+    }
+
+    nav .nav-column.col.l8.m7 {
+        background: none;
+        width: 100%;
+        height: auto;
+        padding: 17px 0.5em 0 .9375rem;
+        font-family: 'Lato', sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+        nav .nav-column ul {
+            background: none;
+            font-size: 16px;
+            height: auto;
+            line-height: normal;
+            padding: 0;
+        }
+
+            nav .nav-column ul li {
+                list-style-position: outside;
+                font-family: Josefin;
+                display: inline-block;
+                background: none;
+                position: relative;
+                padding: 0;
+                float: left;
+            }
+
+                nav .nav-column ul li a {
+                    background: transparent;
+                    padding: 10px 3px 9px 4px;
+                    font-size: 10px;
+                    text-transform: uppercase;
+                    color: #ffffff;
+                    display: inline-block;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+
+
+
+.side-nav {
+    background: #005248;
+}
+
+    .side-nav .side-nav-title {
+        text-align: center;
+    }
+
+    .side-nav .side-nav-title, .side-nav ul li a {
+        color: #ffffff;
+        font-size: 16px;
+    }
+
+/********************************/
+/*       Header Styles          */
+/********************************/
+header {
+    background-color: #ffffff;
+    background-size: auto;
+    padding-bottom: 27px;
+    z-index: 999;
+}
+
+    header .mobile-header {
+        background-color: #9bcbc2;
+        margin-bottom: 30px;
+        height: 60px;
+        min-width: 360px;
+    }
+
+        header .mobile-header .mobile-nav-bar a.phone-box {
+            float: left;
+            padding: 17px 20px;
+            color: #005248;
+            font-size: 16px;
+            line-height: 24px;
+            height: 24px;
+            text-decoration: none;
+            background: transparent;
+            cursor: pointer;
+        }
+
+            header .mobile-header .mobile-nav-bar a.phone-box .fa {
+                color: #005248;
+                font-size: 20px;
+                line-height: 20px;
+                height: 20px;
+                text-align: center;
+                margin: 2px 3px 0 0;
+                position: relative;
+                top: 1px;
+            }
+
+        header .mobile-header .mobile-nav-bar a.menu-icon {
+            color: #ffffff;
+            background: #005248;
+            display: block;
+            text-align: right;
+            float: right;
+            padding: 0 20px 0 30px;
+            height: 60px;
+            width: auto;
+            text-transform: uppercase;
+            font-size: 19px;
+            line-height: 60px;
+            position: relative;
+            vertical-align: middle;
+            cursor: pointer;
+            margin: 0;
+        }
+
+            header .mobile-header .mobile-nav-bar a.menu-icon .fa {
+                margin: 0 0 0 15px;
+            }
+
+
+
+    header .section {
+        padding: 0;
+    }
+
+        header .section .mobile-brand-logo {
+            padding: 10px 10px 15px 16px;
+        }
+
+@media screen and (min-width: 601px) {
+    header {
+        background: url(../../img/top-shadow.png) no-repeat center top;
+        background-size: cover;
+        padding: 17px 0;
+    }
+}
+
+/*****************************/
+/*      Content Styles       */
+/*****************************/
+
+/********************/
+/*   Footer Styles  */
+/********************/
+footer.page-footer {
+    width: 100%;
+    bottom: 0;
+    background-color: #3a3a3c;
+    margin: 0;
+    padding: 0;
+    text-size-adjust: 100%;
+    z-index: 99;
+}
+
+.page-footer .container {
+    height: auto;
+    padding-top: 14px;
+    width: 100%;
+    bottom: 0;
+}
+
+    .page-footer .container .row {
+        margin: 0;
+        padding 0;
+        max-width: 1280px;
+    }
+
+        .page-footer .container .row .footer-copyright {
+            padding: 20px 0 33px 0;
+            line-height: 24px;
+            height: auto;
+            position: relative;
+        }
+
+            .page-footer .container .row .footer-copyright p, .page-footer .container .row .footer-copyright p a {
+                color: #fff;
+            }
+
+            .page-footer .container .row .footer-copyright p {
+                font-size: 14px;
+                font-weight: 300;
+                margin: 0;
+                text-align: center;
+                font-family: 'Lato', sans-serif;
+                line-height: 1.6;
+                text-rendering: optimizeLegibility;
+            }
+
+@media screen and (min-width: 601px) {
+    footer.page-footer {
+        background: url(../../img/top-shadow.png) no-repeat center top;
+        background-size: cover;
+    }
+
+    .page-footer .container .row .col {
+        margin: 0;
+        padding: 0 15px;
+    }
+
+    .page-footer .container .row .footer-copyright {
+        background-color: transparent;
+        margin: 0;
+        padding-top: 53px;
+        padding-bottom: 14px;
+    }
+
+        .page-footer .container .row .footer-copyright p, .page-footer .container .row .footer-copyright p a {
+            color: #cfcfcf;
+        }
+
+        .page-footer .container .row .footer-copyright p {
+            padding: 0;
+        }
+}

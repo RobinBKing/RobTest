@@ -1,6 +1,3 @@
-/**********/
-/* Custom */
-/**********/
 (function ($) {
     $(function () {
         var window_width = $(window).width();
@@ -53,24 +50,24 @@
             }
         }, 100);
         // BuySellAds Detection
-        //var $bsa = $(".buysellads"),
-        //    $timesToCheck = 3;
-        //function checkForChanges() {
-        //    if (!$bsa.find('#carbonads').length) {
-        //        $timesToCheck -= 1;
-        //        if ($timesToCheck >= 0) {
-        //            setTimeout(checkForChanges, 500);
-        //        } else {
-        //            var donateAd = $('<div id="carbonads"><span><a class="carbon-text" href="#!" onclick="document.getElementById(\'paypal-donate\').submit();"><img src="images/donate.png" /> Help support us by turning off adblock. If you still prefer to keep adblock on for this page but still want to support us, feel free to donate. Any little bit helps.</a></form></span></div>');
-        //            $bsa.append(donateAd);
-        //        }
-        //    }
-        //}
-        //checkForChanges();
-        //// BuySellAds Demos close button.
-        //$('.buysellads.buysellads-demo .close').on('click', function () {
-        //    $(this).parent().remove();
-        //});
+        var $bsa = $(".buysellads"),
+            $timesToCheck = 3;
+        function checkForChanges() {
+            if (!$bsa.find('#carbonads').length) {
+                $timesToCheck -= 1;
+                if ($timesToCheck >= 0) {
+                    setTimeout(checkForChanges, 500);
+                } else {
+                    var donateAd = $('<div id="carbonads"><span><a class="carbon-text" href="#!" onclick="document.getElementById(\'paypal-donate\').submit();"><img src="images/donate.png" /> Help support us by turning off adblock. If you still prefer to keep adblock on for this page but still want to support us, feel free to donate. Any little bit helps.</a></form></span></div>');
+                    $bsa.append(donateAd);
+                }
+            }
+        }
+        checkForChanges();
+        // BuySellAds Demos close button.
+        $('.buysellads.buysellads-demo .close').on('click', function () {
+            $(this).parent().remove();
+        });
         // Github Latest Commit
         if ($('.github-commit').length) { // Checks if widget div exists (Index only)
             $.ajax({
@@ -145,37 +142,36 @@
             full_width: true
         });
         $('.parallax').parallax();
-        //$('.modal').modal();
+        $('.modal').modal();
         $('.scrollspy').scrollSpy();
         $('.button-collapse').sideNav({
-            edge: 'right',
-            closeOnClick: true
+            'edge': 'right'
         });
         $('.datepicker').pickadate({
             selectYears: 20
         });
         $('select').not('.disabled').material_select();
-        //$('input.autocomplete').autocomplete({
-        //    data: {
-        //        "Apple": null,
-        //        "Microsoft": null,
-        //        "Google": 'http://placehold.it/250x250'
-        //    }
-        //});
-        //$('.chips').material_chip();
-        //$('.chips-initial').material_chip({
-        //    readOnly: true,
-        //    data: [{
-        //        tag: 'Apple',
-        //    }, {
-        //        tag: 'Microsoft',
-        //    }, {
-        //        tag: 'Google',
-        //    }]
-        //});
-        //$('.chips-placeholder').material_chip({
-        //    placeholder: 'Enter a tag',
-        //    secondaryPlaceholder: '+Tag',
-        //});
+        $('input.autocomplete').autocomplete({
+            data: {
+                "Apple": null,
+                "Microsoft": null,
+                "Google": 'http://placehold.it/250x250'
+            }
+        });
+        $('.chips').material_chip();
+        $('.chips-initial').material_chip({
+            readOnly: true,
+            data: [{
+                tag: 'Apple',
+            }, {
+                tag: 'Microsoft',
+            }, {
+                tag: 'Google',
+            }]
+        });
+        $('.chips-placeholder').material_chip({
+            placeholder: 'Enter a tag',
+            secondaryPlaceholder: '+Tag',
+        });
     }); // end of document ready
 })(jQuery); // end of jQuery name space

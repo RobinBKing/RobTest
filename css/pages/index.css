@@ -1,21 +1,20 @@
-/********************/
-/*   CSS Scripts    */
-/********************/
-/* - home           */
-/* - about          */
-/* - bios           */
-/* - areas          */
-/* - news_resources */
-/* - contact        */
-/********************/
+/*********************/
+/* Pages CSS Scripts */
+/*********************/
+/* - home            */
+/* - about           */
+/* - bios            */
+/* - areas           */
+/* - news_resources  */
+/* - contact         */
+/*********************/
 
 /*****************/
 /*  home styles  */
 /*****************/
 .slider {
-    overflow: hidden;
+    overflow: scroll;
     position: relative;
-    /*height: 100% !important;*/
 }
 
     .slider .slides {
@@ -26,6 +25,8 @@
     }
 
         .slider .slides li {
+            height: 100%;
+            overflow-y: scroll;
             z-index: 50;
         }
 
@@ -33,33 +34,56 @@
                 height: 300px;
                 position: absolute;
                 top: 200px;
-                z-index: 50;
             }
 
-            .slider .slides li .caption {
+            .slider .slides li .caption-area .caption {
                 width: 90%;
                 height: auto;
                 font-family: "Josefin";
-                top: 55%;
-                left: 3%;
+                top: 512px;
+                left: 25px;
+                padding: 0 25px;
                 text-align: right;
-                /*z-index: 50*/
             }
 
-                .slider .slides li .caption .text-headline {
+                .slider .slides li .caption-area .caption .text-headline,
+                .slider .slides li .caption-area .caption .text-headline small {
                     text-transform: uppercase;
                     font-size: 26px;
+                    font-weight: 300;
+                    line-height: 26px;
                 }
 
-                .slider .slides li .caption p {
+                .slider .slides li .caption-area .caption p {
                     color: #ffffff;
                     text-align: right;
+                    font-size: 16px;
                 }
 
-                .slider .slides li .caption .text-body br {
+                .slider .slides li .caption-area .caption .text-body br {
                     display: none;
                 }
 
+                .slider .slides li .caption-area .caption .button-wrap {
+                    padding-top: 25px;
+                }
+
+                    .slider .slides li .caption-area .caption .button-wrap .btn {
+                        display: inline-block;
+                        padding: 15px 14px;
+                        border: 2px solid #fff;
+                        border-radius: 2px;
+                        font-size: 10px;
+                        line-height: 10px;
+                        min-height: 50px;
+                        /*height: 36px;*/
+                        /*line-height: 36px;*/
+                        vertical-align: middle;
+                    }
+
+                        .slider .slides li .caption-area .caption .button-wrap .btn i {
+                            font-size: 10px;
+                        }
 
     /*            .slider .slides li:nth-child(1) {
                 background-image: url('../../img/home-slide1.jpg');
@@ -120,6 +144,8 @@
                 }
 */
 
+
+    /* slide indicators */
     .slider .indicators {
         display: none;
     }

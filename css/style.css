@@ -1,156 +1,19 @@
+/****************************/
+/*       CSS Scripts        */
+/****************************/
+/* - Utils Scripts          */
+/* - base CSS Scripts       */
+/* - Layout CSS Scripts     */
+/* - Components CSS Scripts */
+/* - Pages CSS Scripts      */
+/****************************/
+
 /*******************/
-/*   Utils Scripts */
+/*  Utils Scripts  */
 /*******************/
 /* - variables     */
 /*******************/
-/********************//* variables styles */ /********************//* branding */.brand-color {
-    background-color: #9bcbc2;
-}
-
-.brand-secondary-color {
-    background-color: #005248;
-}
-
-.brand-secondary-text-color {
-    background-color: #9bcbc2;
-}
-
-.brand-text-color {
-    background-color: #005248;
-}
-
-/* slides colors  */
-.slide-blue {
-    background: rgba(63, 134, 200, 0.73);
-}
-
-.slide-green {
-    background: rgba(91, 122, 21, 0.68);
-}
-
-.slide-red {
-    background: rgba(192, 22, 27, 0.72);
-}
-
-.slide-purple {
-    background: rgba(109, 62, 124, 0.79);
-}
-
-.slide-light-purple {
-    background: linear-gradient(rgba(76, 43, 64, 0.98),rgba(79, 77, 78, 0.2));
-    background: -moz-linear-gradient(rgba(76, 43, 64, 0.98),rgba(79, 77, 78, 0.2));
-    background: -o-linear-gradient(rgba(76, 43, 64, 0.98),rgba(79, 77, 78, 0.2));
-    background: -webkit-linear-gradient(rgba(76, 43, 64, 0.98),rgba(79, 77, 78, 0.2));
-}
-
-.slide-dark-green {
-    background: linear-gradient(rgba(19, 71, 19, 0.95),rgba(0, 0, 0, 0.46));
-    background: -moz-linear-gradient(rgba(19, 71, 19, 0.95),rgba(0, 0, 0, 0.46));
-    background: -o-linear-gradient(rgba(19, 71, 19, 0.95),rgba(0, 0, 0, 0.46));
-    background: -webkit-linear-gradient(rgba(19, 71, 19, 0.95),rgba(0, 0, 0, 0.46));
-}
-
-.slide-bottle-green {
-    background: rgba(51, 155, 142, 0.76);
-}
-
-/* Slide colors */
-.slide-blue .caption-area:before {
-    border-color: rgba(63, 134, 200, 0.73) rgba(63, 134, 200, 0.73) rgba(63, 134, 200, 0.73) transparent;
-    background: rgba(63, 134, 200, 0.73);
-}
-
-.slide-green .caption-area:before {
-    border-color: rgba(91, 122, 21, 0.68) rgba(91, 122, 21, 0.68) rgba(91, 122, 21, 0.68) transparent;
-    background: rgba(91, 122, 21, 0.68);
-}
-
-.slide-red .caption-area:before {
-    border-color: rgba(192, 22, 27, 0.72) rgba(192, 22, 27, 0.72) rgba(192, 22, 27, 0.72) transparent;
-    background: rgba(192, 22, 27, 0.72);
-}
-
-.slide-purple .caption-area:before {
-    border-color: rgba(109, 62, 124, 0.79) rgba(109, 62, 124, 0.79) rgba(109, 62, 124, 0.79) transparent;
-    background: rgba(109, 62, 124, 0.79);
-}
-
-.slide-light-purple .caption-area:before {
-    border-color: rgba(144, 82, 121, 0.56) rgba(144, 82, 121, 0.56) rgba(144, 82, 121, 0.56) transparent;
-    background: linear-gradient(rgba(76, 43, 64, 0.98),rgba(79, 77, 78, 0.2));
-    background: -moz-linear-gradient(rgba(76, 43, 64, 0.98),rgba(79, 77, 78, 0.2));
-    background: -o-linear-gradient(rgba(76, 43, 64, 0.98),rgba(79, 77, 78, 0.2));
-    background: -webkit-linear-gradient(rgba(76, 43, 64, 0.98),rgba(79, 77, 78, 0.2));
-}
-
-.slide-dark-green .caption-area:before {
-    border-color: rgba(32, 84, 32, 0.74) rgba(32, 84, 32, 0.74) rgba(32, 84, 32, 0.74) transparent;
-    background: linear-gradient(rgba(19, 71, 19, 0.95),rgba(0, 0, 0, 0.46));
-    background: -moz-linear-gradient(rgba(19, 71, 19, 0.95),rgba(0, 0, 0, 0.46));
-    background: -o-linear-gradient(rgba(19, 71, 19, 0.95),rgba(0, 0, 0, 0.46));
-    background: -webkit-linear-gradient(rgba(19, 71, 19, 0.95),rgba(0, 0, 0, 0.46));
-}
-
-.slide-bottle-green .caption-area:before {
-    border-color: rgba(51, 155, 142, 0.76) rgba(51, 155, 142, 0.76) rgba(51, 155, 142, 0.76) transparent;
-    background: rgba(51, 155, 142, 0.76);
-}
-/* Slide text colors */
-.slide-blue .caption-area .text-headline small {
-    color: #9cceff;
-}
-
-.slide-green .caption-area .text-headline small {
-    color: #c1e870;
-}
-
-.slide-red .caption-area .text-headline small {
-    color: #750003;
-}
-
-.slide-purple .caption-area .text-headline small {
-    color: #470e58;
-}
-
-.slide-light-purple .caption-area .text-headline small {
-    color: #6e2956;
-}
-
-.slide-dark-green .caption-area .text-headline small {
-    color: #0d3908;
-}
-
-.slide-bottle-green .caption-area .text-headline small {
-    color: #00544a;
-}
-/* Slide Button colors */
-.slide-blue .button {
-    background-color: #9cceff;
-}
-
-.slide-green .button {
-    background-color: #3f5d00;
-}
-
-.slide-red .button {
-    background-color: #750003;
-}
-
-.slide-purple .button {
-    background-color: #470e58;
-}
-
-.slide-light-purple .button {
-    background-color: #6e2956;
-}
-
-.slide-dark-green .button {
-    background-color: #0d3908;
-}
-
-.slide-bottle-green .button {
-    background-color: #00544a;
-}
+/********************//* variables styles *//********************//* branding */.brand-color {    background-color: #9bcbc2;}.brand-secondary-color {    background-color: #005248;}.brand-secondary-text-color {    background-color: #9bcbc2;}.brand-text-color {    background-color: #005248;}/* slides colors  */.slide-blue {    background: rgba(63, 134, 200, 1);}.slide-green {    background: rgba(91, 122, 21, 1);}.slide-red {    background: rgba(192, 22, 27, 1);}.slide-purple {    background: rgba(109, 62, 124,1);}.slide-light-purple {    background-color: rgba(144, 82, 121, 1);}.slide-dark-green {    background-color: rgba(32, 84, 32, 1);}.slide-bottle-green {    background-color: rgba(51, 155, 142, 1);}.slide-blue li:before {    border-color: rgba(63, 134, 200, 0.73) rgba(63, 134, 200, 0.73) rgba(63, 134, 200, 0.73) transparent;    background: rgba(63, 134, 200, 0.73);}.slide-green li:before {    border-color: rgba(91, 122, 21, 0.68) rgba(91, 122, 21, 0.68) rgba(91, 122, 21, 0.68) transparent;    background: rgba(91, 122, 21, 0.68);}.slide-red li:before {    border-color: rgba(192, 22, 27, 0.72) rgba(192, 22, 27, 0.72) rgba(192, 22, 27, 0.72) transparent;    background: rgba(192, 22, 27, 0.72);}.slide-purple:before {    border-color: rgba(109, 62, 124, 0.79) rgba(109, 62, 124, 0.79) rgba(109, 62, 124, 0.79) transparent;    background: rgba(109, 62, 124, 0.79);}.slide-light-purple:before {    border-color: rgba(144, 82, 121, 0.56) rgba(144, 82, 121, 0.56) rgba(144, 82, 121, 0.56) transparent;    background: linear-gradient(rgba(76, 43, 64, 0.98),rgba(79, 77, 78, 0.2));    background: -moz-linear-gradient(rgba(76, 43, 64, 0.98),rgba(79, 77, 78, 0.2));    background: -o-linear-gradient(rgba(76, 43, 64, 0.98),rgba(79, 77, 78, 0.2));    background: -webkit-linear-gradient(rgba(76, 43, 64, 0.98),rgba(79, 77, 78, 0.2));}.slide-dark-green:before {    border-color: rgba(32, 84, 32, 0.74) rgba(32, 84, 32, 0.74) rgba(32, 84, 32, 0.74) transparent;    background: linear-gradient(rgba(19, 71, 19, 0.95),rgba(0, 0, 0, 0.46));    background: -moz-linear-gradient(rgba(19, 71, 19, 0.95),rgba(0, 0, 0, 0.46));    background: -o-linear-gradient(rgba(19, 71, 19, 0.95),rgba(0, 0, 0, 0.46));    background: -webkit-linear-gradient(rgba(19, 71, 19, 0.95),rgba(0, 0, 0, 0.46));}.slide-bottle-green:before {    border-color: rgba(51, 155, 142, 0.76) rgba(51, 155, 142, 0.76) rgba(51, 155, 142, 0.76) transparent;    background: rgba(51, 155, 142, 0.76);}/* slide text */.slide-blue .caption-area small {    color: #9cceff;}.slide-green .caption-area small {    color: #c1e870;}.slide-red .caption-area small {    color: #750003;}.slide-purple .caption-area small {    color: #470e58;}.slide-light-purple .caption-area small {    color: #6e2956;}.slide-dark-green .caption-area small {    color: #0d3908;}.slide-bottle-green .caption-area small {    color: #00544a;}/* Slide Button colors */.slide-blue .btn {    background-color: #9cceff;}.slide-green .btn {    background-color: #3f5d00;}.slide-red .btn {    background-color: #750003;}.slide-purple .btn {    background-color: #470e58;}.slide-light-purple .btn {    background-color: #6e2956;}.slide-dark-green .btn {    background-color: #0d3908;}.slide-bottle-green .button {    background-color: #00544a;}@media screen and (min-width: 601px) {    /* slides colors  */    .slide-blue {        background: rgba(63, 134, 200, 0.73);    }    .slide-green {        background: rgba(91, 122, 21, 0.68);    }    .slide-red {        background: rgba(192, 22, 27, 0.72);    }    .slide-purple {        background: rgba(109, 62, 124, 0.79);    }    .slide-light-purple {        background: linear-gradient(rgba(76, 43, 64, 0.98),rgba(79, 77, 78, 0.2));        background: -moz-linear-gradient(rgba(76, 43, 64, 0.98),rgba(79, 77, 78, 0.2));        background: -o-linear-gradient(rgba(76, 43, 64, 0.98),rgba(79, 77, 78, 0.2));        background: -webkit-linear-gradient(rgba(76, 43, 64, 0.98),rgba(79, 77, 78, 0.2));    }    .slide-dark-green {        background: linear-gradient(rgba(19, 71, 19, 0.95),rgba(0, 0, 0, 0.46));        background: -moz-linear-gradient(rgba(19, 71, 19, 0.95),rgba(0, 0, 0, 0.46));        background: -o-linear-gradient(rgba(19, 71, 19, 0.95),rgba(0, 0, 0, 0.46));        background: -webkit-linear-gradient(rgba(19, 71, 19, 0.95),rgba(0, 0, 0, 0.46));    }    .slide-bottle-green {        background: rgba(51, 155, 142, 0.76);    }}
 /********************/
 /* base CSS Scripts */
 /********************/
@@ -437,11 +300,12 @@ body {
 }
 /*
  * Hide text while making it readable for screen readers * 1. Needed in WebKit-based browsers because of an implementation bug; *    See: https://code.google.com/p/chromium/issues/detail?id=457146*/.hide-text {    overflow: hidden;    padding: 0; /* 1 */    text-indent: 101%;    white-space: nowrap;}/* * Hide element while making it readable for screen readers * Shamelessly borrowed from HTML5Boilerplate: * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133 */.visually-hidden {    border: 0;    clip: rect(0 0 0 0);    height: 1px;    margin: -1px;    overflow: hidden;    padding: 0;    position: absolute;    width: 1px;}
-/*******************/
-/*   CSS Scripts   */
-/*******************/
-/* - container     *//* - nav           *//* - header        *//* - content       *//* - footer        */
-/*******************/
+/**********************/
+/* Layout CSS Scripts */
+/**********************/
+/* - container        *//* - nav              *//* - header           *//* - content          *//* - footer           */
+/**********************/
+
 /*******************************/
 /*     container styles        */
 /*******************************/
@@ -680,38 +544,44 @@ footer.page-footer {
             padding: 0;
         }
 }
-/*******************/
-/*   CSS Scripts   */
-/*******************/
-/* - buttons       */
-/* - icons         */
-/*******************/
+/**************************/
+/* Components CSS Scripts */
+/**************************/
+/* - buttons              */
+/* - icons                */
+/**************************/
 
 /******************/
 /* Buttons styles */
 /******************/
-
+.btn {
+    padding: 15px 14px;
+    border: 2px solid #fff;
+    font-size: 15px;
+    border-radius: 2px;
+    /*height: 36px;*/
+    /*line-height: 36px;*/
+}
 /******************/
 /*  icons styles  */
 /******************/
-/********************/
-/*   CSS Scripts    */
-/********************/
-/* - home           */
-/* - about          */
-/* - bios           */
-/* - areas          */
-/* - news_resources */
-/* - contact        */
-/********************/
+/*********************/
+/* Pages CSS Scripts */
+/*********************/
+/* - home            */
+/* - about           */
+/* - bios            */
+/* - areas           */
+/* - news_resources  */
+/* - contact         */
+/*********************/
 
 /*****************/
 /*  home styles  */
 /*****************/
 .slider {
-    overflow: hidden;
+    overflow: scroll;
     position: relative;
-    /*height: 100% !important;*/
 }
 
     .slider .slides {
@@ -722,6 +592,8 @@ footer.page-footer {
     }
 
         .slider .slides li {
+            height: 100%;
+            overflow-y: scroll;
             z-index: 50;
         }
 
@@ -729,33 +601,56 @@ footer.page-footer {
                 height: 300px;
                 position: absolute;
                 top: 200px;
-                z-index: 50;
             }
 
-            .slider .slides li .caption {
+            .slider .slides li .caption-area .caption {
                 width: 90%;
                 height: auto;
                 font-family: "Josefin";
-                top: 55%;
-                left: 3%;
+                top: 512px;
+                left: 25px;
+                padding: 0 25px;
                 text-align: right;
-                /*z-index: 50*/
             }
 
-                .slider .slides li .caption .text-headline {
+                .slider .slides li .caption-area .caption .text-headline,
+                .slider .slides li .caption-area .caption .text-headline small {
                     text-transform: uppercase;
                     font-size: 26px;
+                    font-weight: 300;
+                    line-height: 26px;
                 }
 
-                .slider .slides li .caption p {
+                .slider .slides li .caption-area .caption p {
                     color: #ffffff;
                     text-align: right;
+                    font-size: 16px;
                 }
 
-                .slider .slides li .caption .text-body br {
+                .slider .slides li .caption-area .caption .text-body br {
                     display: none;
                 }
 
+                .slider .slides li .caption-area .caption .button-wrap {
+                    padding-top: 25px;
+                }
+
+                    .slider .slides li .caption-area .caption .button-wrap .btn {
+                        display: inline-block;
+                        padding: 15px 14px;
+                        border: 2px solid #fff;
+                        border-radius: 2px;
+                        font-size: 10px;
+                        line-height: 10px;
+                        min-height: 50px;
+                        /*height: 36px;*/
+                        /*line-height: 36px;*/
+                        vertical-align: middle;
+                    }
+
+                        .slider .slides li .caption-area .caption .button-wrap .btn i {
+                            font-size: 10px;
+                        }
 
     /*            .slider .slides li:nth-child(1) {
                 background-image: url('../img/home-slide1.jpg');
@@ -816,6 +711,8 @@ footer.page-footer {
                 }
 */
 
+
+    /* slide indicators */
     .slider .indicators {
         display: none;
     }

@@ -122,6 +122,7 @@
     <Content Include="css\layout\header.css" />
     <Content Include="css\layout\index.css" />
     <Content Include="css\layout\layout.css" />
+    <Content Include="css\main.css" />
     <Content Include="css\materialize.css" />
     <Content Include="css\materialize.min.css" />
     <Content Include="css\pages\about.css" />

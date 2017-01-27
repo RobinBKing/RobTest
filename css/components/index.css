@@ -1,14 +1,21 @@
-/*******************/
-/*   CSS Scripts   */
-/*******************/
-/* - buttons       */
-/* - icons         */
-/*******************/
+/**************************/
+/* Components CSS Scripts */
+/**************************/
+/* - buttons              */
+/* - icons                */
+/**************************/
 
 /******************/
 /* Buttons styles */
 /******************/
-
+.btn {
+    padding: 15px 14px;
+    border: 2px solid #fff;
+    font-size: 15px;
+    border-radius: 2px;
+    /*height: 36px;*/
+    /*line-height: 36px;*/
+}
 /******************/
 /*  icons styles  */
 /******************/

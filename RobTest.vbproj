@@ -112,10 +112,10 @@
     <Content Include="css\base\helpers.css" />
     <Content Include="css\base\index.css" />
     <Content Include="css\base\typography.css" />
-    <Content Include="css\base\components\buttons.css" />
-    <Content Include="css\base\components\components.css" />
-    <Content Include="css\base\components\icons.css" />
-    <Content Include="css\base\components\index.css" />
+    <Content Include="css\components\buttons.css" />
+    <Content Include="css\components\components.css" />
+    <Content Include="css\components\icons.css" />
+    <Content Include="css\components\index.css" />
     <Content Include="css\layout\container.css" />
     <Content Include="css\layout\content.css" />
     <Content Include="css\layout\footer.css" />

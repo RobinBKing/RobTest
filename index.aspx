@@ -2,7 +2,6 @@
 <asp:Content ID="head" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" runat="server">
-
     <%--    <div class="slider fullscreen" style="touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
         <ul class="slides">
             <li class="" style="opacity: 0; transform: translateX(0px) translateY(0px);">
@@ -36,115 +35,110 @@
             <li class="indicator-item active"></li>
         </ul>
     </div>--%>
-    <div class="slider">
+    <div class="slider fullscreen">
         <ul class="slides">
-            <li class="">
+            <li class="slide-blue">
                 <img src="/img/home-slide1.jpg" />
-                <div class="right-align clearfix">
-                    <h5>Cutting-Edge<br>
+                <div class="caption caption-area clearfix">
+                    <h4 class="text-headline">Cutting-Edge<br>
                         Legal Solutions<br>
                         <small>for</small> Business <small>&amp;</small><br>
-                        Real Estate </h5>
-                    <p>
-                        With over 120 years of collective experience,<br>
+                        Real Estate</h4>
+                    <p class="text-body">With over 120 years of collective experience,<br>
                         Lyons Dougherty is a trusted leader in<br>
                         providing personalized and innovative legal<br>
                         services that meet the complex demands of<br>
-                        businesses and individuals.
-                                                   
-                    </p>
+                        businesses and individuals.</p>
                 </div>
             </li>
-            <li class="">
+            <li class="slide-green">
                 <img src="/img/home-slide2.jpg" />
-                <div class="right-align clearfix">
-                    <h5>Business
-                                               
-                                        <br>
+                <div class="caption caption-area clearfix">
+                    <h4 class="slide-headline">Business<br>
                         Planning <small>AND</small><br>
-                        Organizations</h5>
-                    <p>
+                        Organizations</h4>
+                    <p class="text-body">
                         Our firm offers strategic advice to help<br>
                         companies achieve their goals at every<br>
                         stage of the business cycle.
-                                                   
                     </p>
-                    <div class="button-wrap"><a href="/practices/business-planning-and-organizations/" class="button">Go to Business Planning &amp; Organizations <i class="fa fa-caret-right" aria-hidden="true"></i></a></div>
+                    <%--                    <div class="button-wrap">
+                        <a href="/practices/business-planning-and-organizations/" class="btn">Go to Business Planning &amp; Organizations <i class="fa fa-caret-right" aria-hidden="true"></i></a></div>--%>
                 </div>
             </li>
-            <li class="">
+            <li class="slide-red">
                 <img src="/img/home-slide3.jpg" />
-                <div class="right-align clearfix">
-                    <h5>Commercial<br>
-                        Litigation</h5>
-                    <p>
+                <div class="caption caption-area clearfix">
+                    <h4 class="slide-headline">Commercial<br>
+                        Litigation</h4>
+                    <p class="text-body">
                         When business conflicts and disputes arise,<br>
                         our lawyers provide aggressive advocacy<br>
                         and practical solutions in a diverse range of<br>
                         commercial litigation matters.
                                                    
                     </p>
-                    <div class="button-wrap"><a href="/practices/commercial-litigation/" class="button">Go to commercial litigation <i class="fa fa-caret-right" aria-hidden="true"></i></a></div>
+                    <%--                    <div class="button-wrap"><a href="/practices/commercial-litigation/" class="button">Go to commercial litigation <i class="fa fa-caret-right" aria-hidden="true"></i></a></div>--%>
                 </div>
             </li>
-            <li class="">
+            <li class="slide-purple">
                 <img src="/img/home-slide4.jpg" />
-                <div class="right-align clearfix">
-                    <h5>Real Estate<br>
-                        Transactions</h5>
-                    <p>
+                <div class="caption caption-area clearfix">
+                    <h4 class="slide-headline">Real Estate<br>
+                        Transactions</h4>
+                    <p class="text-body">
                         Lyons Dougherty works with businesses and<br>
                         individuals to address the full spectrum of<br>
                         issues associated with commercial and<br>
                         residential real estate transactions.
                                                    
                     </p>
-                    <div class="button-wrap"><a href="/practices/real-estate-transactions/" class="button">Go to real estate transactions <i class="fa fa-caret-right" aria-hidden="true"></i></a></div>
+                    <%--                    <div class="button-wrap"><a href="/practices/real-estate-transactions/" class="button">Go to real estate transactions <i class="fa fa-caret-right" aria-hidden="true"></i></a></div>--%>
                 </div>
             </li>
-            <li class="">
+            <li class="slide-light-purple">
                 <img src="/img/home-slide5.jpg" />
-                <div class="right-align clearfix">
-                    <h5>Zoning and<br>
+                <div class="caption caption-area clearfix">
+                    <h4 class="slide-headline">Zoning and<br>
                         Land Use<br>
-                        Planning</h5>
-                    <p>
+                        Planning</h4>
+                    <p class="text-body">
                         We use a team approach to guide our<br>
                         clients through the complex laws<br>
                         governing the zoning, subdivision, and<br>
                         land development process.
                                                    
                     </p>
-                    <div class="button-wrap"><a href="/practices/zoning-and-land-use-planning/" class="button">Go to zoning and land use planning  <i class="fa fa-caret-right" aria-hidden="true"></i></a></div>
+                    <%--                    <div class="button-wrap"><a href="/practices/zoning-and-land-use-planning/" class="button">Go to zoning and land use planning  <i class="fa fa-caret-right" aria-hidden="true"></i></a></div>--%>
                 </div>
             </li>
-            <li class="">
+            <li class="slide-dark-green">
                 <img src="/img/home-slide6.jpg" />
-                <div class="right-align clearfix">
-                    <h5>Estate<br>
-                        Planning</h5>
-                    <p>
+                <div class="caption caption-area clearfix">
+                    <h4 class="slide-headline">Estate<br>
+                        Planning</h4>
+                    <p class="text-body">
                         Our estate planning attorneys work<br>
                         with clients and their families to<br>
                         develop estate plans that best serve<br>
                         their individual needs and goals.
                                                    
                     </p>
-                    <div class="button-wrap"><a href="/practices/estate-planning/" class="button">Go to estate planning  <i class="fa fa-caret-right" aria-hidden="true"></i></a></div>
+                    <%--                    <div class="button-wrap"><a href="/practices/estate-planning/" class="button">Go to estate planning  <i class="fa fa-caret-right" aria-hidden="true"></i></a></div>--%>
                 </div>
             </li>
-            <li class="">
+            <li class="slide-bottle-green">
                 <img src="/img/home-slide7.jpg" />
-                <div class="right-align clearfix">
-                    <h5>taxation</h5>
-                    <p>
+                <div class="caption caption-area clearfix">
+                    <h4 class="slide-headline">taxation</h4>
+                    <p class="text-body">
                         Our attorneys develop creative<br>
                         strategies to address the broad range<br>
                         of taxation issues faced by businesses<br>
                         and individuals.
                                                    
                     </p>
-                    <div class="button-wrap"><a href="/practices/taxation/" class="button">Go to taxation  <i class="fa fa-caret-right" aria-hidden="true"></i></a></div>
+                    <%--                    <div class="button-wrap"><a href="/practices/taxation/" class="button">Go to taxation  <i class="fa fa-caret-right" aria-hidden="true"></i></a></div>--%>
                 </div>
             </li>
         </ul>

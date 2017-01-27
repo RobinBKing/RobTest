@@ -43,3 +43,11 @@ C:\Visual Studio 2015\Projects\RobTest\Admin\obj\Debug\Admin.fileuploader.resour
 C:\Visual Studio 2015\Projects\RobTest\Admin\obj\Debug\ClientAdmin.csproj.GenerateResource.Cache
 C:\Visual Studio 2015\Projects\RobTest\Admin\obj\Debug\ClientAdmin.dll
 C:\Visual Studio 2015\Projects\RobTest\Admin\obj\Debug\ClientAdmin.pdb
+C:\Users\samia\OneDrive\Programming\Visual Studio 2015\Projects\RobTest\Admin\bin\ClientAdmin.dll.config
+C:\Users\samia\OneDrive\Programming\Visual Studio 2015\Projects\RobTest\Admin\bin\ClientAdmin.dll
+C:\Users\samia\OneDrive\Programming\Visual Studio 2015\Projects\RobTest\Admin\bin\ClientAdmin.pdb
+C:\Users\samia\OneDrive\Programming\Visual Studio 2015\Projects\RobTest\Admin\obj\Debug\ClientAdmin.csprojResolveAssemblyReference.cache
+C:\Users\samia\OneDrive\Programming\Visual Studio 2015\Projects\RobTest\Admin\obj\Debug\Admin.fileuploader.resources
+C:\Users\samia\OneDrive\Programming\Visual Studio 2015\Projects\RobTest\Admin\obj\Debug\ClientAdmin.csproj.GenerateResource.Cache
+C:\Users\samia\OneDrive\Programming\Visual Studio 2015\Projects\RobTest\Admin\obj\Debug\ClientAdmin.dll
+C:\Users\samia\OneDrive\Programming\Visual Studio 2015\Projects\RobTest\Admin\obj\Debug\ClientAdmin.pdb

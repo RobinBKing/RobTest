@@ -3,7 +3,7 @@
 /*******************/
 /* - variables     */
 /*******************/
-/********************//* variables styles */ /********************/.brand-color {
+/********************//* variables styles */ /********************//* branding */.brand-color {
     background-color: #9bcbc2;
 }
 
@@ -17,6 +17,139 @@
 
 .brand-text-color {
     background-color: #005248;
+}
+
+/* slides colors  */
+.slide-blue {
+    background: rgba(63, 134, 200, 0.73);
+}
+
+.slide-green {
+    background: rgba(91, 122, 21, 0.68);
+}
+
+.slide-red {
+    background: rgba(192, 22, 27, 0.72);
+}
+
+.slide-purple {
+    background: rgba(109, 62, 124, 0.79);
+}
+
+.slide-light-purple {
+    background: linear-gradient(rgba(76, 43, 64, 0.98),rgba(79, 77, 78, 0.2));
+    background: -moz-linear-gradient(rgba(76, 43, 64, 0.98),rgba(79, 77, 78, 0.2));
+    background: -o-linear-gradient(rgba(76, 43, 64, 0.98),rgba(79, 77, 78, 0.2));
+    background: -webkit-linear-gradient(rgba(76, 43, 64, 0.98),rgba(79, 77, 78, 0.2));
+}
+
+.slide-dark-green {
+    background: linear-gradient(rgba(19, 71, 19, 0.95),rgba(0, 0, 0, 0.46));
+    background: -moz-linear-gradient(rgba(19, 71, 19, 0.95),rgba(0, 0, 0, 0.46));
+    background: -o-linear-gradient(rgba(19, 71, 19, 0.95),rgba(0, 0, 0, 0.46));
+    background: -webkit-linear-gradient(rgba(19, 71, 19, 0.95),rgba(0, 0, 0, 0.46));
+}
+
+.slide-bottle-green {
+    background: rgba(51, 155, 142, 0.76);
+}
+
+/* Slide colors */
+.slide-blue .caption-area:before {
+    border-color: rgba(63, 134, 200, 0.73) rgba(63, 134, 200, 0.73) rgba(63, 134, 200, 0.73) transparent;
+    background: rgba(63, 134, 200, 0.73);
+}
+
+.slide-green .caption-area:before {
+    border-color: rgba(91, 122, 21, 0.68) rgba(91, 122, 21, 0.68) rgba(91, 122, 21, 0.68) transparent;
+    background: rgba(91, 122, 21, 0.68);
+}
+
+.slide-red .caption-area:before {
+    border-color: rgba(192, 22, 27, 0.72) rgba(192, 22, 27, 0.72) rgba(192, 22, 27, 0.72) transparent;
+    background: rgba(192, 22, 27, 0.72);
+}
+
+.slide-purple .caption-area:before {
+    border-color: rgba(109, 62, 124, 0.79) rgba(109, 62, 124, 0.79) rgba(109, 62, 124, 0.79) transparent;
+    background: rgba(109, 62, 124, 0.79);
+}
+
+.slide-light-purple .caption-area:before {
+    border-color: rgba(144, 82, 121, 0.56) rgba(144, 82, 121, 0.56) rgba(144, 82, 121, 0.56) transparent;
+    background: linear-gradient(rgba(76, 43, 64, 0.98),rgba(79, 77, 78, 0.2));
+    background: -moz-linear-gradient(rgba(76, 43, 64, 0.98),rgba(79, 77, 78, 0.2));
+    background: -o-linear-gradient(rgba(76, 43, 64, 0.98),rgba(79, 77, 78, 0.2));
+    background: -webkit-linear-gradient(rgba(76, 43, 64, 0.98),rgba(79, 77, 78, 0.2));
+}
+
+.slide-dark-green .caption-area:before {
+    border-color: rgba(32, 84, 32, 0.74) rgba(32, 84, 32, 0.74) rgba(32, 84, 32, 0.74) transparent;
+    background: linear-gradient(rgba(19, 71, 19, 0.95),rgba(0, 0, 0, 0.46));
+    background: -moz-linear-gradient(rgba(19, 71, 19, 0.95),rgba(0, 0, 0, 0.46));
+    background: -o-linear-gradient(rgba(19, 71, 19, 0.95),rgba(0, 0, 0, 0.46));
+    background: -webkit-linear-gradient(rgba(19, 71, 19, 0.95),rgba(0, 0, 0, 0.46));
+}
+
+.slide-bottle-green .caption-area:before {
+    border-color: rgba(51, 155, 142, 0.76) rgba(51, 155, 142, 0.76) rgba(51, 155, 142, 0.76) transparent;
+    background: rgba(51, 155, 142, 0.76);
+}
+/* Slide text colors */
+.slide-blue .caption-area .text-headline small {
+    color: #9cceff;
+}
+
+.slide-green .caption-area .text-headline small {
+    color: #c1e870;
+}
+
+.slide-red .caption-area .text-headline small {
+    color: #750003;
+}
+
+.slide-purple .caption-area .text-headline small {
+    color: #470e58;
+}
+
+.slide-light-purple .caption-area .text-headline small {
+    color: #6e2956;
+}
+
+.slide-dark-green .caption-area .text-headline small {
+    color: #0d3908;
+}
+
+.slide-bottle-green .caption-area .text-headline small {
+    color: #00544a;
+}
+/* Slide Button colors */
+.slide-blue .button {
+    background-color: #9cceff;
+}
+
+.slide-green .button {
+    background-color: #3f5d00;
+}
+
+.slide-red .button {
+    background-color: #750003;
+}
+
+.slide-purple .button {
+    background-color: #470e58;
+}
+
+.slide-light-purple .button {
+    background-color: #6e2956;
+}
+
+.slide-dark-green .button {
+    background-color: #0d3908;
+}
+
+.slide-bottle-green .button {
+    background-color: #00544a;
 }
 /********************/
 /* base CSS Scripts */
@@ -547,6 +680,20 @@ footer.page-footer {
             padding: 0;
         }
 }
+/*******************/
+/*   CSS Scripts   */
+/*******************/
+/* - buttons       */
+/* - icons         */
+/*******************/
+
+/******************/
+/* Buttons styles */
+/******************/
+
+/******************/
+/*  icons styles  */
+/******************/
 /********************/
 /*   CSS Scripts    */
 /********************/
@@ -571,20 +718,43 @@ footer.page-footer {
         margin: 0;
         padding: 0;
         z-index: 0;
+        background-color: #ffffff;
     }
 
         .slider .slides li {
             z-index: 50;
         }
 
-        .slider .slides li img {
-            height: 300px;
-        }
+            .slider .slides li img {
+                height: 300px;
+                position: absolute;
+                top: 200px;
+                z-index: 50;
+            }
 
-        .slider .slides li div {
-            height: 100%;
-            z-index: 50
-        }
+            .slider .slides li .caption {
+                width: 90%;
+                height: auto;
+                font-family: "Josefin";
+                top: 55%;
+                left: 3%;
+                text-align: right;
+                /*z-index: 50*/
+            }
+
+                .slider .slides li .caption .text-headline {
+                    text-transform: uppercase;
+                    font-size: 26px;
+                }
+
+                .slider .slides li .caption p {
+                    color: #ffffff;
+                    text-align: right;
+                }
+
+                .slider .slides li .caption .text-body br {
+                    display: none;
+                }
 
 
     /*            .slider .slides li:nth-child(1) {

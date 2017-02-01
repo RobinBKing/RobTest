@@ -134,6 +134,7 @@
     <Content Include="css\pages\news_resources.css" />
     <Content Include="css\pages\pages.css" />
     <Content Include="css\prism.css" />
+    <Content Include="css\responsive-template.css" />
     <Content Include="css\style.css" />
     <Content Include="css\style.min.css">
       <DependentUpon>style.css</DependentUpon>

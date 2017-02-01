@@ -2,7 +2,7 @@
 <asp:Content ID="head" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" runat="server">
-    <%--    <div class="slider fullscreen" style="touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+<%--        <div class="slider fullscreen" style="touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
         <ul class="slides">
             <li class="" style="opacity: 0; transform: translateX(0px) translateY(0px);">
                 <img src="data:image/gif;base64,R0lGODlhAQABAIABAP///wAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" style="background-image: url(&quot;https://images.unsplash.com/photo-1464817739973-0128fe77aaa1?dpr=1&amp;auto=compress,format&amp;fit=crop&amp;w=1199&amp;h=799&amp;q=80&amp;cs=tinysrgb&amp;crop=&quot;);">
@@ -37,7 +37,7 @@
     </div>--%>
     <div class="slider fullscreen">
         <ul class="slides">
-            <li class="slide-blue">
+            <li class="slide slide-blue">
                 <img src="/img/home-slide1.jpg" />
                 <div class="caption-area ">
                     <div class="caption">
@@ -56,7 +56,7 @@
                     </div>
                 </div>
             </li>
-            <li class="slide-green">
+            <li class="slide slide-green">
                 <img src="/img/home-slide2.jpg" />
                 <div class="caption-area">
                     <div class="caption">
@@ -74,17 +74,13 @@
                     </div>
                 </div>
             </li>
-            <li class="slide-red">
+            <li class="slide slide-red">
                 <img src="/img/home-slide3.jpg" />
                 <div class="caption-area">
                     <div class="caption">
-                        <h4 class="text-headline">Commercial<br>
-                            Litigation</h4>
-                        <p class="text-body">
-                            When business conflicts and disputes arise,<br>
-                            our lawyers provide aggressive advocacy<br>
-                            and practical solutions in a diverse range of<br>
-                            commercial litigation matters.
+                        <h4 class="text-headline">Commercial <br>Litigation</h4>
+                        <p class="text-body">When business conflicts and disputes arise, <br>our lawyers provide aggressive advocacy <br>
+                            and practical solutions in a diverse range of <br>commercial litigation matters.
                        
                         </p>
                         <div class="button-wrap">
@@ -93,7 +89,7 @@
                     </div>
                 </div>
             </li>
-            <li class="slide-purple">
+            <li class="slide slide-purple">
                 <img src="/img/home-slide4.jpg" />
                 <div class="caption-area">
                     <div class="caption">
@@ -112,7 +108,7 @@
                     </div>
                 </div>
             </li>
-            <li class="slide-light-purple">
+            <li class="slide slide-light-purple">
                 <img src="/img/home-slide5.jpg" />
                 <div class="caption-area">
                     <div class="caption">
@@ -132,7 +128,7 @@
                     </div>
                 </div>
             </li>
-            <li class="slide-dark-green">
+            <li class="slide slide-dark-green">
                 <img src="/img/home-slide6.jpg" />
                 <div class="caption-area">
                     <div class="caption">
@@ -151,7 +147,7 @@
                     </div>
                 </div>
             </li>
-            <li class="slide-bottle-green">
+            <li class="slide slide-bottle-green">
                 <img src="/img/home-slide7.jpg" />
                 <div class="caption-area">
                     <div class="caption">
@@ -179,7 +175,7 @@
             <li class="indicator-item"></li>
             <li class="indicator-item"></li>
         </ul>
-        <footer class="page-footer clearfix">
+        <footer class="page-footer">
             <div class="container">
                 <div class="row">
                     <div class="col l12 m12 s12">

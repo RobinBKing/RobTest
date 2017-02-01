@@ -52,41 +52,22 @@
                 });
             }
         }, 100);
-        // BuySellAds Detection
-        //var $bsa = $(".buysellads"),
-        //    $timesToCheck = 3;
-        //function checkForChanges() {
-        //    if (!$bsa.find('#carbonads').length) {
-        //        $timesToCheck -= 1;
-        //        if ($timesToCheck >= 0) {
-        //            setTimeout(checkForChanges, 500);
-        //        } else {
-        //            var donateAd = $('<div id="carbonads"><span><a class="carbon-text" href="#!" onclick="document.getElementById(\'paypal-donate\').submit();"><img src="images/donate.png" /> Help support us by turning off adblock. If you still prefer to keep adblock on for this page but still want to support us, feel free to donate. Any little bit helps.</a></form></span></div>');
-        //            $bsa.append(donateAd);
-        //        }
-        //    }
-        //}
-        //checkForChanges();
-        //// BuySellAds Demos close button.
-        //$('.buysellads.buysellads-demo .close').on('click', function () {
-        //    $(this).parent().remove();
-        //});
         // Github Latest Commit
-        if ($('.github-commit').length) { // Checks if widget div exists (Index only)
-            $.ajax({
-                url: "https://api.github.com/repos/dogfalo/materialize/commits/master",
-                dataType: "json",
-                success: function (data) {
-                    var sha = data.sha,
-                        date = jQuery.timeago(data.commit.author.date);
-                    if (window_width < 1120) {
-                        sha = sha.substring(0, 7);
-                    }
-                    $('.github-commit').find('.date').html(date);
-                    $('.github-commit').find('.sha').html(sha).attr('href', data.html_url);
-                }
-            });
-        }
+        //if ($('.github-commit').length) { // Checks if widget div exists (Index only)
+        //    $.ajax({
+        //        url: "https://api.github.com/repos/dogfalo/materialize/commits/master",
+        //        dataType: "json",
+        //        success: function (data) {
+        //            var sha = data.sha,
+        //                date = jQuery.timeago(data.commit.author.date);
+        //            if (window_width < 1120) {
+        //                sha = sha.substring(0, 7);
+        //            }
+        //            $('.github-commit').find('.date').html(date);
+        //            $('.github-commit').find('.sha').html(sha).attr('href', data.html_url);
+        //        }
+        //    });
+        //}
         // Toggle Flow Text
         var toggleFlowTextButton = $('#flow-toggle');
         toggleFlowTextButton.click(function () {
@@ -138,44 +119,30 @@
         }
         // Plugin initialization
         $('.carousel.carousel-slider').carousel({
-            full_width: true
+            full_width: true,
         });
         $('.carousel').carousel();
         $('.slider').slider({
-            full_width: true
+            full_width: true,
+            interval: 5000,
+            transition: 800
+            //autoplay: true,
+            //overlay: 'plain'
         });
+        autoplay();
+        function autoplay() {
+            $('.slider').slider('first');
+            setTimeout(autoplay, 4500);
+        }
         $('.parallax').parallax();
-        //$('.modal').modal();
-        $('.scrollspy').scrollSpy();
+        //$('.scrollspy').scrollSpy();
         $('.button-collapse').sideNav({
             edge: 'right',
             closeOnClick: true
         });
-        $('.datepicker').pickadate({
-            selectYears: 20
-        });
+        //$('.datepicker').pickadate({
+        //    selectYears: 20
+        //});
         $('select').not('.disabled').material_select();
-        //$('input.autocomplete').autocomplete({
-        //    data: {
-        //        "Apple": null,
-        //        "Microsoft": null,
-        //        "Google": 'http://placehold.it/250x250'
-        //    }
-        //});
-        //$('.chips').material_chip();
-        //$('.chips-initial').material_chip({
-        //    readOnly: true,
-        //    data: [{
-        //        tag: 'Apple',
-        //    }, {
-        //        tag: 'Microsoft',
-        //    }, {
-        //        tag: 'Google',
-        //    }]
-        //});
-        //$('.chips-placeholder').material_chip({
-        //    placeholder: 'Enter a tag',
-        //    secondaryPlaceholder: '+Tag',
-        //});
     }); // end of document ready
 })(jQuery); // end of jQuery name space

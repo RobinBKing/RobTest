@@ -125,15 +125,15 @@
         $('.slider').slider({
             full_width: true,
             interval: 5000,
-            transition: 800
-            //autoplay: true,
-            //overlay: 'plain'
+            transition: 800,
+            autoplay: true,
+            overlay: 'plain'
         });
-        autoplay();
-        function autoplay() {
-            $('.slider').slider('first');
-            setTimeout(autoplay, 4500);
-        }
+        //autoplay();
+        //function autoplay() {
+        //    //$('.slider').slider('first');
+        //    setTimeout(autoplay, 4500);
+        //}
         $('.parallax').parallax();
         //$('.scrollspy').scrollSpy();
         $('.button-collapse').sideNav({
